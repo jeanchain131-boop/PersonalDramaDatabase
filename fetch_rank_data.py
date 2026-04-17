@@ -8,6 +8,7 @@ import os
 import re
 import time
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -155,10 +156,14 @@ def init_ranks_store() -> dict:
 # Phase 2: Fetch rank lists
 # ---------------------------------------------------------------------------
 
-def fetch_missevan_ranks(requester: MissevanRequester, store: dict) -> set[str]:
-    """Fetch all Missevan rank lists, updating store. Return set of drama IDs."""
+def fetch_missevan_ranks(requester: MissevanRequester, store: dict) -> tuple[set[str], set[str]]:
+    """Fetch all Missevan rank lists, updating store. Return (all drama IDs, danmaku-eligible IDs)."""
     all_ids: set[str] = set()
+    danmaku_ids: set[str] = set()
     ranks = store["missevan"].setdefault("ranks", {})
+
+    # Ranks whose dramas should have danmaku collected
+    DANMAKU_RANKS = {"new_daily", "new_weekly"}
 
     # Standard ranks
     for key, (type_val, sub_type, name) in MISSEVAN_RANKS.items():
@@ -174,6 +179,8 @@ def fetch_missevan_ranks(requester: MissevanRequester, store: dict) -> set[str]:
         items = [item["id"] for item in items_raw if "id" in item]
         ranks[key] = {"name": name, "fetched_at": now_iso(), "items": items}
         all_ids.update(str(i) for i in items)
+        if key in DANMAKU_RANKS:
+            danmaku_ids.update(str(i) for i in items)
         print(f"  [missevan] {name}: {len(items)} items")
 
     # Peak rank
@@ -231,7 +238,7 @@ def fetch_missevan_ranks(requester: MissevanRequester, store: dict) -> set[str]:
     except Exception as exc:
         print(f"  [missevan] WARN: failed to fetch 巅峰榜: {exc}")
 
-    return all_ids
+    return all_ids, danmaku_ids
 
 
 def fetch_manbo_ranks(store: dict) -> set[str]:
@@ -275,6 +282,7 @@ def fetch_missevan_drama_details(
     store: dict,
     *,
     skip_danmaku: bool,
+    danmaku_ids: set[str] | None = None,
 ) -> None:
     """Fetch detailed info for each Missevan drama ID."""
     dramas = store["missevan"].setdefault("dramas", {})
@@ -282,8 +290,9 @@ def fetch_missevan_drama_details(
     for idx, drama_id in enumerate(sorted(drama_ids), 1):
         print(f"  [missevan] ({idx}/{total}) drama {drama_id} ...")
         entry: dict = dramas.get(str(drama_id), {})
+        should_skip_dm = skip_danmaku or (danmaku_ids is not None and str(drama_id) not in danmaku_ids)
         try:
-            _fetch_one_missevan(requester, str(drama_id), entry, skip_danmaku=skip_danmaku)
+            _fetch_one_missevan(requester, str(drama_id), entry, skip_danmaku=should_skip_dm)
         except RuntimeError as exc:
             if "HTTP_418" in str(exc):
                 print(f"  [missevan] FATAL: rate limited (418). Saving progress and stopping.")
@@ -410,8 +419,6 @@ def _parse_missevan_dm_xml(xml_text: str, uid_set: set[str]) -> None:
 def fetch_manbo_drama_details(
     drama_ids: set[str],
     store: dict,
-    *,
-    skip_danmaku: bool,
 ) -> None:
     """Fetch detailed info for each Manbo drama ID."""
     dramas = store["manbo"].setdefault("dramas", {})
@@ -421,7 +428,7 @@ def fetch_manbo_drama_details(
         print(f"  [manbo] ({idx}/{total}) drama {drama_id} ...")
         entry: dict = dramas.get(drama_id, {})
         try:
-            _fetch_one_manbo(drama_id, entry, skip_danmaku=skip_danmaku)
+            _fetch_one_manbo(drama_id, entry)
         except Exception as exc:
             print(f"  [manbo] ERROR on {drama_id}: {exc}")
         dramas[drama_id] = entry
@@ -433,7 +440,7 @@ def fetch_manbo_drama_details(
         save_json(RANKS_PATH, store)
 
 
-def _fetch_one_manbo(drama_id: str, entry: dict, *, skip_danmaku: bool) -> None:
+def _fetch_one_manbo(drama_id: str, entry: dict) -> None:
     url = f"https://api.kilamanbo.com/api/v530/radio/drama/detail?radioDramaId={drama_id}"
     data = request_manbo_json(url)
     body = data.get("b") or data.get("data") or {}
@@ -469,56 +476,7 @@ def _fetch_one_manbo(drama_id: str, entry: dict, *, skip_danmaku: bool) -> None:
     else:
         entry["updated_at"] = None
 
-    # Danmaku
-    set_list = body.get("setRespList") or []
-    if skip_danmaku:
-        entry.setdefault("danmaku_uid_count", None)
-    else:
-        _fetch_manbo_danmaku(set_list, entry)
-
     entry["fetched_at"] = now_iso()
-
-
-def _fetch_manbo_danmaku(set_list: list[dict], entry: dict) -> None:
-    """Fetch danmaku for paid episodes and count unique UIDs."""
-    paid_sets = []
-    for s in set_list:
-        if int(s.get("pay_type") or 0) == 1 or int(s.get("price") or 0) > 0:
-            set_id = s.get("radioDramaSetId") or s.get("id")
-            if set_id:
-                paid_sets.append(str(set_id))
-
-    if not paid_sets:
-        entry["danmaku_uid_count"] = 0
-        return
-
-    uid_set: set[str] = set()
-    page_size = 200
-    for set_id in paid_sets:
-        try:
-            # First page
-            url = f"https://www.kilamanbo.com/web_manbo/getDanmaKuPgList?pageSize={page_size}&dramaSetId={set_id}&pageNo=1"
-            data = request_manbo_json(url)
-            body = data.get("data") or {}
-            total_count = int(body.get("count") or 0)
-            page_list = body.get("list") or []
-            for item in page_list:
-                eid = item.get("eid")
-                if eid:
-                    uid_set.add(str(eid))
-            # Remaining pages
-            total_pages = (total_count + page_size - 1) // page_size if total_count > 0 else 1
-            for page_no in range(2, total_pages + 1):
-                page_url = f"https://www.kilamanbo.com/web_manbo/getDanmaKuPgList?pageSize={page_size}&dramaSetId={set_id}&pageNo={page_no}"
-                page_data = request_manbo_json(page_url)
-                page_body = page_data.get("data") or {}
-                for item in page_body.get("list") or []:
-                    eid = item.get("eid")
-                    if eid:
-                        uid_set.add(str(eid))
-        except Exception as exc:
-            print(f"    [danmaku] WARN: failed for set {set_id}: {exc}")
-    entry["danmaku_uid_count"] = len(uid_set)
 
 
 # ---------------------------------------------------------------------------
@@ -600,17 +558,22 @@ def _load_upstash_json(key: str) -> dict | list | None:
 # --only-danmaku mode
 # ---------------------------------------------------------------------------
 
-def only_danmaku_mode(store: dict, *, force: bool, do_missevan: bool, do_manbo: bool) -> None:
-    """Only update danmaku_uid_count for dramas already in ranks.json."""
+def only_danmaku_mode(store: dict, *, force: bool, do_missevan: bool) -> None:
+    """Only update danmaku_uid_count for Missevan dramas (新品日榜+新品周榜) in ranks.json."""
     requester = MissevanRequester()
 
     if do_missevan:
         missevan_dramas = store["missevan"].get("dramas") or {}
+        # Only process dramas from 新品日榜 and 新品周榜
+        missevan_ranks = store["missevan"].get("ranks") or {}
+        danmaku_eligible = set()
+        for rk in ("new_daily", "new_weekly"):
+            danmaku_eligible.update(str(i) for i in (missevan_ranks.get(rk, {}).get("items") or []))
         targets = []
         for drama_id, entry in missevan_dramas.items():
-            if force or entry.get("danmaku_uid_count") is None:
+            if drama_id in danmaku_eligible and (force or entry.get("danmaku_uid_count") is None):
                 targets.append(drama_id)
-        print(f"[only-danmaku] missevan: {len(targets)} dramas to update")
+        print(f"[only-danmaku] missevan: {len(targets)} dramas to update (from 新品日榜+新品周榜)")
         for idx, drama_id in enumerate(sorted(targets), 1):
             print(f"  [missevan] ({idx}/{len(targets)}) danmaku for drama {drama_id} ...")
             # Need episodes list from getdrama
@@ -631,31 +594,7 @@ def only_danmaku_mode(store: dict, *, force: bool, do_missevan: bool, do_manbo: 
                 print(f"  [missevan] ERROR: {exc}")
             save_json(RANKS_PATH, store)
 
-    if do_manbo:
-        manbo_dramas = store["manbo"].get("dramas") or {}
-        targets = []
-        for drama_id, entry in manbo_dramas.items():
-            if force or entry.get("danmaku_uid_count") is None:
-                targets.append(drama_id)
-        print(f"[only-danmaku] manbo: {len(targets)} dramas to update")
-        save_counter = 0
-        for idx, drama_id in enumerate(sorted(targets), 1):
-            print(f"  [manbo] ({idx}/{len(targets)}) danmaku for drama {drama_id} ...")
-            try:
-                url = f"https://api.kilamanbo.com/api/v530/radio/drama/detail?radioDramaId={drama_id}"
-                data = request_manbo_json(url)
-                body = data.get("b") or data.get("data") or {}
-                set_list = body.get("setRespList") or []
-                _fetch_manbo_danmaku(set_list, manbo_dramas[drama_id])
-                manbo_dramas[drama_id]["fetched_at"] = now_iso()
-            except Exception as exc:
-                print(f"  [manbo] ERROR: {exc}")
-            save_counter += 1
-            if save_counter >= 5:
-                save_json(RANKS_PATH, store)
-                save_counter = 0
-        if save_counter > 0:
-            save_json(RANKS_PATH, store)
+
 
 
 # ---------------------------------------------------------------------------
@@ -691,7 +630,7 @@ def main() -> None:
     # --only-danmaku mode: skip everything else
     if args.only_danmaku:
         print("=== Only-danmaku mode ===")
-        only_danmaku_mode(store, force=args.force, do_missevan=do_missevan, do_manbo=do_manbo)
+        only_danmaku_mode(store, force=args.force, do_missevan=do_missevan)
         store["_meta"]["updated_at"] = now_iso()
         save_json(RANKS_PATH, store)
         try:
@@ -708,8 +647,10 @@ def main() -> None:
     missevan_ids: set[str] = set()
     manbo_ids: set[str] = set()
 
+    missevan_danmaku_ids: set[str] = set()
+
     if do_missevan:
-        missevan_ids = fetch_missevan_ranks(requester, store)
+        missevan_ids, missevan_danmaku_ids = fetch_missevan_ranks(requester, store)
     if do_manbo:
         manbo_ids = fetch_manbo_ranks(store)
 
@@ -747,6 +688,7 @@ def main() -> None:
         fetch_missevan_drama_details(
             requester, missevan_to_update, store,
             skip_danmaku=args.skip_danmaku,
+            danmaku_ids=missevan_danmaku_ids,
         )
 
     # Phase 5: Manbo drama details
@@ -754,7 +696,6 @@ def main() -> None:
         print(f"=== Phase 5: Manbo drama details ({len(manbo_to_update)}) ===")
         fetch_manbo_drama_details(
             manbo_to_update, store,
-            skip_danmaku=args.skip_danmaku,
         )
 
     # Phase 6: Upstash CV lookup

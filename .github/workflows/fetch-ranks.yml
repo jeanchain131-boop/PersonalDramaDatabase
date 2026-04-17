@@ -28,7 +28,7 @@ jobs:
         run: pip install requests
 
       - name: Run fetch_rank_data.py
-        run: python fetch_rank_data.py --skip-danmaku --force
+        run: python fetch_rank_data.py --force
         env:
           UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
           UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
