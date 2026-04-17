@@ -131,9 +131,9 @@ def is_missevan_ready(record: dict | None) -> bool:
         return False
     if record.get("catalog") in (None, ""):
         return False
-    if not normalize(record.get("createTime")):
-        return False
-    if not normalize(record.get("author")):
+    has_create_time = bool(normalize(record.get("createTime")))
+    has_author = bool(normalize(record.get("author")))
+    if not has_create_time and not has_author:
         return False
     return len(record.get("maincvs") or []) >= 2
 

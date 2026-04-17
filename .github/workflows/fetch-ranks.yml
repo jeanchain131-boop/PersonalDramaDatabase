@@ -1,0 +1,39 @@
+name: Fetch Rank Data
+
+on:
+  schedule:
+    # 7:10 PM EDT (UTC-4) = 23:10 UTC
+    # 冬令时 (EST, UTC-5) 则为 6:10 PM
+    - cron: '10 23 * * *'
+  workflow_dispatch: # 允许在 GitHub 页面上手动触发
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run fetch_rank_data.py
+        run: python fetch_rank_data.py --skip-danmaku --force
+        env:
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+
+      - name: Commit updated ranks.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ranks.json
+          git diff --cached --quiet || git commit -m "chore: update ranks.json [skip ci]"
+          git push

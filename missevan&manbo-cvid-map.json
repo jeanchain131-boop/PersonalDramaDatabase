@@ -5298,5 +5298,25 @@
     "source": "observed",
     "updatedAt": "2026-04-17T02:13:51+00:00",
     "notes": ""
+  },
+  "辰音雪兔": {
+    "cvId": 1439,
+    "missevanCvId": 1439,
+    "manboCvId": null,
+    "displayName": "辰音雪兔",
+    "aliases": [],
+    "source": "observed",
+    "updatedAt": "2026-04-17T06:09:11+00:00",
+    "notes": ""
+  },
+  "侵老攻": {
+    "cvId": 1478,
+    "missevanCvId": 1478,
+    "manboCvId": null,
+    "displayName": "侵老攻",
+    "aliases": [],
+    "source": "observed",
+    "updatedAt": "2026-04-17T06:09:11+00:00",
+    "notes": ""
   }
 }

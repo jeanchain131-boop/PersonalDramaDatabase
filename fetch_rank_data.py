@@ -186,10 +186,46 @@ def fetch_missevan_ranks(requester: MissevanRequester, store: dict) -> set[str]:
         elements = []
         for group in inner_list:
             elements.extend(group.get("elements") or [])
-        peak_items = [
-            {"name": el.get("name", ""), "view_count": el.get("view_count", 0), "cover": el.get("cover", "")}
-            for el in elements
-        ]
+        # Hardcoded overrides for peak dramaIds
+        PEAK_DRAMAID_OVERRIDES: dict[str, list[str]] = {
+            "二哈和他的白猫师尊广播剧（翼之声中文配音社团）": ["20741"],
+            "娘娘腔（贾诩、苏莫离）": ["19255"],
+            "错撩": ["52355"],
+        }
+        # Build series title -> dramaIds lookup for 猫耳 platform
+        series_info = load_json(HERE / "drama-series-info.json", {})
+        missevan_series: dict[str, list[str]] = {}
+        for entry in series_info.values():
+            if entry.get("platform") == "猫耳":
+                missevan_series[entry.get("series title", "")] = entry.get("dramaIds", [])
+        missevan_series.update(PEAK_DRAMAID_OVERRIDES)
+        # Collect names not matched in drama-series-info
+        unmatched_names: set[str] = set()
+        for el in elements:
+            name = el.get("name", "")
+            if name and name not in missevan_series:
+                unmatched_names.add(name)
+        # Fallback: search upstash missevan:info:v1 for unmatched names
+        upstash_series: dict[str, list[str]] = {}
+        if unmatched_names:
+            print(f"  [missevan] 巅峰榜: {len(unmatched_names)} names not in drama-series-info, searching upstash ...")
+            missevan_info = _load_upstash_json("missevan:info:v1") or {}
+            for drama_id, node in missevan_info.items():
+                title = node.get("title", "")
+                if title in unmatched_names:
+                    upstash_series.setdefault(title, []).append(str(drama_id))
+        peak_items = []
+        for el in elements:
+            name = el.get("name", "")
+            cvs = [cv.get("name", "") for cv in (el.get("cvs") or []) if cv.get("name")]
+            drama_ids = missevan_series.get(name) or upstash_series.get(name, [])
+            peak_items.append({
+                "name": name,
+                "view_count": el.get("view_count", 0),
+                "cover": el.get("cover", ""),
+                "cvs": cvs,
+                "dramaIds": drama_ids,
+            })
         ranks["peak"] = {"name": "巅峰榜", "fetched_at": now_iso(), "items": peak_items}
         print(f"  [missevan] 巅峰榜: {len(peak_items)} items")
     except Exception as exc:

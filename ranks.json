@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "updated_at": "2026-04-17T04:51:37.264627+00:00"
+    "updated_at": "2026-04-17T06:27:37.187209+00:00"
   },
   "missevan": {
     "ranks": {
       "new_daily": {
         "name": "新品日榜",
-        "fetched_at": "2026-04-17T04:51:03.258996+00:00",
+        "fetched_at": "2026-04-17T06:27:01.492702+00:00",
         "items": [
           93038,
           86815,
@@ -42,7 +42,7 @@
       },
       "new_weekly": {
         "name": "新品周榜",
-        "fetched_at": "2026-04-17T04:51:07.082197+00:00",
+        "fetched_at": "2026-04-17T06:27:05.111764+00:00",
         "items": [
           86815,
           93038,
@@ -78,7 +78,7 @@
       },
       "popular_weekly": {
         "name": "人气周榜",
-        "fetched_at": "2026-04-17T04:51:10.572439+00:00",
+        "fetched_at": "2026-04-17T06:27:08.829040+00:00",
         "items": [
           86815,
           93038,
@@ -114,7 +114,7 @@
       },
       "popular_monthly": {
         "name": "人气月榜",
-        "fetched_at": "2026-04-17T04:51:14.872545+00:00",
+        "fetched_at": "2026-04-17T06:27:13.545166+00:00",
         "items": [
           86815,
           85974,
@@ -150,7 +150,7 @@
       },
       "bestseller_weekly": {
         "name": "畅销周榜",
-        "fetched_at": "2026-04-17T04:51:19.176472+00:00",
+        "fetched_at": "2026-04-17T06:27:17.472885+00:00",
         "items": [
           86834,
           86815,
@@ -186,7 +186,7 @@
       },
       "bestseller_monthly": {
         "name": "畅销月榜",
-        "fetched_at": "2026-04-17T04:51:23.054765+00:00",
+        "fetched_at": "2026-04-17T06:27:21.472298+00:00",
         "items": [
           86815,
           86834,
@@ -222,257 +222,684 @@
       },
       "peak": {
         "name": "巅峰榜",
-        "fetched_at": "2026-04-17T04:51:27.446019+00:00",
+        "fetched_at": "2026-04-17T06:27:26.942604+00:00",
         "items": [
           {
             "name": "魔道祖师",
-            "view_count": 721049969,
-            "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/108a20bcf469221699b798b9cf5f4ecd.jpg"
+            "view_count": 721054675,
+            "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/108a20bcf469221699b798b9cf5f4ecd.jpg",
+            "cvs": [
+              "路知行",
+              "魏超"
+            ],
+            "dramaIds": [
+              "15861",
+              "19059",
+              "22602"
+            ]
           },
           {
             "name": "虚拟偶像声音综艺系列",
-            "view_count": 357244338,
-            "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/cd50fc6462d59347466dda83b09b759d.jpg"
+            "view_count": 357252298,
+            "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/cd50fc6462d59347466dda83b09b759d.jpg",
+            "cvs": [
+              "LASER",
+              "MANTA"
+            ],
+            "dramaIds": [
+              "28989",
+              "38165",
+              "50724",
+              "50725",
+              "58225",
+              "78684",
+              "84529"
+            ]
           },
           {
             "name": "将进酒",
-            "view_count": 266216696,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202402/03/0f25ad2f73ff53270c8c81691264df0d203419.jpg"
+            "view_count": 266221429,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202402/03/0f25ad2f73ff53270c8c81691264df0d203419.jpg",
+            "cvs": [
+              "姜广涛",
+              "袁铭喆"
+            ],
+            "dramaIds": [
+              "25944",
+              "30383",
+              "38692",
+              "49082",
+              "54532"
+            ]
           },
           {
             "name": "天官赐福",
-            "view_count": 224479177,
-            "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/19c946c3c9e4b701cc2ddbdf01d3cccb.jpg"
+            "view_count": 224499831,
+            "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/19c946c3c9e4b701cc2ddbdf01d3cccb.jpg",
+            "cvs": [
+              "苏尚卿",
+              "陈张太康"
+            ],
+            "dramaIds": [
+              "52400",
+              "75026",
+              "82040",
+              "91718"
+            ]
           },
           {
             "name": "撒野",
-            "view_count": 207538961,
-            "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/946476302c8a0c9b7f0cefd690a55043.jpg"
+            "view_count": 207539767,
+            "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/946476302c8a0c9b7f0cefd690a55043.jpg",
+            "cvs": [
+              "倒霉死勒",
+              "涅槃"
+            ],
+            "dramaIds": [
+              "58443",
+              "58444",
+              "58445",
+              "58446"
+            ]
           },
           {
             "name": "偷偷藏不住",
-            "view_count": 201160337,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202101/30/e6ac00f9bee3b69979816abc6e146795185908.jpg"
+            "view_count": 201161421,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202101/30/e6ac00f9bee3b69979816abc6e146795185908.jpg",
+            "cvs": [
+              "浮梦若薇",
+              "轩ZONE"
+            ],
+            "dramaIds": [
+              "34632"
+            ]
           },
           {
             "name": "伪装学渣",
-            "view_count": 176498286,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202401/09/d13aa713301df4966ae42b74a1251075183250.jpg"
+            "view_count": 176499455,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202401/09/d13aa713301df4966ae42b74a1251075183250.jpg",
+            "cvs": [
+              "风袖",
+              "谢添天"
+            ],
+            "dramaIds": [
+              "58262",
+              "58263"
+            ]
           },
           {
             "name": "我喜欢你的信息素",
-            "view_count": 173516722,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202310/20/9ce5bbe9f2433f1df847255d0854c61e113443.jpg"
+            "view_count": 173519300,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202310/20/9ce5bbe9f2433f1df847255d0854c61e113443.jpg",
+            "cvs": [
+              "路知行",
+              "史泽鲲"
+            ],
+            "dramaIds": [
+              "58217",
+              "58218"
+            ]
           },
           {
             "name": "杀破狼",
-            "view_count": 167027141,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202306/01/4d5ffed95b37aa5dffc60bc4b463a824143851.jpg"
+            "view_count": 167028410,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202306/01/4d5ffed95b37aa5dffc60bc4b463a824143851.jpg",
+            "cvs": [
+              "阿杰",
+              "杨天翔"
+            ],
+            "dramaIds": [
+              "9888",
+              "12998",
+              "17132"
+            ]
           },
           {
             "name": "某某",
-            "view_count": 162070305,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202309/20/b94037e0b6cbdab066c10d6bf080e1c7225309.jpg"
+            "view_count": 162072157,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202309/20/b94037e0b6cbdab066c10d6bf080e1c7225309.jpg",
+            "cvs": [
+              "凌飞",
+              "钱文青"
+            ],
+            "dramaIds": [
+              "58219",
+              "58220"
+            ]
           },
           {
             "name": "二哈和他的白猫师尊广播剧（翼之声中文配音社团）",
-            "view_count": 160530875,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202502/20/a8afcbfbcfa5878c81f0580eea182d7b173654.jpg"
+            "view_count": 160534042,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202502/20/a8afcbfbcfa5878c81f0580eea182d7b173654.jpg",
+            "cvs": [
+              "商桐",
+              "卡修"
+            ],
+            "dramaIds": [
+              "20741"
+            ]
           },
           {
             "name": "破云",
-            "view_count": 148097156,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202208/23/093b3c4df124247608970127cc6af1ad222108.png"
+            "view_count": 148098526,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202208/23/093b3c4df124247608970127cc6af1ad222108.png",
+            "cvs": [
+              "阿春",
+              "天空"
+            ],
+            "dramaIds": [
+              "59047",
+              "59048",
+              "59049"
+            ]
           },
           {
             "name": "难哄",
-            "view_count": 145055377,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202110/15/7977b7314b0139cc8c7c7b40877b71f6180040.jpg"
+            "view_count": 145056562,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202110/15/7977b7314b0139cc8c7c7b40877b71f6180040.jpg",
+            "cvs": [
+              "伤洛",
+              "景向谁依"
+            ],
+            "dramaIds": [
+              "38074"
+            ]
           },
           {
             "name": "AWM",
-            "view_count": 141592772,
-            "cover": "https://static.maoercdn.com/dramacoversmini/201906/21/b95f57f46e9689bec0b19c141560a67e171225.jpg"
+            "view_count": 141594056,
+            "cover": "https://static.maoercdn.com/dramacoversmini/201906/21/b95f57f46e9689bec0b19c141560a67e171225.jpg",
+            "cvs": [
+              "姜广涛",
+              "胡良伟"
+            ],
+            "dramaIds": [
+              "20284",
+              "24494"
+            ]
           },
           {
             "name": "我在无限游戏里封神",
-            "view_count": 132566537,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202305/07/429713243473481f425bd661ec4bf216161424.jpg"
+            "view_count": 132579198,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202305/07/429713243473481f425bd661ec4bf216161424.jpg",
+            "cvs": [
+              "倒霉死勒",
+              "顺子"
+            ],
+            "dramaIds": [
+              "52347",
+              "71605",
+              "76557",
+              "81851",
+              "86834"
+            ]
           },
           {
             "name": "重生之将门毒后",
-            "view_count": 131177698,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202112/24/2a67147747c63ff396b63c4c442af03e162350.jpg"
+            "view_count": 131181739,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202112/24/2a67147747c63ff396b63c4c442af03e162350.jpg",
+            "cvs": [
+              "刘校妤",
+              "马正阳"
+            ],
+            "dramaIds": [
+              "43922",
+              "52293"
+            ]
           },
           {
             "name": "营业悖论",
-            "view_count": 128380539,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202106/06/1cd234dacadc86cd849e08fea443d9b8130013.jpg"
+            "view_count": 128381669,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202106/06/1cd234dacadc86cd849e08fea443d9b8130013.jpg",
+            "cvs": [
+              "吴晛",
+              "马正阳",
+              "江山",
+              "胡良伟",
+              "邓宥希",
+              "刘明月"
+            ],
+            "dramaIds": [
+              "36817",
+              "41326",
+              "45206"
+            ]
           },
           {
             "name": "FOG[电竞]",
-            "view_count": 125923856,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202401/05/3e9f2d6b68eb008e9e18a3cf9c7d9ea4201543.jpg"
+            "view_count": 125926022,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202401/05/3e9f2d6b68eb008e9e18a3cf9c7d9ea4201543.jpg",
+            "cvs": [
+              "马正阳",
+              "文森"
+            ],
+            "dramaIds": [
+              "29122",
+              "39588"
+            ]
           },
           {
             "name": "吞海",
-            "view_count": 120978924,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202407/11/269f2a15be26601d3b9b2608919e02bf141740.jpg"
+            "view_count": 120984075,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202407/11/269f2a15be26601d3b9b2608919e02bf141740.jpg",
+            "cvs": [
+              "陈张太康",
+              "郑希"
+            ],
+            "dramaIds": [
+              "29187",
+              "67085",
+              "73221",
+              "76879"
+            ]
           },
           {
             "name": "迪奥先生",
-            "view_count": 114796882,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202310/13/9a0c9ac6d492f1f4d1c737f103ed42db205314.jpg"
+            "view_count": 114797442,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202310/13/9a0c9ac6d492f1f4d1c737f103ed42db205314.jpg",
+            "cvs": [
+              "景向谁依",
+              "羊仔"
+            ],
+            "dramaIds": [
+              "23329",
+              "25790"
+            ]
           },
           {
             "name": "残次品",
-            "view_count": 108973127,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202306/01/320e002ee91c66f2930fc8cfa58f829c150153.jpg"
+            "view_count": 108973438,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202306/01/320e002ee91c66f2930fc8cfa58f829c150153.jpg",
+            "cvs": [
+              "沈磊",
+              "梁达伟"
+            ],
+            "dramaIds": [
+              "16730",
+              "19057",
+              "21802",
+              "24730"
+            ]
           },
           {
             "name": "小蘑菇",
-            "view_count": 98058597,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202310/26/4992f7c2cb751f8fada6d459c2ad61bd164052.jpg"
+            "view_count": 98065099,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202310/26/4992f7c2cb751f8fada6d459c2ad61bd164052.jpg",
+            "cvs": [
+              "孙路路",
+              "阿杰"
+            ],
+            "dramaIds": [
+              "29125",
+              "39605"
+            ]
           },
           {
             "name": "1930来的先生",
-            "view_count": 97690506,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202306/01/77ec663309cbe52883e406bceec3f2e8143554.jpg"
+            "view_count": 97690881,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202306/01/77ec663309cbe52883e406bceec3f2e8143554.jpg",
+            "cvs": [
+              "羊仔",
+              "轩ZONE"
+            ],
+            "dramaIds": [
+              "5265"
+            ]
           },
           {
             "name": "我嗑了对家X我的CP",
-            "view_count": 93035076,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202401/09/96a3ba3a6ecaf9dc15532062d2e17fbf184630.jpg"
+            "view_count": 93037541,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202401/09/96a3ba3a6ecaf9dc15532062d2e17fbf184630.jpg",
+            "cvs": [
+              "陈张太康",
+              "刘思岑"
+            ],
+            "dramaIds": [
+              "21102",
+              "22628"
+            ]
           },
           {
             "name": "你的距离",
-            "view_count": 88982137,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202402/04/c786840bd41e87142595432516af06bc161352.png"
+            "view_count": 88984069,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202402/04/c786840bd41e87142595432516af06bc161352.png",
+            "cvs": [
+              "羊仔",
+              "郑希"
+            ],
+            "dramaIds": [
+              "31552"
+            ]
           },
           {
             "name": "如果月亮不抱你",
-            "view_count": 82971604,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202007/28/2fbb5f76fade142f4a58e54ccb473912135535.jpg"
+            "view_count": 82972119,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202007/28/2fbb5f76fade142f4a58e54ccb473912135535.jpg",
+            "cvs": [
+              "浮梦若薇",
+              "轩ZONE"
+            ],
+            "dramaIds": [
+              "25485"
+            ]
           },
           {
             "name": "全球高考",
-            "view_count": 80462300,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202401/16/ed0277497c52a665c698b64ae9046de6144652.jpg"
+            "view_count": 80464876,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202401/16/ed0277497c52a665c698b64ae9046de6144652.jpg",
+            "cvs": [
+              "路知行",
+              "郑希"
+            ],
+            "dramaIds": [
+              "39622",
+              "59564",
+              "60289"
+            ]
           },
           {
             "name": "放学等我",
-            "view_count": 79024961,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202309/14/27da5bf1fb32009fdf5f084690eb0a3e120535.jpg"
+            "view_count": 79028577,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202309/14/27da5bf1fb32009fdf5f084690eb0a3e120535.jpg",
+            "cvs": [
+              "凌飞",
+              "倒霉死勒"
+            ],
+            "dramaIds": [
+              "64911",
+              "68837"
+            ]
           },
           {
             "name": "夫人你马甲又掉了",
-            "view_count": 77667116,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202106/17/f5d9c408b5184bc7f072605587f934be150438.jpg"
+            "view_count": 77668171,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202106/17/f5d9c408b5184bc7f072605587f934be150438.jpg",
+            "cvs": [
+              "姜广涛",
+              "云鹤追"
+            ],
+            "dramaIds": [
+              "32574",
+              "47547"
+            ]
           },
           {
             "name": "论以貌取人的下场",
-            "view_count": 71179286,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202208/24/ec26161c3de5ab3733e3f005c1496f99224522.jpg"
+            "view_count": 71180359,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202208/24/ec26161c3de5ab3733e3f005c1496f99224522.jpg",
+            "cvs": [
+              "彭尧",
+              "张福正"
+            ],
+            "dramaIds": [
+              "34149",
+              "43185"
+            ]
           },
           {
             "name": "碎玉投珠",
-            "view_count": 70624605,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202309/12/2a0321f3b5507122fe18abad82f5d2fb200224.jpg"
+            "view_count": 70626754,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202309/12/2a0321f3b5507122fe18abad82f5d2fb200224.jpg",
+            "cvs": [
+              "凌飞",
+              "陈张太康"
+            ],
+            "dramaIds": [
+              "24727",
+              "65418"
+            ]
           },
           {
             "name": "娘娘腔（贾诩、苏莫离）",
-            "view_count": 68433425,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202002/12/bd9622c22b7fc6fea3aa49812efcc9cc131936.jpg"
+            "view_count": 68433719,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202002/12/bd9622c22b7fc6fea3aa49812efcc9cc131936.jpg",
+            "cvs": [
+              "苏莫离",
+              "贾诩"
+            ],
+            "dramaIds": [
+              "19255"
+            ]
           },
           {
             "name": "落池",
-            "view_count": 67941622,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202109/18/759d9bd2ecc153ab741ac4372b650136134658.png"
+            "view_count": 67942071,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202109/18/759d9bd2ecc153ab741ac4372b650136134658.png",
+            "cvs": [
+              "景向谁依",
+              "倒霉死勒"
+            ],
+            "dramaIds": [
+              "74648"
+            ]
           },
           {
             "name": "判官",
-            "view_count": 63837320,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202311/01/4abe77a51e42e870ff7b34c45e5175d7120500.jpg"
+            "view_count": 63838519,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202311/01/4abe77a51e42e870ff7b34c45e5175d7120500.jpg",
+            "cvs": [
+              "赵乾景",
+              "吴磊"
+            ],
+            "dramaIds": [
+              "37773",
+              "42264"
+            ]
           },
           {
             "name": "台风眼",
-            "view_count": 62131413,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202207/10/a1b1510f494c55c02f22217981499879155936.jpg"
+            "view_count": 62133966,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202207/10/a1b1510f494c55c02f22217981499879155936.jpg",
+            "cvs": [
+              "史泽鲲",
+              "郝祥海"
+            ],
+            "dramaIds": [
+              "52404",
+              "68664"
+            ]
           },
           {
             "name": "犯罪心理",
-            "view_count": 59560451,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202401/09/6fd6568125a2057b3b4d8c62b75e8a2d184630.png"
+            "view_count": 59561174,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202401/09/6fd6568125a2057b3b4d8c62b75e8a2d184630.png",
+            "cvs": [
+              "姜广涛",
+              "赵成晨"
+            ],
+            "dramaIds": [
+              "21594",
+              "25996",
+              "29150"
+            ]
           },
           {
             "name": "千秋",
-            "view_count": 53956205,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202309/21/5d9099a6d23b3e54ad14dfa90ddfde2a115713.jpg"
+            "view_count": 53956562,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202309/21/5d9099a6d23b3e54ad14dfa90ddfde2a115713.jpg",
+            "cvs": [
+              "夏磊",
+              "吴磊"
+            ],
+            "dramaIds": [
+              "22906",
+              "29156"
+            ]
           },
           {
             "name": "全职高手",
-            "view_count": 53472454,
-            "cover": "https://static.maoercdn.com/dramacoversmini/201906/21/d2ee3b306312e6358c429e00121ccca6165205.jpg"
+            "view_count": 53473424,
+            "cover": "https://static.maoercdn.com/dramacoversmini/201906/21/d2ee3b306312e6358c429e00121ccca6165205.jpg",
+            "cvs": [
+              "阿杰"
+            ],
+            "dramaIds": [
+              "22523",
+              "24136",
+              "25321",
+              "27614",
+              "34122",
+              "64397"
+            ]
           },
           {
             "name": "铜钱龛世",
-            "view_count": 53278223,
-            "cover": "https://static.maoercdn.com/dramacoversmini/201911/15/ed99da535e9606914fe46992e638b25d111402.jpg"
+            "view_count": 53278794,
+            "cover": "https://static.maoercdn.com/dramacoversmini/201911/15/ed99da535e9606914fe46992e638b25d111402.jpg",
+            "cvs": [
+              "路知行",
+              "赵毅"
+            ],
+            "dramaIds": [
+              "24660",
+              "63681"
+            ]
           },
           {
             "name": "彼得·潘与辛德瑞拉",
-            "view_count": 52360183,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202310/16/dc2e1e4389ed4bed2d42b49cc3b0e169153032.webp"
+            "view_count": 52360280,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202310/16/dc2e1e4389ed4bed2d42b49cc3b0e169153032.webp",
+            "cvs": [
+              "羊仔",
+              "景向谁依"
+            ],
+            "dramaIds": [
+              "17678",
+              "20281"
+            ]
           },
           {
             "name": "君有疾否广播剧",
-            "view_count": 50918962,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202310/14/fdd0476cc578bfa62077d2321f51253c211635.jpg"
+            "view_count": 50920054,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202310/14/fdd0476cc578bfa62077d2321f51253c211635.jpg",
+            "cvs": [
+              "马正阳",
+              "陈张太康"
+            ],
+            "dramaIds": [
+              "34592",
+              "42645"
+            ]
           },
           {
             "name": "当年万里觅封侯",
-            "view_count": 50518545,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202309/19/11738723d216e851d9360bd99efaceb8164237.jpg"
+            "view_count": 50518980,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202309/19/11738723d216e851d9360bd99efaceb8164237.jpg",
+            "cvs": [
+              "苏尚卿",
+              "郝祥海"
+            ],
+            "dramaIds": [
+              "26165",
+              "63651"
+            ]
           },
           {
             "name": "我只喜欢你的人设",
-            "view_count": 47101944,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202401/04/91b44a20bd15e809e6ebf86b2fbb9623122424.jpg"
+            "view_count": 47102707,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202401/04/91b44a20bd15e809e6ebf86b2fbb9623122424.jpg",
+            "cvs": [
+              "文森",
+              "赵成晨"
+            ],
+            "dramaIds": [
+              "29154",
+              "40297"
+            ]
           },
           {
             "name": "可爱过敏原",
-            "view_count": 47098425,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202310/13/b010fdcbb00b62ea72998f872799c40c191322.jpg"
+            "view_count": 47099098,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202310/13/b010fdcbb00b62ea72998f872799c40c191322.jpg",
+            "cvs": [
+              "锦鲤",
+              "史泽鲲"
+            ],
+            "dramaIds": [
+              "45209",
+              "51390",
+              "58128"
+            ]
           },
           {
             "name": "网恋翻车指南",
-            "view_count": 46254411,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202310/16/7e93b1710107855f0eaf4a01f3f1c0bc174233.jpg"
+            "view_count": 46255157,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202310/16/7e93b1710107855f0eaf4a01f3f1c0bc174233.jpg",
+            "cvs": [
+              "倒霉死勒",
+              "袁铭喆"
+            ],
+            "dramaIds": [
+              "39617",
+              "57334"
+            ]
           },
           {
             "name": "SCI谜案集",
-            "view_count": 45080196,
-            "cover": "https://static.maoercdn.com/dramacoversmini/201906/16/7f54f62e93f5f011f429f9f394f718f9115153.jpg"
+            "view_count": 45080705,
+            "cover": "https://static.maoercdn.com/dramacoversmini/201906/16/7f54f62e93f5f011f429f9f394f718f9115153.jpg",
+            "cvs": [
+              "涅槃",
+              "倒霉死勒"
+            ],
+            "dramaIds": [
+              "21950",
+              "24433",
+              "29763",
+              "32895",
+              "41293",
+              "48657"
+            ]
           },
           {
             "name": "陈年烈苟",
-            "view_count": 42937957,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202401/29/71c17e6cb4a93a51c085f85a22b61bbb182719.png"
+            "view_count": 42940473,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202401/29/71c17e6cb4a93a51c085f85a22b61bbb182719.png",
+            "cvs": [
+              "凌飞",
+              "苏尚卿"
+            ],
+            "dramaIds": [
+              "61128",
+              "73251"
+            ]
           },
           {
             "name": "小行星",
-            "view_count": 42325155,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202311/02/8c05a550af644dc6f8a8beb4b6456ece045318.jpg"
+            "view_count": 42325610,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202311/02/8c05a550af644dc6f8a8beb4b6456ece045318.jpg",
+            "cvs": [
+              "苏尚卿",
+              "景向谁依"
+            ],
+            "dramaIds": [
+              "40341",
+              "43924"
+            ]
           },
           {
             "name": "奇洛李维斯回信",
-            "view_count": 42161464,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202506/12/fbcb3f8cc4100035399a1eb05c44146e143406.png"
+            "view_count": 42177934,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202506/12/fbcb3f8cc4100035399a1eb05c44146e143406.png",
+            "cvs": [
+              "陈张太康",
+              "郑希"
+            ],
+            "dramaIds": [
+              "85974"
+            ]
           },
           {
             "name": "错撩",
-            "view_count": 41555490,
-            "cover": "https://static.maoercdn.com/dramacoversmini/202208/22/c5d7bd123bb9db79234d80c8ae4e98a6225306.jpg"
+            "view_count": 41556026,
+            "cover": "https://static.maoercdn.com/dramacoversmini/202208/22/c5d7bd123bb9db79234d80c8ae4e98a6225306.jpg",
+            "cvs": [
+              "李诗萌",
+              "景向谁依"
+            ],
+            "dramaIds": [
+              "52355"
+            ]
           }
         ]
       }
@@ -481,13 +908,13 @@
       "15861": {
         "name": "魔道祖师 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202310/27/26dd5e34de2055066ca2bc4dfa39afe1114948.jpg",
-        "view_count": 256929026,
-        "subscription_num": 2247117,
-        "reward_num": 16975,
+        "view_count": 256932535,
+        "subscription_num": 2247147,
+        "reward_num": 16976,
         "reward_total": 790594,
         "updated_at": "2018-09-21T04:16:31+00:00",
         "danmaku_uid_count": null,
-        "fetched_at": "2026-04-17T02:39:45.406417+00:00",
+        "fetched_at": "2026-04-17T05:50:39.771228+00:00",
         "maincvs": [
           "路知行",
           "魏超"
@@ -496,13 +923,13 @@
       "20741": {
         "name": "二哈和他的白猫师尊",
         "cover": "https://static.maoercdn.com/dramacovers/202502/20/a8afcbfbcfa5878c81f0580eea182d7b173654.jpg",
-        "view_count": 160527194,
-        "subscription_num": 3142515,
+        "view_count": 160533077,
+        "subscription_num": 3142566,
         "reward_num": 0,
         "reward_total": 0,
         "updated_at": "2026-04-14T10:48:34+00:00",
         "danmaku_uid_count": null,
-        "fetched_at": "2026-04-17T02:40:03.112522+00:00",
+        "fetched_at": "2026-04-17T05:50:55.776702+00:00",
         "maincvs": [
           "商桐",
           "卡修"
@@ -511,13 +938,13 @@
       "25944": {
         "name": "将进酒 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202402/03/0f25ad2f73ff53270c8c81691264df0d203419.jpg",
-        "view_count": 104232257,
-        "subscription_num": 1421060,
+        "view_count": 104235406,
+        "subscription_num": 1421087,
         "reward_num": 5091,
         "reward_total": 1577593,
         "updated_at": "2020-08-07T04:21:23+00:00",
         "danmaku_uid_count": null,
-        "fetched_at": "2026-04-17T02:40:20.721653+00:00",
+        "fetched_at": "2026-04-17T05:51:10.960765+00:00",
         "maincvs": [
           "姜广涛",
           "袁铭喆"
@@ -526,13 +953,13 @@
       "29125": {
         "name": "小蘑菇 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202310/26/4992f7c2cb751f8fada6d459c2ad61bd164052.jpg",
-        "view_count": 48633531,
-        "subscription_num": 904595,
+        "view_count": 48636674,
+        "subscription_num": 904630,
         "reward_num": 2351,
         "reward_total": 818739,
         "updated_at": "2022-08-27T09:21:11+00:00",
         "danmaku_uid_count": null,
-        "fetched_at": "2026-04-17T02:40:36.809847+00:00",
+        "fetched_at": "2026-04-17T05:51:27.428237+00:00",
         "maincvs": [
           "孙路路",
           "阿杰"
@@ -541,13 +968,13 @@
       "29187": {
         "name": "吞海 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202407/11/269f2a15be26601d3b9b2608919e02bf141740.jpg",
-        "view_count": 49581906,
-        "subscription_num": 513435,
+        "view_count": 49585065,
+        "subscription_num": 513460,
         "reward_num": 1230,
         "reward_total": 835560,
         "updated_at": "2024-10-30T10:59:57+00:00",
         "danmaku_uid_count": null,
-        "fetched_at": "2026-04-17T02:40:53.001046+00:00",
+        "fetched_at": "2026-04-17T05:51:44.384008+00:00",
         "maincvs": [
           "陈张太康",
           "郑希"
@@ -556,13 +983,13 @@
       "31552": {
         "name": "你的距离",
         "cover": "https://static.maoercdn.com/dramacovers/202402/04/c786840bd41e87142595432516af06bc161352.png",
-        "view_count": 88980342,
-        "subscription_num": 927074,
+        "view_count": 88983532,
+        "subscription_num": 927105,
         "reward_num": 2991,
         "reward_total": 744368,
         "updated_at": "2021-06-20T05:20:28+00:00",
         "danmaku_uid_count": null,
-        "fetched_at": "2026-04-17T02:41:09.927892+00:00",
+        "fetched_at": "2026-04-17T05:52:01.796487+00:00",
         "maincvs": [
           "羊仔",
           "郑希"
@@ -1533,7 +1960,7 @@
         "name": "热播榜",
         "rankId": 0,
         "unitName": "热度",
-        "fetched_at": "2026-04-17T04:51:29.022587+00:00",
+        "fetched_at": "2026-04-17T06:27:28.692337+00:00",
         "items": [
           {
             "dramaId": "2087206604062588962",
@@ -1621,7 +2048,7 @@
         "name": "票房榜总榜",
         "rankId": 7,
         "unitName": "票房值",
-        "fetched_at": "2026-04-17T04:51:30.045372+00:00",
+        "fetched_at": "2026-04-17T06:27:29.729308+00:00",
         "items": [
           {
             "dramaId": "2087206604062588962",
@@ -1709,7 +2136,7 @@
         "name": "票房榜会员剧榜",
         "rankId": 8,
         "unitName": "票房值",
-        "fetched_at": "2026-04-17T04:51:31.108426+00:00",
+        "fetched_at": "2026-04-17T06:27:30.791462+00:00",
         "items": [
           {
             "dramaId": "2180734748203155603",
@@ -1757,7 +2184,7 @@
         "name": "票房榜付费剧榜",
         "rankId": 9,
         "unitName": "票房值",
-        "fetched_at": "2026-04-17T04:51:32.161880+00:00",
+        "fetched_at": "2026-04-17T06:27:31.819753+00:00",
         "items": [
           {
             "dramaId": "2087206604062588962",
@@ -1805,15 +2232,15 @@
         "name": "钻石榜月榜",
         "rankId": 5,
         "unitName": "钻石",
-        "fetched_at": "2026-04-17T04:51:33.438886+00:00",
+        "fetched_at": "2026-04-17T06:27:33.119155+00:00",
         "items": [
           {
             "dramaId": "2191530234400997469",
-            "diamondValue": 2515935
+            "diamondValue": 2519065
           },
           {
             "dramaId": "2188837813892415606",
-            "diamondValue": 2025975
+            "diamondValue": 2026282
           },
           {
             "dramaId": "2069873254222266552",
@@ -1845,7 +2272,7 @@
           },
           {
             "dramaId": "2153578778092109868",
-            "diamondValue": 121550
+            "diamondValue": 121560
           },
           {
             "dramaId": "2087206604062588962",
@@ -1853,7 +2280,7 @@
           },
           {
             "dramaId": "2126945977947390043",
-            "diamondValue": 113867
+            "diamondValue": 113937
           },
           {
             "dramaId": "2083142877805805672",
@@ -1861,7 +2288,7 @@
           },
           {
             "dramaId": "2117301040473702473",
-            "diamondValue": 77455
+            "diamondValue": 77554
           },
           {
             "dramaId": "1955825512983036032",
@@ -1893,7 +2320,7 @@
         "name": "巅峰榜",
         "rankId": 4,
         "unitName": "播放量",
-        "fetched_at": "2026-04-17T04:51:35.136598+00:00",
+        "fetched_at": "2026-04-17T06:27:34.846603+00:00",
         "items": [
           {
             "dramaId": "1946295508834189409",
