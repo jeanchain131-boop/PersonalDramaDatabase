@@ -16,7 +16,9 @@ import requests
 
 from platform_sync import (
     MANBO_HEADERS,
+    MANBO_CATALOG_NAME_BY_ID,
     MISSEVAN_HEADERS,
+    MISSEVAN_CATALOG_NAME_BY_ID,
     MissevanRequester,
     load_json,
     request_manbo_json,
@@ -483,8 +485,59 @@ def _fetch_one_manbo(drama_id: str, entry: dict) -> None:
 # Phase 6: Upstash CV lookup
 # ---------------------------------------------------------------------------
 
+def catalog_name_from_missevan(node: dict) -> str | None:
+    value = node.get("catalog")
+    if value in (None, ""):
+        return None
+    try:
+        return MISSEVAN_CATALOG_NAME_BY_ID.get(int(value))
+    except (TypeError, ValueError):
+        return None
+
+
+def catalog_name_from_manbo(record: dict) -> str | None:
+    name = str(record.get("catalogName") or "").strip()
+    if name:
+        return name
+    value = record.get("catalog")
+    if value in (None, ""):
+        return None
+    try:
+        return MANBO_CATALOG_NAME_BY_ID.get(int(value))
+    except (TypeError, ValueError):
+        return None
+
+
+def pay_status_from_needpay(value: object) -> str | None:
+    if value is True:
+        return "付费"
+    if value is False:
+        return "免费"
+    return None
+
+
+def metadata_create_time(source: dict) -> str | None:
+    value = str(source.get("createTime") or "").strip()
+    return value or None
+
+
+def update_metadata_fields(entry: dict, *, catalog_name: str | None, pay_status: str | None, create_time: str | None) -> None:
+    if catalog_name is not None:
+        entry["catalogName"] = catalog_name
+    else:
+        entry.setdefault("catalogName", None)
+    if pay_status is not None:
+        entry["payStatus"] = pay_status
+    else:
+        entry.setdefault("payStatus", None)
+    if create_time is not None:
+        entry["createTime"] = create_time
+    else:
+        entry.setdefault("createTime", None)
+
+
 def lookup_cvs(store: dict) -> None:
-    """Look up main CVs from Upstash info stores and register unknown IDs."""
+    """Look up main CVs and metadata from Upstash info stores, registering unknown IDs."""
     missevan_dramas = store["missevan"].get("dramas") or {}
     manbo_dramas = store["manbo"].get("dramas") or {}
 
@@ -510,8 +563,15 @@ def lookup_cvs(store: dict) -> None:
             cvnames = node.get("cvnames") or {}
             maincvs_ids = node.get("maincvs") or []
             entry["maincvs"] = [cvnames.get(str(cid), str(cid)) for cid in maincvs_ids] or None
+            update_metadata_fields(
+                entry,
+                catalog_name=catalog_name_from_missevan(node),
+                pay_status=pay_status_from_needpay(node.get("needpay")),
+                create_time=metadata_create_time(node),
+            )
         else:
             entry.setdefault("maincvs", None)
+            update_metadata_fields(entry, catalog_name=None, pay_status=None, create_time=None)
             new_missevan.append(str(drama_id))
 
     # Manbo CV lookup
@@ -519,8 +579,15 @@ def lookup_cvs(store: dict) -> None:
         record = manbo_by_id.get(drama_id)
         if record:
             entry["maincvs"] = record.get("mainCvNames") or None
+            update_metadata_fields(
+                entry,
+                catalog_name=catalog_name_from_manbo(record),
+                pay_status=pay_status_from_needpay(record.get("needpay")),
+                create_time=metadata_create_time(record),
+            )
         else:
             entry.setdefault("maincvs", None)
+            update_metadata_fields(entry, catalog_name=None, pay_status=None, create_time=None)
             new_manbo.append(drama_id)
 
     # Register unknown IDs to queue
