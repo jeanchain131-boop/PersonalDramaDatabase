@@ -16,6 +16,7 @@ import requests
 
 from platform_sync import (
     MANBO_HEADERS,
+    MANBO_CATALOG_NAME_ALIASES,
     MANBO_CATALOG_NAME_BY_ID,
     MISSEVAN_HEADERS,
     MISSEVAN_CATALOG_NAME_BY_ID,
@@ -498,7 +499,7 @@ def catalog_name_from_missevan(node: dict) -> str | None:
 def catalog_name_from_manbo(record: dict) -> str | None:
     name = str(record.get("catalogName") or "").strip()
     if name:
-        return name
+        return MANBO_CATALOG_NAME_ALIASES.get(name, name)
     value = record.get("catalog")
     if value in (None, ""):
         return None

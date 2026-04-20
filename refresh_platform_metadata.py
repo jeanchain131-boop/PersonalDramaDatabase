@@ -8,6 +8,7 @@ from clean_manbo_pricing import MANBO_PRICING_EXCLUSIONS, classify_manbo_pricing
 from cvid_map_tools import load_combined_map
 from platform_sync import (
     GENRE_BY_TYPE,
+    MANBO_CATALOG_NAME_ALIASES,
     MANBO_CATALOG_NAME_BY_ID,
     MANBO_COUNTS_PATH,
     MANBO_INFO_PATH,
@@ -166,6 +167,11 @@ MANBO_AUTHOR_SOURCE_PREFIXES = (
     "酷威文化",
     "快看",
 )
+
+
+def normalize_manbo_catalog_name(value: object) -> str:
+    name = normalize(value)
+    return MANBO_CATALOG_NAME_ALIASES.get(name, name)
 
 
 def clean_manbo_author_candidate(value: object) -> str:
@@ -610,11 +616,11 @@ def build_manbo_record(record: dict, payload: dict, manbo_cv_name_map: dict[int,
     override = MANBO_CATALOG_OVERRIDES.get(normalize(record.get("normalizedName") or record.get("name") or data.get("title")))
     if override is not None:
         final_catalog = int(override["catalog"])
-        catalog_name = normalize(override["catalogName"])
+        catalog_name = normalize_manbo_catalog_name(override["catalogName"])
     else:
         final_catalog = None if catalog in (None, "") else int(catalog)
         default_catalog_name = MANBO_CATALOG_NAME_BY_ID.get(int(final_catalog), "") if final_catalog is not None else ""
-        catalog_name = normalize(category_resp.get("name") or default_catalog_name)
+        catalog_name = normalize_manbo_catalog_name(category_resp.get("name") or default_catalog_name)
 
     updated = dict(record)
     updated["name"] = normalize(data.get("title") or record.get("name"))
@@ -637,9 +643,11 @@ def build_manbo_record(record: dict, payload: dict, manbo_cv_name_map: dict[int,
 
 def finalize_manbo_records(records: list[dict]) -> None:
     for record in records:
-        catalog_name = normalize(record.get("catalogName"))
+        catalog_name = normalize_manbo_catalog_name(record.get("catalogName"))
         if not catalog_name and record.get("catalog") not in (None, ""):
-            record["catalogName"] = MANBO_CATALOG_NAME_BY_ID.get(int(record["catalog"]), "")
+            record["catalogName"] = normalize_manbo_catalog_name(MANBO_CATALOG_NAME_BY_ID.get(int(record["catalog"]), ""))
+        elif catalog_name:
+            record["catalogName"] = catalog_name
     finalize_series_titles(records, title_key="name", catalog_key="catalog", catalog_name_key="catalogName", output_key="seriesTitle")
 
 

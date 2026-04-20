@@ -35,8 +35,9 @@ MANBO_HEADERS = {
 BJ_TZ = timezone(timedelta(hours=8))
 
 GENRE_BY_TYPE = {3: "全年龄", 4: "纯爱", 6: "言情"}
-MISSEVAN_CATALOG_NAME_BY_ID = {89: "广播剧", 93: "有声剧", 96: "有声漫"}
+MISSEVAN_CATALOG_NAME_BY_ID = {89: "广播剧", 90: "广播剧", 93: "有声剧", 96: "有声漫"}
 MANBO_CATALOG_NAME_BY_ID = {1: "广播剧", 5: "有声剧"}
+MANBO_CATALOG_NAME_ALIASES = {"有声书": "有声剧"}
 CATALOG_SUFFIX_BY_NAME = {
     "广播剧": "广播剧",
     "有声剧": "有声剧",

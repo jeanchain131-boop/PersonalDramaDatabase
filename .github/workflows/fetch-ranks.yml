@@ -13,7 +13,7 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 75
 
     steps:
       - name: Checkout repository
@@ -33,10 +33,16 @@ jobs:
           UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
           UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
 
-      - name: Commit updated ranks.json
+      - name: Run sync_new_drama_ids.py
+        run: python sync_new_drama_ids.py
+        env:
+          UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
+          UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+
+      - name: Commit updated JSON data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ranks.json
-          git diff --cached --quiet || git commit -m "chore: update ranks.json [skip ci]"
+          git add ranks.json manbo-drama-info.json manbo-watch-counts.json missevan-drama-info.json missevan-watch-counts.json 'missevan&manbo-cvid-map.json'
+          git diff --cached --quiet || git commit -m "chore: update rank and drama JSON data [skip ci]"
           git push
