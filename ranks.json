@@ -1,48 +1,48 @@
 {
   "_meta": {
-    "updated_at": "2026-04-21T00:18:24.588673+00:00"
+    "updated_at": "2026-04-22T00:13:40.704346+00:00"
   },
   "missevan": {
     "ranks": {
       "new_daily": {
         "name": "新品日榜",
-        "fetched_at": "2026-04-20T23:56:04.894058+00:00",
+        "fetched_at": "2026-04-21T23:49:37.767566+00:00",
         "items": [
           86815,
           93038,
           86834,
-          86684,
           93113,
-          92988,
-          86692,
-          93154,
-          86827,
-          86740,
-          90985,
-          93169,
-          91870,
-          86789,
-          92575,
-          92895,
-          86723,
-          91771,
           92520,
-          91354,
-          93005,
-          92775,
-          92611,
-          90896,
-          92968,
-          92155,
+          86684,
+          86789,
+          93169,
+          92988,
+          93154,
+          90985,
+          86740,
+          86827,
+          91870,
+          91771,
+          86692,
           93196,
+          92155,
+          86723,
+          92775,
+          92770,
+          91661,
+          90896,
+          91354,
+          92611,
+          93005,
           92701,
-          92245,
-          92633
+          92968,
+          91589,
+          92895
         ]
       },
       "new_weekly": {
         "name": "新品周榜",
-        "fetched_at": "2026-04-20T23:56:08.728424+00:00",
+        "fetched_at": "2026-04-21T23:49:41.204771+00:00",
         "items": [
           93038,
           86815,
@@ -50,35 +50,35 @@
           92988,
           93113,
           86740,
-          86789,
           86692,
+          86789,
           86684,
           86827,
           93005,
           90985,
+          93154,
           91870,
+          92520,
           92968,
           86723,
-          93154,
           91354,
-          92520,
           92611,
           92895,
           92155,
-          91771,
           90896,
-          91418,
           92575,
-          92775,
+          91418,
+          91771,
           92701,
+          93169,
           92245,
-          92633,
-          86818
+          92775,
+          92633
         ]
       },
       "popular_weekly": {
         "name": "人气周榜",
-        "fetched_at": "2026-04-20T23:56:12.893536+00:00",
+        "fetched_at": "2026-04-21T23:49:44.529165+00:00",
         "items": [
           93038,
           86815,
@@ -89,32 +89,32 @@
           86834,
           86822,
           64911,
-          90818,
           72230,
-          92988,
+          90818,
           86179,
           52400,
           52347,
+          92988,
           80533,
           15861,
-          93113,
           68837,
           85562,
+          93113,
           91718,
           86740,
           43922,
-          58217,
           71321,
-          82040,
+          58217,
           46640,
+          86692,
           25944,
-          86789,
-          81851
+          82040,
+          86789
         ]
       },
       "popular_monthly": {
         "name": "人气月榜",
-        "fetched_at": "2026-04-20T23:56:16.307360+00:00",
+        "fetched_at": "2026-04-21T23:49:48.005906+00:00",
         "items": [
           86815,
           85974,
@@ -123,25 +123,25 @@
           20741,
           86822,
           64911,
-          89245,
           86834,
+          89245,
           90818,
           52400,
           84529,
-          86179,
           52347,
+          86179,
           15861,
           72230,
           91718,
           43922,
           80533,
-          68837,
           25944,
-          92611,
+          68837,
           58217,
+          92611,
           29125,
-          92520,
           92988,
+          92520,
           46640,
           82040,
           58262,
@@ -150,11 +150,11 @@
       },
       "bestseller_weekly": {
         "name": "畅销周榜",
-        "fetched_at": "2026-04-20T23:56:20.750589+00:00",
+        "fetched_at": "2026-04-21T23:49:52.461626+00:00",
         "items": [
           86815,
-          93038,
           86834,
+          93038,
           72230,
           85974,
           86178,
@@ -162,49 +162,49 @@
           90818,
           85562,
           86179,
-          93113,
-          91870,
-          92520,
-          81851,
           90987,
-          93005,
+          81851,
+          93113,
           82040,
+          93005,
+          91870,
+          86684,
+          85110,
+          64911,
           86789,
           75026,
-          85110,
-          86684,
-          64911,
+          92520,
           52400,
+          68837,
           71389,
           31552,
-          68837,
+          85497,
           86740,
           52347,
-          90985,
-          85497
+          90985
         ]
       },
       "bestseller_monthly": {
         "name": "畅销月榜",
-        "fetched_at": "2026-04-20T23:56:25.286470+00:00",
+        "fetched_at": "2026-04-21T23:49:56.759782+00:00",
         "items": [
           86815,
           86834,
           85974,
-          86178,
           93038,
+          86178,
           86179,
-          86789,
           72230,
+          86789,
           90818,
           86740,
           86684,
-          82040,
           85562,
+          82040,
           90987,
           81851,
-          92611,
           71389,
+          92611,
           75026,
           52400,
           85110,
@@ -212,9 +212,9 @@
           86827,
           90985,
           68837,
+          91870,
           77591,
           86723,
-          91870,
           52347,
           29187,
           93005
@@ -222,11 +222,11 @@
       },
       "peak": {
         "name": "巅峰榜",
-        "fetched_at": "2026-04-20T23:56:30.362079+00:00",
+        "fetched_at": "2026-04-21T23:50:01.680423+00:00",
         "items": [
           {
             "name": "魔道祖师",
-            "view_count": 721317125,
+            "view_count": 721386671,
             "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/108a20bcf469221699b798b9cf5f4ecd.jpg",
             "cvs": [
               "路知行",
@@ -240,7 +240,7 @@
           },
           {
             "name": "虚拟偶像声音综艺系列",
-            "view_count": 358187648,
+            "view_count": 358332537,
             "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/cd50fc6462d59347466dda83b09b759d.jpg",
             "cvs": [
               "LASER",
@@ -258,7 +258,7 @@
           },
           {
             "name": "将进酒",
-            "view_count": 266448647,
+            "view_count": 266510077,
             "cover": "https://static.maoercdn.com/dramacoversmini/202402/03/0f25ad2f73ff53270c8c81691264df0d203419.jpg",
             "cvs": [
               "姜广涛",
@@ -274,7 +274,7 @@
           },
           {
             "name": "天官赐福",
-            "view_count": 225636354,
+            "view_count": 225977271,
             "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/19c946c3c9e4b701cc2ddbdf01d3cccb.jpg",
             "cvs": [
               "苏尚卿",
@@ -289,7 +289,7 @@
           },
           {
             "name": "撒野",
-            "view_count": 207585290,
+            "view_count": 207595549,
             "cover": "https://static.maoercdn.com/manage-assets/upload/2026/2/946476302c8a0c9b7f0cefd690a55043.jpg",
             "cvs": [
               "倒霉死勒",
@@ -304,7 +304,7 @@
           },
           {
             "name": "偷偷藏不住",
-            "view_count": 201228853,
+            "view_count": 201248660,
             "cover": "https://static.maoercdn.com/dramacoversmini/202101/30/e6ac00f9bee3b69979816abc6e146795185908.jpg",
             "cvs": [
               "浮梦若薇",
@@ -316,7 +316,7 @@
           },
           {
             "name": "伪装学渣",
-            "view_count": 176594156,
+            "view_count": 176611996,
             "cover": "https://static.maoercdn.com/dramacoversmini/202401/09/d13aa713301df4966ae42b74a1251075183250.jpg",
             "cvs": [
               "风袖",
@@ -329,7 +329,7 @@
           },
           {
             "name": "我喜欢你的信息素",
-            "view_count": 173673528,
+            "view_count": 173705284,
             "cover": "https://static.maoercdn.com/dramacoversmini/202310/20/9ce5bbe9f2433f1df847255d0854c61e113443.jpg",
             "cvs": [
               "路知行",
@@ -342,7 +342,7 @@
           },
           {
             "name": "杀破狼",
-            "view_count": 167094555,
+            "view_count": 167112003,
             "cover": "https://static.maoercdn.com/dramacoversmini/202306/01/4d5ffed95b37aa5dffc60bc4b463a824143851.jpg",
             "cvs": [
               "阿杰",
@@ -356,7 +356,7 @@
           },
           {
             "name": "某某",
-            "view_count": 162188168,
+            "view_count": 162212285,
             "cover": "https://static.maoercdn.com/dramacoversmini/202309/20/b94037e0b6cbdab066c10d6bf080e1c7225309.jpg",
             "cvs": [
               "凌飞",
@@ -369,7 +369,7 @@
           },
           {
             "name": "二哈和他的白猫师尊广播剧（翼之声中文配音社团）",
-            "view_count": 160753811,
+            "view_count": 160807870,
             "cover": "https://static.maoercdn.com/dramacoversmini/202502/20/a8afcbfbcfa5878c81f0580eea182d7b173654.jpg",
             "cvs": [
               "商桐",
@@ -381,7 +381,7 @@
           },
           {
             "name": "破云",
-            "view_count": 148185406,
+            "view_count": 148202745,
             "cover": "https://static.maoercdn.com/dramacoversmini/202208/23/093b3c4df124247608970127cc6af1ad222108.png",
             "cvs": [
               "阿春",
@@ -395,7 +395,7 @@
           },
           {
             "name": "难哄",
-            "view_count": 145121451,
+            "view_count": 145138316,
             "cover": "https://static.maoercdn.com/dramacoversmini/202110/15/7977b7314b0139cc8c7c7b40877b71f6180040.jpg",
             "cvs": [
               "伤洛",
@@ -407,7 +407,7 @@
           },
           {
             "name": "AWM",
-            "view_count": 141661259,
+            "view_count": 141678432,
             "cover": "https://static.maoercdn.com/dramacoversmini/201906/21/b95f57f46e9689bec0b19c141560a67e171225.jpg",
             "cvs": [
               "姜广涛",
@@ -420,7 +420,7 @@
           },
           {
             "name": "我在无限游戏里封神",
-            "view_count": 133156199,
+            "view_count": 133270695,
             "cover": "https://static.maoercdn.com/dramacoversmini/202305/07/429713243473481f425bd661ec4bf216161424.jpg",
             "cvs": [
               "倒霉死勒",
@@ -436,7 +436,7 @@
           },
           {
             "name": "重生之将门毒后",
-            "view_count": 131380038,
+            "view_count": 131428633,
             "cover": "https://static.maoercdn.com/dramacoversmini/202112/24/2a67147747c63ff396b63c4c442af03e162350.jpg",
             "cvs": [
               "刘校妤",
@@ -449,7 +449,7 @@
           },
           {
             "name": "营业悖论",
-            "view_count": 128455813,
+            "view_count": 128471729,
             "cover": "https://static.maoercdn.com/dramacoversmini/202106/06/1cd234dacadc86cd849e08fea443d9b8130013.jpg",
             "cvs": [
               "吴晛",
@@ -467,7 +467,7 @@
           },
           {
             "name": "FOG[电竞]",
-            "view_count": 126058198,
+            "view_count": 126091346,
             "cover": "https://static.maoercdn.com/dramacoversmini/202401/05/3e9f2d6b68eb008e9e18a3cf9c7d9ea4201543.jpg",
             "cvs": [
               "马正阳",
@@ -480,7 +480,7 @@
           },
           {
             "name": "吞海",
-            "view_count": 121239957,
+            "view_count": 121304447,
             "cover": "https://static.maoercdn.com/dramacoversmini/202407/11/269f2a15be26601d3b9b2608919e02bf141740.jpg",
             "cvs": [
               "陈张太康",
@@ -495,7 +495,7 @@
           },
           {
             "name": "迪奥先生",
-            "view_count": 114826525,
+            "view_count": 114834783,
             "cover": "https://static.maoercdn.com/dramacoversmini/202310/13/9a0c9ac6d492f1f4d1c737f103ed42db205314.jpg",
             "cvs": [
               "景向谁依",
@@ -508,7 +508,7 @@
           },
           {
             "name": "残次品",
-            "view_count": 108990833,
+            "view_count": 108996053,
             "cover": "https://static.maoercdn.com/dramacoversmini/202306/01/320e002ee91c66f2930fc8cfa58f829c150153.jpg",
             "cvs": [
               "沈磊",
@@ -523,7 +523,7 @@
           },
           {
             "name": "小蘑菇",
-            "view_count": 98460755,
+            "view_count": 98588157,
             "cover": "https://static.maoercdn.com/dramacoversmini/202310/26/4992f7c2cb751f8fada6d459c2ad61bd164052.jpg",
             "cvs": [
               "孙路路",
@@ -536,7 +536,7 @@
           },
           {
             "name": "1930来的先生",
-            "view_count": 97709377,
+            "view_count": 97715342,
             "cover": "https://static.maoercdn.com/dramacoversmini/202306/01/77ec663309cbe52883e406bceec3f2e8143554.jpg",
             "cvs": [
               "羊仔",
@@ -548,7 +548,7 @@
           },
           {
             "name": "我嗑了对家X我的CP",
-            "view_count": 93154879,
+            "view_count": 93185947,
             "cover": "https://static.maoercdn.com/dramacoversmini/202401/09/96a3ba3a6ecaf9dc15532062d2e17fbf184630.jpg",
             "cvs": [
               "陈张太康",
@@ -561,7 +561,7 @@
           },
           {
             "name": "你的距离",
-            "view_count": 89078912,
+            "view_count": 89103954,
             "cover": "https://static.maoercdn.com/dramacoversmini/202402/04/c786840bd41e87142595432516af06bc161352.png",
             "cvs": [
               "羊仔",
@@ -573,7 +573,7 @@
           },
           {
             "name": "如果月亮不抱你",
-            "view_count": 82999980,
+            "view_count": 83008111,
             "cover": "https://static.maoercdn.com/dramacoversmini/202007/28/2fbb5f76fade142f4a58e54ccb473912135535.jpg",
             "cvs": [
               "浮梦若薇",
@@ -585,7 +585,7 @@
           },
           {
             "name": "全球高考",
-            "view_count": 80600267,
+            "view_count": 80635006,
             "cover": "https://static.maoercdn.com/dramacoversmini/202401/16/ed0277497c52a665c698b64ae9046de6144652.jpg",
             "cvs": [
               "路知行",
@@ -599,7 +599,7 @@
           },
           {
             "name": "放学等我",
-            "view_count": 79291597,
+            "view_count": 79341926,
             "cover": "https://static.maoercdn.com/dramacoversmini/202309/14/27da5bf1fb32009fdf5f084690eb0a3e120535.jpg",
             "cvs": [
               "凌飞",
@@ -612,7 +612,7 @@
           },
           {
             "name": "夫人你马甲又掉了",
-            "view_count": 77719439,
+            "view_count": 77733577,
             "cover": "https://static.maoercdn.com/dramacoversmini/202106/17/f5d9c408b5184bc7f072605587f934be150438.jpg",
             "cvs": [
               "姜广涛",
@@ -625,7 +625,7 @@
           },
           {
             "name": "论以貌取人的下场",
-            "view_count": 71230835,
+            "view_count": 71244022,
             "cover": "https://static.maoercdn.com/dramacoversmini/202208/24/ec26161c3de5ab3733e3f005c1496f99224522.jpg",
             "cvs": [
               "彭尧",
@@ -638,7 +638,7 @@
           },
           {
             "name": "碎玉投珠",
-            "view_count": 70719129,
+            "view_count": 70738546,
             "cover": "https://static.maoercdn.com/dramacoversmini/202309/12/2a0321f3b5507122fe18abad82f5d2fb200224.jpg",
             "cvs": [
               "凌飞",
@@ -651,7 +651,7 @@
           },
           {
             "name": "娘娘腔（贾诩、苏莫离）",
-            "view_count": 68450556,
+            "view_count": 68454709,
             "cover": "https://static.maoercdn.com/dramacoversmini/202002/12/bd9622c22b7fc6fea3aa49812efcc9cc131936.jpg",
             "cvs": [
               "苏莫离",
@@ -663,7 +663,7 @@
           },
           {
             "name": "落池",
-            "view_count": 67966639,
+            "view_count": 67972873,
             "cover": "https://static.maoercdn.com/dramacoversmini/202109/18/759d9bd2ecc153ab741ac4372b650136134658.png",
             "cvs": [
               "景向谁依",
@@ -675,7 +675,7 @@
           },
           {
             "name": "判官",
-            "view_count": 63906555,
+            "view_count": 63923233,
             "cover": "https://static.maoercdn.com/dramacoversmini/202311/01/4abe77a51e42e870ff7b34c45e5175d7120500.jpg",
             "cvs": [
               "赵乾景",
@@ -688,7 +688,7 @@
           },
           {
             "name": "台风眼",
-            "view_count": 62332290,
+            "view_count": 62385053,
             "cover": "https://static.maoercdn.com/dramacoversmini/202207/10/a1b1510f494c55c02f22217981499879155936.jpg",
             "cvs": [
               "史泽鲲",
@@ -701,7 +701,7 @@
           },
           {
             "name": "犯罪心理",
-            "view_count": 59595858,
+            "view_count": 59605651,
             "cover": "https://static.maoercdn.com/dramacoversmini/202401/09/6fd6568125a2057b3b4d8c62b75e8a2d184630.png",
             "cvs": [
               "姜广涛",
@@ -715,7 +715,7 @@
           },
           {
             "name": "千秋",
-            "view_count": 53975741,
+            "view_count": 53980686,
             "cover": "https://static.maoercdn.com/dramacoversmini/202309/21/5d9099a6d23b3e54ad14dfa90ddfde2a115713.jpg",
             "cvs": [
               "夏磊",
@@ -728,7 +728,7 @@
           },
           {
             "name": "全职高手",
-            "view_count": 53523796,
+            "view_count": 53537170,
             "cover": "https://static.maoercdn.com/dramacoversmini/201906/21/d2ee3b306312e6358c429e00121ccca6165205.jpg",
             "cvs": [
               "阿杰"
@@ -744,7 +744,7 @@
           },
           {
             "name": "铜钱龛世",
-            "view_count": 53305669,
+            "view_count": 53312374,
             "cover": "https://static.maoercdn.com/dramacoversmini/201911/15/ed99da535e9606914fe46992e638b25d111402.jpg",
             "cvs": [
               "路知行",
@@ -757,7 +757,7 @@
           },
           {
             "name": "彼得·潘与辛德瑞拉",
-            "view_count": 52368362,
+            "view_count": 52370255,
             "cover": "https://static.maoercdn.com/dramacoversmini/202310/16/dc2e1e4389ed4bed2d42b49cc3b0e169153032.webp",
             "cvs": [
               "羊仔",
@@ -770,7 +770,7 @@
           },
           {
             "name": "君有疾否广播剧",
-            "view_count": 50981044,
+            "view_count": 50994172,
             "cover": "https://static.maoercdn.com/dramacoversmini/202310/14/fdd0476cc578bfa62077d2321f51253c211635.jpg",
             "cvs": [
               "马正阳",
@@ -783,7 +783,7 @@
           },
           {
             "name": "当年万里觅封侯",
-            "view_count": 50548134,
+            "view_count": 50556435,
             "cover": "https://static.maoercdn.com/dramacoversmini/202309/19/11738723d216e851d9360bd99efaceb8164237.jpg",
             "cvs": [
               "苏尚卿",
@@ -796,7 +796,7 @@
           },
           {
             "name": "可爱过敏原",
-            "view_count": 47146368,
+            "view_count": 47155890,
             "cover": "https://static.maoercdn.com/dramacoversmini/202310/13/b010fdcbb00b62ea72998f872799c40c191322.jpg",
             "cvs": [
               "锦鲤",
@@ -810,7 +810,7 @@
           },
           {
             "name": "我只喜欢你的人设",
-            "view_count": 47145721,
+            "view_count": 47154259,
             "cover": "https://static.maoercdn.com/dramacoversmini/202401/04/91b44a20bd15e809e6ebf86b2fbb9623122424.jpg",
             "cvs": [
               "文森",
@@ -823,7 +823,7 @@
           },
           {
             "name": "网恋翻车指南",
-            "view_count": 46299114,
+            "view_count": 46311722,
             "cover": "https://static.maoercdn.com/dramacoversmini/202310/16/7e93b1710107855f0eaf4a01f3f1c0bc174233.jpg",
             "cvs": [
               "倒霉死勒",
@@ -836,7 +836,7 @@
           },
           {
             "name": "SCI谜案集",
-            "view_count": 45103242,
+            "view_count": 45109383,
             "cover": "https://static.maoercdn.com/dramacoversmini/201906/16/7f54f62e93f5f011f429f9f394f718f9115153.jpg",
             "cvs": [
               "涅槃",
@@ -853,7 +853,7 @@
           },
           {
             "name": "陈年烈苟",
-            "view_count": 43067062,
+            "view_count": 43099509,
             "cover": "https://static.maoercdn.com/dramacoversmini/202401/29/71c17e6cb4a93a51c085f85a22b61bbb182719.png",
             "cvs": [
               "凌飞",
@@ -866,7 +866,7 @@
           },
           {
             "name": "奇洛李维斯回信",
-            "view_count": 42926932,
+            "view_count": 43077904,
             "cover": "https://static.maoercdn.com/dramacoversmini/202506/12/fbcb3f8cc4100035399a1eb05c44146e143406.png",
             "cvs": [
               "陈张太康",
@@ -878,7 +878,7 @@
           },
           {
             "name": "小行星",
-            "view_count": 42347985,
+            "view_count": 42354037,
             "cover": "https://static.maoercdn.com/dramacoversmini/202311/02/8c05a550af644dc6f8a8beb4b6456ece045318.jpg",
             "cvs": [
               "苏尚卿",
@@ -891,7 +891,7 @@
           },
           {
             "name": "错撩",
-            "view_count": 41585890,
+            "view_count": 41593328,
             "cover": "https://static.maoercdn.com/dramacoversmini/202208/22/c5d7bd123bb9db79234d80c8ae4e98a6225306.jpg",
             "cvs": [
               "李诗萌",
@@ -908,13 +908,13 @@
       "15861": {
         "name": "魔道祖师 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202310/27/26dd5e34de2055066ca2bc4dfa39afe1114948.jpg",
-        "view_count": 257034882,
-        "subscription_num": 2248365,
-        "reward_num": 16976,
+        "view_count": 257059776,
+        "subscription_num": 2248588,
+        "reward_num": 16979,
         "reward_total": 790594,
         "updated_at": "2018-09-21T04:16:31+00:00",
         "danmaku_uid_count": 64531,
-        "fetched_at": "2026-04-20T23:56:54.016855+00:00",
+        "fetched_at": "2026-04-21T23:50:24.654658+00:00",
         "maincvs": [
           "路知行",
           "魏超"
@@ -927,13 +927,13 @@
       "20741": {
         "name": "二哈和他的白猫师尊",
         "cover": "https://static.maoercdn.com/dramacovers/202502/20/a8afcbfbcfa5878c81f0580eea182d7b173654.jpg",
-        "view_count": 160753819,
-        "subscription_num": 3144085,
+        "view_count": 160808094,
+        "subscription_num": 3144376,
         "reward_num": 0,
         "reward_total": 0,
         "updated_at": "2026-04-19T09:58:40+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-20T23:57:10.243807+00:00",
+        "fetched_at": "2026-04-21T23:50:41.172332+00:00",
         "maincvs": [
           "商桐",
           "卡修"
@@ -946,13 +946,13 @@
       "25944": {
         "name": "将进酒 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202402/03/0f25ad2f73ff53270c8c81691264df0d203419.jpg",
-        "view_count": 104311619,
-        "subscription_num": 1422014,
+        "view_count": 104332195,
+        "subscription_num": 1422227,
         "reward_num": 5091,
         "reward_total": 1577593,
         "updated_at": "2020-08-07T04:21:23+00:00",
         "danmaku_uid_count": 53296,
-        "fetched_at": "2026-04-20T23:57:26.822851+00:00",
+        "fetched_at": "2026-04-21T23:50:57.746010+00:00",
         "maincvs": [
           "姜广涛",
           "袁铭喆"
@@ -965,13 +965,13 @@
       "29125": {
         "name": "小蘑菇 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202310/26/4992f7c2cb751f8fada6d459c2ad61bd164052.jpg",
-        "view_count": 48796791,
-        "subscription_num": 905565,
-        "reward_num": 2352,
+        "view_count": 48845342,
+        "subscription_num": 905758,
+        "reward_num": 2353,
         "reward_total": 818739,
         "updated_at": "2022-08-27T09:21:11+00:00",
         "danmaku_uid_count": 38885,
-        "fetched_at": "2026-04-20T23:57:42.055990+00:00",
+        "fetched_at": "2026-04-21T23:51:14.579831+00:00",
         "maincvs": [
           "孙路路",
           "阿杰"
@@ -984,13 +984,13 @@
       "29187": {
         "name": "吞海 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202407/11/269f2a15be26601d3b9b2608919e02bf141740.jpg",
-        "view_count": 49692728,
-        "subscription_num": 514310,
-        "reward_num": 1231,
+        "view_count": 49718572,
+        "subscription_num": 514502,
+        "reward_num": 1232,
         "reward_total": 835560,
         "updated_at": "2024-10-30T10:59:57+00:00",
         "danmaku_uid_count": 27363,
-        "fetched_at": "2026-04-20T23:57:57.998551+00:00",
+        "fetched_at": "2026-04-21T23:51:30.257704+00:00",
         "maincvs": [
           "陈张太康",
           "郑希"
@@ -1003,13 +1003,13 @@
       "31552": {
         "name": "你的距离",
         "cover": "https://static.maoercdn.com/dramacovers/202402/04/c786840bd41e87142595432516af06bc161352.png",
-        "view_count": 89078976,
-        "subscription_num": 927706,
+        "view_count": 89104065,
+        "subscription_num": 927828,
         "reward_num": 2991,
         "reward_total": 744368,
         "updated_at": "2021-06-20T05:20:28+00:00",
         "danmaku_uid_count": 56127,
-        "fetched_at": "2026-04-20T23:58:13.785528+00:00",
+        "fetched_at": "2026-04-21T23:51:45.136517+00:00",
         "maincvs": [
           "羊仔",
           "郑希"
@@ -1022,13 +1022,13 @@
       "43922": {
         "name": "重生之将门毒后 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202112/24/2a67147747c63ff396b63c4c442af03e162350.jpg",
-        "view_count": 91032146,
-        "subscription_num": 818441,
+        "view_count": 91062353,
+        "subscription_num": 818584,
         "reward_num": 1934,
         "reward_total": 84840,
         "updated_at": "2022-09-10T05:00:05+00:00",
         "danmaku_uid_count": 42133,
-        "fetched_at": "2026-04-20T23:58:30.687919+00:00",
+        "fetched_at": "2026-04-21T23:52:01.131624+00:00",
         "maincvs": [
           "刘校妤",
           "马正阳"
@@ -1041,13 +1041,13 @@
       "46640": {
         "name": "娘娘腔",
         "cover": "https://static.maoercdn.com/dramacovers/202310/16/f74db410dc1b4e91fe0359e908774a2a154138.webp",
-        "view_count": 36105573,
-        "subscription_num": 693509,
+        "view_count": 36129241,
+        "subscription_num": 693771,
         "reward_num": 1424,
         "reward_total": 116437,
         "updated_at": "2022-08-12T09:06:24+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-20T23:58:46.717019+00:00",
+        "fetched_at": "2026-04-21T23:52:17.012696+00:00",
         "maincvs": [
           "张思王之",
           "郭浩然"
@@ -1060,13 +1060,13 @@
       "52347": {
         "name": "我在无限游戏里封神 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202305/07/429713243473481f425bd661ec4bf216161424.jpg",
-        "view_count": 70812690,
-        "subscription_num": 966630,
+        "view_count": 70845105,
+        "subscription_num": 966864,
         "reward_num": 3697,
         "reward_total": 261359,
         "updated_at": "2023-10-17T09:00:07+00:00",
         "danmaku_uid_count": 42793,
-        "fetched_at": "2026-04-20T23:59:02.924921+00:00",
+        "fetched_at": "2026-04-21T23:52:31.229755+00:00",
         "maincvs": [
           "倒霉死勒",
           "顺子"
@@ -1079,13 +1079,13 @@
       "52400": {
         "name": "天官赐福 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202502/06/d40cdf18c7c0a4208d2ea32adcb76d32165409.jpg",
-        "view_count": 82975355,
-        "subscription_num": 938415,
+        "view_count": 83082057,
+        "subscription_num": 938628,
         "reward_num": 4211,
         "reward_total": 2399969,
         "updated_at": "2024-07-15T11:12:50+00:00",
         "danmaku_uid_count": 36285,
-        "fetched_at": "2026-04-20T23:59:18.782784+00:00",
+        "fetched_at": "2026-04-21T23:52:47.087636+00:00",
         "maincvs": [
           "苏尚卿",
           "陈张太康"
@@ -1098,13 +1098,13 @@
       "58217": {
         "name": "我喜欢你的信息素 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202310/20/9ce5bbe9f2433f1df847255d0854c61e113443.jpg",
-        "view_count": 98412219,
-        "subscription_num": 1489883,
+        "view_count": 98431177,
+        "subscription_num": 1490051,
         "reward_num": 3351,
         "reward_total": 877564,
         "updated_at": "2021-10-05T03:58:14+00:00",
         "danmaku_uid_count": 45230,
-        "fetched_at": "2026-04-20T23:59:33.830402+00:00",
+        "fetched_at": "2026-04-21T23:53:03.581732+00:00",
         "maincvs": [
           "路知行",
           "史泽鲲"
@@ -1117,13 +1117,13 @@
       "58219": {
         "name": "某某 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202309/20/b94037e0b6cbdab066c10d6bf080e1c7225309.jpg",
-        "view_count": 96727851,
-        "subscription_num": 1695353,
+        "view_count": 96742623,
+        "subscription_num": 1695537,
         "reward_num": 4481,
         "reward_total": 1159293,
         "updated_at": "2021-11-08T11:04:46+00:00",
         "danmaku_uid_count": 45020,
-        "fetched_at": "2026-04-20T23:59:50.117896+00:00",
+        "fetched_at": "2026-04-21T23:53:19.172917+00:00",
         "maincvs": [
           "凌飞",
           "钱文青"
@@ -1136,13 +1136,13 @@
       "58262": {
         "name": "伪装学渣 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202401/09/d13aa713301df4966ae42b74a1251075183250.jpg",
-        "view_count": 101646075,
-        "subscription_num": 1917768,
+        "view_count": 101656798,
+        "subscription_num": 1917941,
         "reward_num": 4464,
         "reward_total": 150213,
         "updated_at": "2019-04-08T03:54:58+00:00",
         "danmaku_uid_count": 47069,
-        "fetched_at": "2026-04-21T00:00:05.666020+00:00",
+        "fetched_at": "2026-04-21T23:53:35.243932+00:00",
         "maincvs": [
           "风袖",
           "谢添天"
@@ -1155,13 +1155,13 @@
       "64911": {
         "name": "放学等我 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202309/14/27da5bf1fb32009fdf5f084690eb0a3e120535.jpg",
-        "view_count": 49939463,
-        "subscription_num": 798546,
+        "view_count": 49970072,
+        "subscription_num": 798852,
         "reward_num": 1694,
         "reward_total": 201463,
         "updated_at": "2023-12-15T10:29:17+00:00",
         "danmaku_uid_count": 36312,
-        "fetched_at": "2026-04-21T00:00:21.998179+00:00",
+        "fetched_at": "2026-04-21T23:53:52.085915+00:00",
         "maincvs": [
           "凌飞",
           "倒霉死勒"
@@ -1174,13 +1174,13 @@
       "68837": {
         "name": "放学等我 第二季",
         "cover": "https://static.maoercdn.com/dramacovers/202603/03/a835d1c208cd9e8f15ed4aaae4f5d675182821.png",
-        "view_count": 29352188,
-        "subscription_num": 425058,
+        "view_count": 29372143,
+        "subscription_num": 425262,
         "reward_num": 1319,
         "reward_total": 221559,
         "updated_at": "2025-06-21T03:59:52+00:00",
         "danmaku_uid_count": 34684,
-        "fetched_at": "2026-04-21T00:00:38.916238+00:00",
+        "fetched_at": "2026-04-21T23:54:07.981994+00:00",
         "maincvs": [
           "凌飞",
           "倒霉死勒"
@@ -1193,13 +1193,13 @@
       "71389": {
         "name": "偷风不偷月 上季",
         "cover": "https://static.maoercdn.com/dramacovers/202312/30/d4884259ef56250f0509a9f3fd7c3dc8110729.jpg",
-        "view_count": 7795916,
-        "subscription_num": 124301,
-        "reward_num": 205,
+        "view_count": 7810126,
+        "subscription_num": 124499,
+        "reward_num": 206,
         "reward_total": 194491,
         "updated_at": "2024-05-11T09:03:57+00:00",
         "danmaku_uid_count": 5609,
-        "fetched_at": "2026-04-21T00:01:10.082125+00:00",
+        "fetched_at": "2026-04-21T23:54:39.549772+00:00",
         "maincvs": [
           "顺子",
           "刘思岑"
@@ -1212,13 +1212,13 @@
       "72230": {
         "name": "早春晴朗",
         "cover": "https://static.maoercdn.com/dramacovers/202402/17/bb61e55a33dd93684cd66ad391289dc3123054.jpg",
-        "view_count": 31377893,
-        "subscription_num": 244134,
+        "view_count": 31455564,
+        "subscription_num": 244738,
         "reward_num": 382,
-        "reward_total": 102915,
+        "reward_total": 103595,
         "updated_at": "2024-05-31T13:49:26+00:00",
         "danmaku_uid_count": 12730,
-        "fetched_at": "2026-04-21T00:01:26.402705+00:00",
+        "fetched_at": "2026-04-21T23:54:57.324077+00:00",
         "maincvs": [
           "浮梦若薇",
           "郑希"
@@ -1231,13 +1231,13 @@
       "75026": {
         "name": "天官赐福 第二季",
         "cover": "https://static.maoercdn.com/dramacovers/202502/06/dd865e114d6e7db433c09fd84caa5f2f165511.jpg",
-        "view_count": 70280104,
-        "subscription_num": 341864,
+        "view_count": 70358576,
+        "subscription_num": 342001,
         "reward_num": 2357,
         "reward_total": 2437034,
         "updated_at": "2025-04-02T10:00:41+00:00",
         "danmaku_uid_count": 33695,
-        "fetched_at": "2026-04-21T00:01:42.163892+00:00",
+        "fetched_at": "2026-04-21T23:55:12.408139+00:00",
         "maincvs": [
           "苏尚卿",
           "陈张太康"
@@ -1269,13 +1269,13 @@
       "77591": {
         "name": "偷风不偷月 下季",
         "cover": "https://static.maoercdn.com/dramacovers/202409/28/23a82baa17f2162287ea6900dfad0b60152614.jpg",
-        "view_count": 3364286,
-        "subscription_num": 59875,
+        "view_count": 3372714,
+        "subscription_num": 59995,
         "reward_num": 117,
         "reward_total": 88087,
         "updated_at": "2024-12-07T09:57:35+00:00",
         "danmaku_uid_count": 4057,
-        "fetched_at": "2026-04-21T00:01:58.620703+00:00",
+        "fetched_at": "2026-04-21T23:55:29.530563+00:00",
         "maincvs": [
           "顺子",
           "刘思岑"
@@ -1288,13 +1288,13 @@
       "80533": {
         "name": "见春天",
         "cover": "https://static.maoercdn.com/dramacovers/202501/21/670f83b0baa6a0c48036d27e5f2d581e125642.jpg",
-        "view_count": 12239791,
-        "subscription_num": 219639,
+        "view_count": 12250310,
+        "subscription_num": 219754,
         "reward_num": 570,
         "reward_total": 20700,
         "updated_at": "2025-03-20T10:28:41+00:00",
         "danmaku_uid_count": 8309,
-        "fetched_at": "2026-04-21T00:02:14.775269+00:00",
+        "fetched_at": "2026-04-21T23:55:44.778243+00:00",
         "maincvs": [
           "乔苏",
           "谷江山"
@@ -1307,13 +1307,13 @@
       "81851": {
         "name": "我在无限游戏里封神 第三季",
         "cover": "https://static.maoercdn.com/dramacovers/202501/31/e7b5451cd07d96c122cc54171eee9373174652.jpg",
-        "view_count": 21177939,
-        "subscription_num": 201205,
+        "view_count": 21205022,
+        "subscription_num": 201354,
         "reward_num": 946,
         "reward_total": 277994,
         "updated_at": "2025-06-27T08:59:39+00:00",
         "danmaku_uid_count": 20436,
-        "fetched_at": "2026-04-21T00:02:30.709683+00:00",
+        "fetched_at": "2026-04-21T23:56:00.084442+00:00",
         "maincvs": [
           "倒霉死勒",
           "顺子"
@@ -1326,13 +1326,13 @@
       "82040": {
         "name": "天官赐福 第三季",
         "cover": "https://static.maoercdn.com/dramacovers/202501/29/eadaaa17a7dcb1c6428c72b5c038b861182728.png",
-        "view_count": 68236340,
-        "subscription_num": 251676,
+        "view_count": 68356212,
+        "subscription_num": 251824,
         "reward_num": 2292,
         "reward_total": 3286997,
         "updated_at": "2026-04-05T09:59:31+00:00",
         "danmaku_uid_count": 25832,
-        "fetched_at": "2026-04-21T00:02:47.129829+00:00",
+        "fetched_at": "2026-04-21T23:56:16.778629+00:00",
         "maincvs": [
           "苏尚卿",
           "陈张太康"
@@ -1345,13 +1345,13 @@
       "84529": {
         "name": "虚拟偶像团综丨《NEW DAYS（一起又出发）》",
         "cover": "https://static.maoercdn.com/dramacovers/202601/27/f63d475b7af9fa4ca429cdb707766280141609.png",
-        "view_count": 24838764,
-        "subscription_num": 106855,
+        "view_count": 24907132,
+        "subscription_num": 106902,
         "reward_num": 573,
         "reward_total": 22929,
         "updated_at": "2026-04-18T08:53:57+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:03:01.812834+00:00",
+        "fetched_at": "2026-04-21T23:56:31.420306+00:00",
         "maincvs": [
           "凌飞",
           "吴晛",
@@ -1371,13 +1371,13 @@
       "85110": {
         "name": "藏南晚星",
         "cover": "https://static.maoercdn.com/dramacovers/202602/15/8e0232c2723c4476469df8a64232c86e123511.png",
-        "view_count": 17670106,
-        "subscription_num": 190602,
-        "reward_num": 704,
+        "view_count": 17693141,
+        "subscription_num": 190795,
+        "reward_num": 705,
         "reward_total": 756755,
         "updated_at": "2026-02-15T04:39:59+00:00",
         "danmaku_uid_count": 13724,
-        "fetched_at": "2026-04-21T00:03:18.399534+00:00",
+        "fetched_at": "2026-04-21T23:56:47.481571+00:00",
         "maincvs": [
           "姜广涛",
           "顺子"
@@ -1390,13 +1390,13 @@
       "85562": {
         "name": "初三的六一儿童节",
         "cover": "https://static.maoercdn.com/dramacovers/202506/01/a6a138bb2e588e51ea267451402a2451004034.jpg",
-        "view_count": 23755625,
-        "subscription_num": 50907,
-        "reward_num": 512,
+        "view_count": 23895170,
+        "subscription_num": 51165,
+        "reward_num": 513,
         "reward_total": 960140,
-        "updated_at": "2026-04-20T09:58:52+00:00",
+        "updated_at": "2026-04-21T09:58:42+00:00",
         "danmaku_uid_count": 4340,
-        "fetched_at": "2026-04-21T00:03:49.566919+00:00",
+        "fetched_at": "2026-04-21T23:57:17.729834+00:00",
         "maincvs": [
           "顾辰",
           "倔强的小红"
@@ -1409,13 +1409,13 @@
       "85974": {
         "name": "奇洛李维斯回信",
         "cover": "https://static.maoercdn.com/dramacovers/202506/12/fbcb3f8cc4100035399a1eb05c44146e143406.png",
-        "view_count": 42927966,
-        "subscription_num": 506650,
-        "reward_num": 1878,
-        "reward_total": 2918895,
+        "view_count": 43079125,
+        "subscription_num": 507112,
+        "reward_num": 1879,
+        "reward_total": 2920784,
         "updated_at": "2026-03-16T08:58:18+00:00",
         "danmaku_uid_count": 23644,
-        "fetched_at": "2026-04-21T00:04:05.199762+00:00",
+        "fetched_at": "2026-04-21T23:57:33.927125+00:00",
         "maincvs": [
           "陈张太康",
           "郑希"
@@ -1428,13 +1428,13 @@
       "86178": {
         "name": "情蛊",
         "cover": "https://static.maoercdn.com/dramacovers/202601/23/92a6e53746d6acc72d962f7be09c1d93220007.jpg",
-        "view_count": 34034711,
-        "subscription_num": 382051,
-        "reward_num": 1423,
-        "reward_total": 625550,
-        "updated_at": "2026-04-15T10:23:47+00:00",
+        "view_count": 34106508,
+        "subscription_num": 382566,
+        "reward_num": 1424,
+        "reward_total": 630770,
+        "updated_at": "2026-04-21T10:47:35+00:00",
         "danmaku_uid_count": 28101,
-        "fetched_at": "2026-04-21T00:04:22.286584+00:00",
+        "fetched_at": "2026-04-21T23:57:48.393161+00:00",
         "maincvs": [
           "马洋",
           "马正阳"
@@ -1447,13 +1447,13 @@
       "86179": {
         "name": "于是麦麦决定离家出走",
         "cover": "https://static.maoercdn.com/dramacovers/202601/27/db6fd0ef00d3e5c7a39630db38050695211126.jpg",
-        "view_count": 4400072,
-        "subscription_num": 96007,
+        "view_count": 4421643,
+        "subscription_num": 96176,
         "reward_num": 158,
-        "reward_total": 31904,
+        "reward_total": 31954,
         "updated_at": "2026-04-19T10:27:57+00:00",
         "danmaku_uid_count": 4628,
-        "fetched_at": "2026-04-21T00:04:37.953098+00:00",
+        "fetched_at": "2026-04-21T23:58:04.049370+00:00",
         "maincvs": [
           "孙睿扬",
           "张福正"
@@ -1466,13 +1466,13 @@
       "86684": {
         "name": "反差 全一季",
         "cover": "https://static.maoercdn.com/dramacovers/202603/01/03baa7a075a821b32e75df25cd828ce0190444.png",
-        "view_count": 6475367,
-        "subscription_num": 50407,
+        "view_count": 6503267,
+        "subscription_num": 50641,
         "reward_num": 149,
         "reward_total": 192454,
         "updated_at": "2026-04-20T11:00:18+00:00",
-        "danmaku_uid_count": 1699,
-        "fetched_at": "2026-04-21T00:05:08.942807+00:00",
+        "danmaku_uid_count": 1715,
+        "fetched_at": "2026-04-21T23:58:34.266114+00:00",
         "maincvs": [
           "袁铭喆",
           "顺子"
@@ -1485,13 +1485,13 @@
       "86723": {
         "name": "太傅他人人喊打 第二季",
         "cover": "https://static.maoercdn.com/dramacovers/202507/08/21bcebba1b2ef0c97629c0362a8820bf144143.png",
-        "view_count": 2294444,
-        "subscription_num": 36892,
-        "reward_num": 160,
+        "view_count": 2326667,
+        "subscription_num": 37011,
+        "reward_num": 161,
         "reward_total": 47479,
         "updated_at": "2026-04-17T03:57:39+00:00",
-        "danmaku_uid_count": 1485,
-        "fetched_at": "2026-04-21T00:05:54.215705+00:00",
+        "danmaku_uid_count": 1504,
+        "fetched_at": "2026-04-21T23:59:18.991152+00:00",
         "maincvs": [
           "金弦",
           "张福正"
@@ -1504,13 +1504,13 @@
       "86740": {
         "name": "沉醉不醒",
         "cover": "https://static.maoercdn.com/dramacovers/202507/12/2ecb451d58f0842bdc59ce1cd2fb10ac160011.jpg",
-        "view_count": 1617591,
-        "subscription_num": 40058,
+        "view_count": 1633688,
+        "subscription_num": 40227,
         "reward_num": 69,
         "reward_total": 116099,
         "updated_at": "2026-04-16T10:09:34+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:06:10.380733+00:00",
+        "fetched_at": "2026-04-21T23:59:35.428240+00:00",
         "maincvs": [
           "马洋",
           "顺子"
@@ -1523,13 +1523,13 @@
       "86789": {
         "name": "顶级掠食者 第二季",
         "cover": "https://static.maoercdn.com/dramacovers/202602/04/8aa108106cdf4c2ffdec4c2c91223340153121.png",
-        "view_count": 5815176,
-        "subscription_num": 50478,
-        "reward_num": 157,
+        "view_count": 5869766,
+        "subscription_num": 50581,
+        "reward_num": 158,
         "reward_total": 245952,
-        "updated_at": "2026-04-15T10:57:20+00:00",
-        "danmaku_uid_count": 3167,
-        "fetched_at": "2026-04-21T00:06:41.799001+00:00",
+        "updated_at": "2026-04-21T10:57:02+00:00",
+        "danmaku_uid_count": 3177,
+        "fetched_at": "2026-04-22T00:00:07.910137+00:00",
         "maincvs": [
           "路知行",
           "赵成晨"
@@ -1542,13 +1542,13 @@
       "86815": {
         "name": "洄天 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202604/03/656ab7fa7b95fc87dc1fc40b97fd10e6171830.jpg",
-        "view_count": 18537965,
-        "subscription_num": 201046,
-        "reward_num": 549,
-        "reward_total": 857155,
+        "view_count": 18756324,
+        "subscription_num": 202102,
+        "reward_num": 552,
+        "reward_total": 857166,
         "updated_at": "2026-04-20T07:29:23+00:00",
-        "danmaku_uid_count": 4160,
-        "fetched_at": "2026-04-21T00:07:02.000352+00:00",
+        "danmaku_uid_count": 4271,
+        "fetched_at": "2026-04-22T00:00:28.437545+00:00",
         "maincvs": [
           "姜广涛",
           "顺子"
@@ -1581,13 +1581,13 @@
       "86822": {
         "name": "囚于永夜",
         "cover": "https://static.maoercdn.com/dramacovers/202507/12/d56e402c16f97d3671c37e167e228397155554.png",
-        "view_count": 4215764,
-        "subscription_num": 260193,
+        "view_count": 4225451,
+        "subscription_num": 260590,
         "reward_num": 0,
         "reward_total": 0,
         "updated_at": "2025-07-10T17:06:24+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:07:32.796487+00:00",
+        "fetched_at": "2026-04-22T00:00:44.703974+00:00",
         "maincvs": null,
         "isVIP": false,
         "catalogName": "广播剧",
@@ -1597,13 +1597,13 @@
       "86827": {
         "name": "再世权臣 第三季（上）",
         "cover": "https://static.maoercdn.com/dramacovers/202602/26/57e456a1910826658999c89042b717ce124355.png",
-        "view_count": 2149785,
-        "subscription_num": 45142,
+        "view_count": 2164389,
+        "subscription_num": 45235,
         "reward_num": 152,
         "reward_total": 102914,
         "updated_at": "2026-04-17T08:58:07+00:00",
-        "danmaku_uid_count": 2135,
-        "fetched_at": "2026-04-21T00:07:59.084059+00:00",
+        "danmaku_uid_count": 2147,
+        "fetched_at": "2026-04-22T00:01:12.391881+00:00",
         "maincvs": [
           "倒霉死勒",
           "顺子",
@@ -1621,13 +1621,13 @@
       "86834": {
         "name": "我在无限游戏里封神 第四季",
         "cover": "https://static.maoercdn.com/dramacovers/202603/27/00343f111ecbc7ab3dd786f4296823a8220635.png",
-        "view_count": 2533658,
-        "subscription_num": 104918,
-        "reward_num": 166,
+        "view_count": 2560568,
+        "subscription_num": 105395,
+        "reward_num": 167,
         "reward_total": 57737,
         "updated_at": "2026-04-17T08:59:21+00:00",
-        "danmaku_uid_count": 2614,
-        "fetched_at": "2026-04-21T00:08:17.193995+00:00",
+        "danmaku_uid_count": 2649,
+        "fetched_at": "2026-04-22T00:01:31.966555+00:00",
         "maincvs": [
           "倒霉死勒",
           "顺子"
@@ -1640,13 +1640,13 @@
       "89245": {
         "name": "逐玉 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202512/01/902ff0edd82e27eec04aaee788f86189181416.png",
-        "view_count": 4159807,
-        "subscription_num": 70619,
+        "view_count": 4168578,
+        "subscription_num": 70680,
         "reward_num": 75,
         "reward_total": 8637,
         "updated_at": "2026-03-06T07:56:49+00:00",
         "danmaku_uid_count": 979,
-        "fetched_at": "2026-04-21T00:08:32.441771+00:00",
+        "fetched_at": "2026-04-22T00:01:47.480384+00:00",
         "maincvs": [
           "高启帆",
           "彭尧"
@@ -1659,13 +1659,13 @@
       "90818": {
         "name": "一颗苹果",
         "cover": "https://static.maoercdn.com/dramacovers/202601/02/75a16004cf0decab86c493f6d2fd7270180714.png",
-        "view_count": 11689183,
-        "subscription_num": 136720,
+        "view_count": 11741611,
+        "subscription_num": 137003,
         "reward_num": 397,
         "reward_total": 275769,
         "updated_at": "2026-04-20T07:59:48+00:00",
         "danmaku_uid_count": 4308,
-        "fetched_at": "2026-04-21T00:08:48.505710+00:00",
+        "fetched_at": "2026-04-22T00:02:03.409991+00:00",
         "maincvs": [
           "倒霉死勒",
           "史泽鲲"
@@ -1678,13 +1678,13 @@
       "90896": {
         "name": "君有疾否",
         "cover": "https://static.maoercdn.com/dramacovers/202602/11/a16b07e7c3cdde70a250c5c23920b5dd195553.png",
-        "view_count": 1276248,
-        "subscription_num": 30546,
-        "reward_num": 68,
-        "reward_total": 74999,
-        "updated_at": "2026-04-20T11:58:20+00:00",
-        "danmaku_uid_count": 360,
-        "fetched_at": "2026-04-21T00:09:44.643569+00:00",
+        "view_count": 1285087,
+        "subscription_num": 30583,
+        "reward_num": 69,
+        "reward_total": 75015,
+        "updated_at": "2026-04-21T12:00:34+00:00",
+        "danmaku_uid_count": 363,
+        "fetched_at": "2026-04-22T00:03:00.380417+00:00",
         "maincvs": [
           "杨天翔",
           "梁达伟"
@@ -1697,13 +1697,13 @@
       "90985": {
         "name": "欢迎进入梦魇直播间 第二季",
         "cover": "https://static.maoercdn.com/dramacovers/202602/13/bedb0438842d77b9544d1ebfc8187c6f123638.png",
-        "view_count": 5351952,
-        "subscription_num": 41126,
-        "reward_num": 218,
+        "view_count": 5401570,
+        "subscription_num": 41267,
+        "reward_num": 219,
         "reward_total": 210945,
-        "updated_at": "2026-04-17T09:57:47+00:00",
-        "danmaku_uid_count": 2182,
-        "fetched_at": "2026-04-21T00:10:12.613550+00:00",
+        "updated_at": "2026-04-21T13:29:39+00:00",
+        "danmaku_uid_count": 2195,
+        "fetched_at": "2026-04-22T00:03:29.212600+00:00",
         "maincvs": [
           "路知行",
           "刘一鸣"
@@ -1716,13 +1716,13 @@
       "90987": {
         "name": "惹祸精",
         "cover": "https://static.maoercdn.com/dramacovers/202602/06/b9defae66eb5c4f66cb00f6c75addbea183252.png",
-        "view_count": 754765,
-        "subscription_num": 27378,
+        "view_count": 762966,
+        "subscription_num": 27520,
         "reward_num": 36,
         "reward_total": 22154,
         "updated_at": "2026-04-15T08:58:11+00:00",
         "danmaku_uid_count": 615,
-        "fetched_at": "2026-04-21T00:10:28.630902+00:00",
+        "fetched_at": "2026-04-22T00:03:45.064268+00:00",
         "maincvs": [
           "徐宇隆",
           "孙睿扬"
@@ -1735,13 +1735,13 @@
       "91354": {
         "name": "一诺一生 全一季",
         "cover": "https://static.maoercdn.com/dramacovers/202602/28/bd36c6848c15d8a3e69178fd3d26f318100321.png",
-        "view_count": 806023,
-        "subscription_num": 26980,
+        "view_count": 810280,
+        "subscription_num": 27046,
         "reward_num": 83,
         "reward_total": 135436,
         "updated_at": "2026-04-18T10:59:17+00:00",
-        "danmaku_uid_count": 675,
-        "fetched_at": "2026-04-21T00:10:52.555974+00:00",
+        "danmaku_uid_count": 680,
+        "fetched_at": "2026-04-22T00:04:07.844501+00:00",
         "maincvs": [
           "顺子",
           "孙路路"
@@ -1754,13 +1754,13 @@
       "91418": {
         "name": "怀火 全一季",
         "cover": "https://static.maoercdn.com/dramacovers/202601/17/aa6a08a0f4156cf2c723782d2525a3da171546.png",
-        "view_count": 126049,
-        "subscription_num": 9177,
+        "view_count": 128005,
+        "subscription_num": 9242,
         "reward_num": 5,
         "reward_total": 760,
         "updated_at": "2026-04-18T09:56:50+00:00",
-        "danmaku_uid_count": 78,
-        "fetched_at": "2026-04-21T00:11:08.582846+00:00",
+        "danmaku_uid_count": 82,
+        "fetched_at": "2026-04-22T00:04:25.696483+00:00",
         "maincvs": [
           "吴晛",
           "赵成晨"
@@ -1773,13 +1773,13 @@
       "91718": {
         "name": "天官赐福 第四季",
         "cover": "https://static.maoercdn.com/dramacovers/202602/10/3fedcf388910c41f2c387c51378d6582115644.png",
-        "view_count": 4145871,
-        "subscription_num": 67659,
+        "view_count": 4182969,
+        "subscription_num": 67903,
         "reward_num": 0,
         "reward_total": 0,
         "updated_at": "2026-02-17T09:56:58+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:11:25.156845+00:00",
+        "fetched_at": "2026-04-22T00:06:20.917224+00:00",
         "maincvs": [
           "苏尚卿",
           "陈张太康"
@@ -1792,13 +1792,13 @@
       "91771": {
         "name": "穿成阴鸷反派的联姻对象 第二季",
         "cover": "https://static.maoercdn.com/dramacovers/202602/09/594c714b267008d0a6c244749d0b8d80110513.png",
-        "view_count": 634962,
-        "subscription_num": 20506,
-        "reward_num": 38,
-        "reward_total": 31368,
-        "updated_at": "2026-04-20T09:57:46+00:00",
-        "danmaku_uid_count": 688,
-        "fetched_at": "2026-04-21T00:11:53.270774+00:00",
+        "view_count": 646510,
+        "subscription_num": 20668,
+        "reward_num": 39,
+        "reward_total": 31462,
+        "updated_at": "2026-04-21T10:10:44+00:00",
+        "danmaku_uid_count": 699,
+        "fetched_at": "2026-04-22T00:06:50.211440+00:00",
         "maincvs": [
           "倒霉死勒",
           "刘一鸣"
@@ -1849,13 +1849,13 @@
       "91870": {
         "name": "恩客",
         "cover": "https://static.maoercdn.com/dramacovers/202604/07/686c0f63b6a8a0cd00bf689a44d2df61124752.png",
-        "view_count": 765515,
-        "subscription_num": 14732,
+        "view_count": 795365,
+        "subscription_num": 14885,
         "reward_num": 59,
-        "reward_total": 83888,
-        "updated_at": "2026-04-20T11:58:14+00:00",
-        "danmaku_uid_count": 352,
-        "fetched_at": "2026-04-21T00:12:22.196737+00:00",
+        "reward_total": 83920,
+        "updated_at": "2026-04-21T12:00:18+00:00",
+        "danmaku_uid_count": 372,
+        "fetched_at": "2026-04-22T00:07:21.239922+00:00",
         "maincvs": [
           "刘思岑",
           "赵毅"
@@ -1908,13 +1908,13 @@
       "92155": {
         "name": "语义错误 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202604/08/172ca242e1be16dcad053a0c3cf57138155356.png",
-        "view_count": 2953734,
-        "subscription_num": 23137,
-        "reward_num": 145,
+        "view_count": 3020647,
+        "subscription_num": 23246,
+        "reward_num": 146,
         "reward_total": 324205,
-        "updated_at": "2026-04-15T10:30:49+00:00",
-        "danmaku_uid_count": 597,
-        "fetched_at": "2026-04-21T00:12:40.543550+00:00",
+        "updated_at": "2026-04-21T11:29:30+00:00",
+        "danmaku_uid_count": 600,
+        "fetched_at": "2026-04-22T00:07:40.689404+00:00",
         "maincvs": [
           "苏尚卿",
           "凌飞"
@@ -1927,13 +1927,13 @@
       "92245": {
         "name": "落火 全一季",
         "cover": "https://static.maoercdn.com/dramacovers/202604/04/0fc44ac3d636fc2fa7c68df4205a620b042004.png",
-        "view_count": 171097,
-        "subscription_num": 11044,
+        "view_count": 173547,
+        "subscription_num": 11111,
         "reward_num": 18,
         "reward_total": 14227,
         "updated_at": "2026-04-17T10:08:43+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:12:56.242886+00:00",
+        "fetched_at": "2026-04-22T00:07:56.428519+00:00",
         "maincvs": [
           "马正阳",
           "三石"
@@ -1946,13 +1946,13 @@
       "92520": {
         "name": "逐玉 第二季",
         "cover": "https://static.maoercdn.com/dramacovers/202603/16/78f3a7f38f87524caca632c106de2f80180756.png",
-        "view_count": 621658,
-        "subscription_num": 12777,
+        "view_count": 634487,
+        "subscription_num": 12900,
         "reward_num": 13,
         "reward_total": 2582,
-        "updated_at": "2026-04-17T07:57:45+00:00",
-        "danmaku_uid_count": 47,
-        "fetched_at": "2026-04-21T00:13:12.785432+00:00",
+        "updated_at": "2026-04-21T07:59:34+00:00",
+        "danmaku_uid_count": 65,
+        "fetched_at": "2026-04-22T00:08:13.732450+00:00",
         "maincvs": [
           "高启帆",
           "彭尧"
@@ -1984,13 +1984,13 @@
       "92611": {
         "name": "美人印",
         "cover": "https://static.maoercdn.com/dramacovers/202603/24/199eab1af8e9390f72323282236ed18a190733.png",
-        "view_count": 475768,
-        "subscription_num": 27368,
+        "view_count": 479547,
+        "subscription_num": 27466,
         "reward_num": 46,
         "reward_total": 73981,
         "updated_at": "2026-04-18T08:57:31+00:00",
-        "danmaku_uid_count": 352,
-        "fetched_at": "2026-04-21T00:13:47.939743+00:00",
+        "danmaku_uid_count": 355,
+        "fetched_at": "2026-04-22T00:08:48.855555+00:00",
         "maincvs": [
           "马正阳",
           "顺子"
@@ -2003,13 +2003,13 @@
       "92633": {
         "name": "第二十八年春II",
         "cover": "https://static.maoercdn.com/dramacovers/202603/21/0bb6b87478b89c0b8e83a70fe5051877003442.png",
-        "view_count": 111132,
-        "subscription_num": 4525,
+        "view_count": 112962,
+        "subscription_num": 4584,
         "reward_num": 0,
         "reward_total": 0,
         "updated_at": "2026-03-20T16:34:41+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:14:03.229610+00:00",
+        "fetched_at": "2026-04-22T00:09:04.317091+00:00",
         "maincvs": null,
         "isVIP": false,
         "catalogName": "广播剧",
@@ -2019,13 +2019,13 @@
       "92701": {
         "name": "余污 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202603/24/62d4b121dd8b05b0d1d35d650ef76dea171958.png",
-        "view_count": 170234,
-        "subscription_num": 11422,
+        "view_count": 174762,
+        "subscription_num": 11567,
         "reward_num": 57,
         "reward_total": 76821,
         "updated_at": "2026-04-19T09:58:23+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:14:19.680646+00:00",
+        "fetched_at": "2026-04-22T00:09:18.728809+00:00",
         "maincvs": [
           "彭尧",
           "马正阳"
@@ -2076,13 +2076,13 @@
       "92775": {
         "name": "全球进化后我站在食物链顶端 第二季（下）",
         "cover": "https://static.maoercdn.com/dramacovers/202604/14/0d8a704fc110158f1ba786cea5757004160656.png",
-        "view_count": 58031,
-        "subscription_num": 6764,
-        "reward_num": 20,
-        "reward_total": 17225,
+        "view_count": 61455,
+        "subscription_num": 6916,
+        "reward_num": 21,
+        "reward_total": 17467,
         "updated_at": "2026-04-20T09:29:27+00:00",
-        "danmaku_uid_count": 195,
-        "fetched_at": "2026-04-21T00:14:36.890005+00:00",
+        "danmaku_uid_count": 205,
+        "fetched_at": "2026-04-22T00:09:53.379328+00:00",
         "maincvs": [
           "顺子",
           "马正阳"
@@ -2095,13 +2095,13 @@
       "92895": {
         "name": "沉浮事",
         "cover": "https://static.maoercdn.com/dramacovers/202604/07/d9f6e177a3dfeb79af59e1146d11341a122832.jpg",
-        "view_count": 100671,
-        "subscription_num": 7384,
+        "view_count": 105755,
+        "subscription_num": 7478,
         "reward_num": 14,
-        "reward_total": 17695,
-        "updated_at": "2026-04-20T11:57:44+00:00",
-        "danmaku_uid_count": 133,
-        "fetched_at": "2026-04-21T00:14:59.564251+00:00",
+        "reward_total": 17714,
+        "updated_at": "2026-04-21T12:00:28+00:00",
+        "danmaku_uid_count": 144,
+        "fetched_at": "2026-04-22T00:10:16.224142+00:00",
         "maincvs": [
           "赵成晨",
           "孙睿扬"
@@ -2114,13 +2114,13 @@
       "92968": {
         "name": "伏特加与曼特宁",
         "cover": "https://static.maoercdn.com/dramacovers/202604/09/f520d97a1214887a8aef6101aaeb8729194907.png",
-        "view_count": 106888,
-        "subscription_num": 8163,
-        "reward_num": 13,
-        "reward_total": 3170,
-        "updated_at": "2026-04-20T09:58:45+00:00",
-        "danmaku_uid_count": 22,
-        "fetched_at": "2026-04-21T00:15:16.670136+00:00",
+        "view_count": 111581,
+        "subscription_num": 8247,
+        "reward_num": 16,
+        "reward_total": 3394,
+        "updated_at": "2026-04-21T09:58:23+00:00",
+        "danmaku_uid_count": 34,
+        "fetched_at": "2026-04-22T00:10:34.355013+00:00",
         "maincvs": [
           "余昊威",
           "赵成晨"
@@ -2133,13 +2133,13 @@
       "92988": {
         "name": "伏特加与曼特宁",
         "cover": "https://static.maoercdn.com/dramacovers/202604/07/4477a1498b4f7f817bf8801a42a97351192910.png",
-        "view_count": 411791,
-        "subscription_num": 31539,
+        "view_count": 431295,
+        "subscription_num": 32050,
         "reward_num": 0,
         "reward_total": 0,
         "updated_at": "2026-04-07T11:29:09+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:15:32.600766+00:00",
+        "fetched_at": "2026-04-22T00:10:49.860107+00:00",
         "maincvs": [
           "马洋",
           "郑希"
@@ -2152,13 +2152,13 @@
       "93005": {
         "name": "降水概率百分百",
         "cover": "https://static.maoercdn.com/dramacovers/202604/19/a8f30c9fca4c570641fc13ebce2619f2215628.jpg",
-        "view_count": 395326,
-        "subscription_num": 14933,
+        "view_count": 416295,
+        "subscription_num": 15083,
         "reward_num": 47,
         "reward_total": 28808,
         "updated_at": "2026-04-18T06:28:24+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:15:47.308182+00:00",
+        "fetched_at": "2026-04-22T00:11:05.176410+00:00",
         "maincvs": [
           "胡良伟",
           "谷江山"
@@ -2171,13 +2171,13 @@
       "93038": {
         "name": "一屋暗灯 全一季",
         "cover": "https://static.maoercdn.com/dramacovers/202604/14/a99c9192cdaf0344ed8f105238d4c3ea182402.jpg",
-        "view_count": 925349,
-        "subscription_num": 60445,
-        "reward_num": 197,
-        "reward_total": 185222,
-        "updated_at": "2026-04-20T09:58:11+00:00",
+        "view_count": 1035051,
+        "subscription_num": 62968,
+        "reward_num": 204,
+        "reward_total": 186121,
+        "updated_at": "2026-04-21T09:59:11+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:16:03.432516+00:00",
+        "fetched_at": "2026-04-22T00:11:20.709972+00:00",
         "maincvs": [
           "孙路路",
           "顺子"
@@ -2190,13 +2190,13 @@
       "93113": {
         "name": "愚蠢的有钱人",
         "cover": "https://static.maoercdn.com/dramacovers/202604/15/df8c9f3babaa3b0d3cc95fc410c5e17e132230.jpg",
-        "view_count": 147795,
-        "subscription_num": 11599,
-        "reward_num": 20,
-        "reward_total": 4396,
-        "updated_at": "2026-04-20T10:59:10+00:00",
+        "view_count": 184335,
+        "subscription_num": 12294,
+        "reward_num": 21,
+        "reward_total": 8446,
+        "updated_at": "2026-04-21T10:57:26+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:16:18.479509+00:00",
+        "fetched_at": "2026-04-22T00:11:35.324392+00:00",
         "maincvs": [
           "三石",
           "赵成晨",
@@ -2212,13 +2212,13 @@
       "93154": {
         "name": "初三的六一儿童节 第二季（上）",
         "cover": "https://static.maoercdn.com/dramacovers/202604/15/a44d1a3280c6235aa04c4a802068632c112126.png",
-        "view_count": 75670,
-        "subscription_num": 4917,
+        "view_count": 91383,
+        "subscription_num": 5239,
         "reward_num": 35,
         "reward_total": 25278,
         "updated_at": "2026-04-20T10:28:28+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:16:34.391789+00:00",
+        "fetched_at": "2026-04-22T00:11:51.052144+00:00",
         "maincvs": [
           "路知行",
           "景向谁依"
@@ -2231,13 +2231,13 @@
       "92575": {
         "name": "禁区",
         "cover": "https://static.maoercdn.com/dramacovers/202604/19/767bcf297da6b05e263fdf82a3143455182849.png",
-        "view_count": 39062,
+        "view_count": 40029,
         "reward_num": 6,
         "reward_total": 1114,
-        "subscription_num": 4292,
+        "subscription_num": 4448,
         "updated_at": "2026-04-19T11:58:00+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:13:29.463463+00:00",
+        "fetched_at": "2026-04-22T00:08:29.531622+00:00",
         "maincvs": [
           "三石",
           "桑毓泽"
@@ -2267,13 +2267,13 @@
       "86692": {
         "name": "液态欲望 全一季",
         "cover": "https://static.maoercdn.com/dramacovers/202604/17/ec74f453f819c7a85eb7652da10bc036131628.png",
-        "view_count": 93782,
+        "view_count": 101396,
         "reward_num": 0,
         "reward_total": 0,
-        "subscription_num": 12470,
+        "subscription_num": 12957,
         "updated_at": "2026-04-18T03:58:15+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:05:24.729349+00:00",
+        "fetched_at": "2026-04-21T23:58:49.759120+00:00",
         "maincvs": null,
         "catalogName": "广播剧",
         "payStatus": "免费",
@@ -2282,13 +2282,13 @@
       "71321": {
         "name": "再世权臣 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202312/20/7a64abcaa3ba174ec4ec8a945f6c6583102840.jpg",
-        "view_count": 20456050,
+        "view_count": 20471072,
         "reward_num": 520,
         "reward_total": 274585,
-        "subscription_num": 249539,
+        "subscription_num": 249657,
         "updated_at": "2024-08-08T03:59:19+00:00",
         "danmaku_uid_count": null,
-        "fetched_at": "2026-04-21T00:00:54.745412+00:00",
+        "fetched_at": "2026-04-21T23:54:23.669043+00:00",
         "maincvs": [
           "倒霉死勒",
           "马正阳",
@@ -2305,13 +2305,13 @@
       "91589": {
         "name": "吞雨",
         "cover": "https://static.maoercdn.com/dramacovers/202604/04/2a24a850934d655170b94436a8d4f024144643.png",
-        "view_count": 216761,
-        "reward_num": 42,
-        "reward_total": 9497,
-        "subscription_num": 11645,
-        "updated_at": "2026-04-18T12:14:23+00:00",
-        "danmaku_uid_count": 209,
-        "fetched_at": "2026-04-20T00:05:43.418137+00:00",
+        "view_count": 222637,
+        "reward_num": 43,
+        "reward_total": 12625,
+        "subscription_num": 11760,
+        "updated_at": "2026-04-21T10:01:24+00:00",
+        "danmaku_uid_count": 217,
+        "fetched_at": "2026-04-22T00:04:48.348126+00:00",
         "maincvs": [
           "孙睿扬",
           "魏一凡"
@@ -2323,13 +2323,13 @@
       "85497": {
         "name": "初三的六一儿童节 第一季",
         "cover": "https://static.maoercdn.com/dramacovers/202507/03/0fa3526e893e86f9570db4c062cdaa3c115601.png",
-        "view_count": 11044965,
+        "view_count": 11056428,
         "reward_num": 247,
         "reward_total": 429890,
-        "subscription_num": 53691,
+        "subscription_num": 53919,
         "updated_at": "2026-01-01T03:58:02+00:00",
         "danmaku_uid_count": null,
-        "fetched_at": "2026-04-21T00:03:34.344277+00:00",
+        "fetched_at": "2026-04-21T23:57:02.549028+00:00",
         "maincvs": [
           "路知行",
           "景向谁依"
@@ -2341,28 +2341,61 @@
       "93169": {
         "name": "嫁入高门的人",
         "cover": "https://static.maoercdn.com/dramacovers/202604/20/23ca8c84d5133c08bb107f64dbbd73d4142732.png",
-        "view_count": 18530,
+        "view_count": 22541,
         "reward_num": 0,
         "reward_total": 0,
-        "subscription_num": 1102,
+        "subscription_num": 1693,
         "updated_at": "2026-04-16T02:31:31+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:16:49.786399+00:00",
+        "fetched_at": "2026-04-22T00:12:06.699781+00:00",
         "maincvs": null,
-        "catalogName": null,
-        "payStatus": null,
+        "catalogName": "有声剧",
+        "payStatus": "付费",
         "createTime": null
       },
       "93196": {
         "name": "岁岁未停",
         "cover": "https://static.maoercdn.com/dramacovers/202604/17/3bf0a67956813ebf9f8d2db57160b80f111246.png",
-        "view_count": 28716,
+        "view_count": 33578,
         "reward_num": 3,
         "reward_total": 371,
-        "subscription_num": 1742,
+        "subscription_num": 2678,
         "updated_at": "2026-04-17T03:12:45+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:17:05.122532+00:00",
+        "fetched_at": "2026-04-22T00:12:23.018381+00:00",
+        "maincvs": null,
+        "catalogName": "广播剧",
+        "payStatus": "付费",
+        "createTime": null
+      },
+      "91661": {
+        "name": "等你仰望",
+        "cover": "https://static.maoercdn.com/dramacovers/202602/10/11ebf288f9a7474964f4b8d22845329a121722.png",
+        "view_count": 484779,
+        "reward_num": 30,
+        "reward_total": 13278,
+        "subscription_num": 14157,
+        "updated_at": "2026-04-21T08:58:31+00:00",
+        "danmaku_uid_count": 600,
+        "fetched_at": "2026-04-22T00:06:05.283312+00:00",
+        "maincvs": [
+          "景向谁依",
+          "三石"
+        ],
+        "catalogName": "有声剧",
+        "payStatus": "付费",
+        "createTime": "2026.01"
+      },
+      "92770": {
+        "name": "泠声",
+        "cover": "https://static.maoercdn.com/dramacovers/202603/27/4eb9ff03bbcf8fcfbe8ac854c5eb8106120431.png",
+        "view_count": 430387,
+        "reward_num": 22,
+        "reward_total": 4068,
+        "subscription_num": 3913,
+        "updated_at": "2026-04-17T03:32:45+00:00",
+        "danmaku_uid_count": 0,
+        "fetched_at": "2026-04-22T00:09:34.456857+00:00",
         "maincvs": null,
         "catalogName": null,
         "payStatus": null,
@@ -2376,87 +2409,87 @@
         "name": "热播榜",
         "rankId": 0,
         "unitName": "热度",
-        "fetched_at": "2026-04-20T23:56:31.972375+00:00",
+        "fetched_at": "2026-04-21T23:50:03.135991+00:00",
         "items": [
           {
             "dramaId": "2087206604062588962",
-            "hotValue": 2619693
+            "hotValue": 2616467
           },
           {
             "dramaId": "1955825512983036032",
-            "hotValue": 1266070
+            "hotValue": 1254140
           },
           {
             "dramaId": "2083142877805805672",
-            "hotValue": 866187
+            "hotValue": 888125
           },
           {
             "dramaId": "1946295508834189409",
-            "hotValue": 731507
+            "hotValue": 724000
           },
           {
             "dramaId": "2188837813892415606",
-            "hotValue": 595685
+            "hotValue": 612915
           },
           {
             "dramaId": "2180734748203155603",
-            "hotValue": 463192
+            "hotValue": 480053
           },
           {
             "dramaId": "1909122352138944584",
-            "hotValue": 429545
+            "hotValue": 462567
           },
           {
             "dramaId": "2153578778092109868",
-            "hotValue": 358362
+            "hotValue": 363588
           },
           {
             "dramaId": "1944764730950287431",
-            "hotValue": 324616
+            "hotValue": 329592
           },
           {
             "dramaId": "2069873254222266552",
-            "hotValue": 307264
+            "hotValue": 314826
           },
           {
             "dramaId": "1574380284785197130",
-            "hotValue": 200646
+            "hotValue": 193553
           },
           {
             "dramaId": "2108102247022854570",
-            "hotValue": 190479
+            "hotValue": 188840
           },
           {
             "dramaId": "2191530234400997469",
-            "hotValue": 188331
-          },
-          {
-            "dramaId": "2114219113676013652",
-            "hotValue": 174420
+            "hotValue": 178998
           },
           {
             "dramaId": "1697533863498088523",
-            "hotValue": 157904
+            "hotValue": 158201
+          },
+          {
+            "dramaId": "2114219113676013652",
+            "hotValue": 153875
+          },
+          {
+            "dramaId": "2182687618293039383",
+            "hotValue": 147356
           },
           {
             "dramaId": "1509120515875274832",
-            "hotValue": 139233
+            "hotValue": 141250
           },
           {
             "dramaId": "2195128381907927121",
-            "hotValue": 138593
-          },
-          {
-            "dramaId": "1467197155415425161",
-            "hotValue": 134570
-          },
-          {
-            "dramaId": "1871610739135873099",
-            "hotValue": 134184
+            "hotValue": 141064
           },
           {
             "dramaId": "1811968765974282305",
-            "hotValue": 132766
+            "hotValue": 136638
+          },
+          {
+            "dramaId": "2103530877106520082",
+            "hotValue": 136302
           }
         ]
       },
@@ -2464,87 +2497,87 @@
         "name": "票房榜总榜",
         "rankId": 7,
         "unitName": "票房值",
-        "fetched_at": "2026-04-20T23:56:32.844430+00:00",
+        "fetched_at": "2026-04-21T23:50:04.021048+00:00",
         "items": [
           {
             "dramaId": "2087206604062588962",
-            "hotValue": 16825248
+            "hotValue": 16748634
           },
           {
             "dramaId": "2083142877805805672",
-            "hotValue": 10638372
+            "hotValue": 10680384
           },
           {
             "dramaId": "2182687618293039383",
-            "hotValue": 9664716
-          },
-          {
-            "dramaId": "1955825512983036032",
-            "hotValue": 5660250
+            "hotValue": 10088366
           },
           {
             "dramaId": "1944764730950287431",
-            "hotValue": 5633428
+            "hotValue": 5687996
+          },
+          {
+            "dramaId": "1955825512983036032",
+            "hotValue": 5587770
           },
           {
             "dramaId": "2191530234400997469",
-            "hotValue": 5277598
+            "hotValue": 5405702
           },
           {
             "dramaId": "2180734748203155603",
-            "hotValue": 4575600
+            "hotValue": 4418600
           },
           {
             "dramaId": "1946295508834189409",
-            "hotValue": 3972960
-          },
-          {
-            "dramaId": "2051248540860022865",
-            "hotValue": 3857928
+            "hotValue": 3965706
           },
           {
             "dramaId": "2069873254222266552",
-            "hotValue": 3800692
+            "hotValue": 3921978
+          },
+          {
+            "dramaId": "2051248540860022865",
+            "hotValue": 3749352
           },
           {
             "dramaId": "2153578778092109868",
-            "hotValue": 3663348
-          },
-          {
-            "dramaId": "2195128381907927121",
-            "hotValue": 3223554
+            "hotValue": 3645408
           },
           {
             "dramaId": "1983255583611945059",
-            "hotValue": 3029208
+            "hotValue": 3003672
           },
           {
             "dramaId": "2106168395048157341",
-            "hotValue": 2730316
+            "hotValue": 2721978
           },
           {
-            "dramaId": "2108102247022854570",
-            "hotValue": 2628750
-          },
-          {
-            "dramaId": "1871610739135873099",
-            "hotValue": 2610768
+            "dramaId": "2195128381907927121",
+            "hotValue": 2715594
           },
           {
             "dramaId": "1909122352138944584",
-            "hotValue": 2600320
+            "hotValue": 2659114
+          },
+          {
+            "dramaId": "2108102247022854570",
+            "hotValue": 2588610
+          },
+          {
+            "dramaId": "1871610739135873099",
+            "hotValue": 2576760
           },
           {
             "dramaId": "1697533863498088523",
-            "hotValue": 2512902
+            "hotValue": 2498426
           },
           {
             "dramaId": "1467197155415425161",
-            "hotValue": 2237384
+            "hotValue": 2242152
           },
           {
             "dramaId": "1509120515875274832",
-            "hotValue": 2188096
+            "hotValue": 2186306
           }
         ]
       },
@@ -2552,47 +2585,47 @@
         "name": "票房榜会员剧榜",
         "rankId": 8,
         "unitName": "票房值",
-        "fetched_at": "2026-04-20T23:56:33.737607+00:00",
+        "fetched_at": "2026-04-21T23:50:04.834339+00:00",
         "items": [
           {
             "dramaId": "2188837813892415606",
-            "hotValue": 752300
+            "hotValue": 770500
           },
           {
             "dramaId": "2180734748203155603",
-            "hotValue": 720000
+            "hotValue": 674600
           },
           {
             "dramaId": "2099832214479962276",
-            "hotValue": 260120
+            "hotValue": 252970
           },
           {
             "dramaId": "1521746834962251929",
-            "hotValue": 209450
+            "hotValue": 211440
           },
           {
             "dramaId": "2090556936251506742",
-            "hotValue": 198960
+            "hotValue": 205740
           },
           {
             "dramaId": "1817070006005923931",
-            "hotValue": 179960
-          },
-          {
-            "dramaId": "1822308538962149425",
-            "hotValue": 174350
-          },
-          {
-            "dramaId": "1812267721467887665",
-            "hotValue": 160740
+            "hotValue": 180890
           },
           {
             "dramaId": "1800304751489843262",
-            "hotValue": 152510
+            "hotValue": 173170
           },
           {
-            "dramaId": "1880163165778477107",
-            "hotValue": 147060
+            "dramaId": "1822308538962149425",
+            "hotValue": 168300
+          },
+          {
+            "dramaId": "1812267721467887665",
+            "hotValue": 157260
+          },
+          {
+            "dramaId": "1834138790155780240",
+            "hotValue": 148470
           }
         ]
       },
@@ -2600,47 +2633,47 @@
         "name": "票房榜付费剧榜",
         "rankId": 9,
         "unitName": "票房值",
-        "fetched_at": "2026-04-20T23:56:34.705767+00:00",
+        "fetched_at": "2026-04-21T23:50:05.811541+00:00",
         "items": [
           {
             "dramaId": "2087206604062588962",
-            "hotValue": 3625266
+            "hotValue": 3726966
           },
           {
             "dramaId": "2083142877805805672",
-            "hotValue": 2656092
+            "hotValue": 2730002
           },
           {
             "dramaId": "2191530234400997469",
-            "hotValue": 1997084
-          },
-          {
-            "dramaId": "1944764730950287431",
-            "hotValue": 1463284
+            "hotValue": 1944504
           },
           {
             "dramaId": "2182687618293039383",
-            "hotValue": 1388198
+            "hotValue": 1526972
+          },
+          {
+            "dramaId": "1944764730950287431",
+            "hotValue": 1494158
           },
           {
             "dramaId": "2069873254222266552",
-            "hotValue": 1203622
+            "hotValue": 1123460
           },
           {
             "dramaId": "1946295508834189409",
-            "hotValue": 1077498
+            "hotValue": 1085310
           },
           {
             "dramaId": "2153578778092109868",
-            "hotValue": 791154
+            "hotValue": 776204
+          },
+          {
+            "dramaId": "1909122352138944584",
+            "hotValue": 727038
           },
           {
             "dramaId": "1983255583611945059",
-            "hotValue": 709422
-          },
-          {
-            "dramaId": "2106168395048157341",
-            "hotValue": 678410
+            "hotValue": 719796
           }
         ]
       },
@@ -2648,39 +2681,39 @@
         "name": "钻石榜月榜",
         "rankId": 5,
         "unitName": "钻石",
-        "fetched_at": "2026-04-20T23:56:35.965466+00:00",
+        "fetched_at": "2026-04-21T23:50:06.972276+00:00",
         "items": [
           {
             "dramaId": "2191530234400997469",
-            "diamondValue": 2577257
+            "diamondValue": 2579536
           },
           {
             "dramaId": "2188837813892415606",
-            "diamondValue": 2117753
+            "diamondValue": 2119709
           },
           {
             "dramaId": "2069873254222266552",
-            "diamondValue": 543719
+            "diamondValue": 545644
           },
           {
             "dramaId": "2195128381907927121",
-            "diamondValue": 241120
+            "diamondValue": 245000
           },
           {
             "dramaId": "2180734748203155603",
-            "diamondValue": 233515
+            "diamondValue": 236013
           },
           {
             "dramaId": "2096474602321477724",
-            "diamondValue": 225265
+            "diamondValue": 225335
           },
           {
             "dramaId": "2106915161011912707",
-            "diamondValue": 188723
+            "diamondValue": 200621
           },
           {
             "dramaId": "1946295508834189409",
-            "diamondValue": 153239
+            "diamondValue": 153259
           },
           {
             "dramaId": "1574380284785197130",
@@ -2688,39 +2721,39 @@
           },
           {
             "dramaId": "2153578778092109868",
-            "diamondValue": 133742
+            "diamondValue": 137295
           },
           {
             "dramaId": "2087206604062588962",
-            "diamondValue": 133386
+            "diamondValue": 134721
           },
           {
             "dramaId": "2126945977947390043",
-            "diamondValue": 123935
+            "diamondValue": 124185
           },
           {
             "dramaId": "2083142877805805672",
-            "diamondValue": 95591
+            "diamondValue": 97157
           },
           {
             "dramaId": "2117301040473702473",
-            "diamondValue": 78795
+            "diamondValue": 78894
           },
           {
             "dramaId": "1955825512983036032",
-            "diamondValue": 78028
+            "diamondValue": 78376
           },
           {
             "dramaId": "2004409671934279838",
-            "diamondValue": 63100
+            "diamondValue": 68666
           },
           {
             "dramaId": "2103530877106520082",
-            "diamondValue": 46283
+            "diamondValue": 54448
           },
           {
             "dramaId": "2182687618293039383",
-            "diamondValue": 28426
+            "diamondValue": 30476
           },
           {
             "dramaId": "2152882568188395742",
@@ -2728,7 +2761,7 @@
           },
           {
             "dramaId": "1878242245950308469",
-            "diamondValue": 21178
+            "diamondValue": 21266
           }
         ]
       },
@@ -2736,207 +2769,207 @@
         "name": "巅峰榜",
         "rankId": 4,
         "unitName": "播放量",
-        "fetched_at": "2026-04-20T23:56:37.296175+00:00",
+        "fetched_at": "2026-04-21T23:50:08.373590+00:00",
         "items": [
           {
             "dramaId": "1946295508834189409",
-            "hotValue": 83732467
+            "hotValue": 83816681
           },
           {
             "dramaId": "1955825512983036032",
-            "hotValue": 81240226
+            "hotValue": 81302005
           },
           {
             "dramaId": "1944764730950287431",
-            "hotValue": 59397094
+            "hotValue": 59423240
           },
           {
             "dramaId": "1697533863498088523",
-            "hotValue": 57800802
+            "hotValue": 57813694
           },
           {
             "dramaId": "1610319737894469722",
-            "hotValue": 57389608
+            "hotValue": 57392136
           },
           {
             "dramaId": "1521746834962251929",
-            "hotValue": 50188474
+            "hotValue": 50193556
           },
           {
             "dramaId": "1596401836242239612",
-            "hotValue": 42424560
+            "hotValue": 42428755
           },
           {
             "dramaId": "1516526645811347512",
-            "hotValue": 39269671
+            "hotValue": 39270990
           },
           {
             "dramaId": "1554716979611303976",
-            "hotValue": 36462186
+            "hotValue": 36468928
           },
           {
             "dramaId": "1553264331477483561",
-            "hotValue": 36265663
-          },
-          {
-            "dramaId": "1467197155415425161",
-            "hotValue": 33802841
+            "hotValue": 36271431
           },
           {
             "dramaId": "2087206604062588962",
-            "hotValue": 33766337
+            "hotValue": 33882187
+          },
+          {
+            "dramaId": "1467197155415425161",
+            "hotValue": 33812196
           },
           {
             "dramaId": "1598818249267478612",
-            "hotValue": 33737583
+            "hotValue": 33741445
           },
           {
             "dramaId": "1574380284785197130",
-            "hotValue": 33598250
+            "hotValue": 33618041
           },
           {
             "dramaId": "1651969680736256039",
-            "hotValue": 32833929
+            "hotValue": 32835046
           },
           {
             "dramaId": "1478200608224706661",
-            "hotValue": 32598144
+            "hotValue": 32602142
           },
           {
             "dramaId": "1509120515875274832",
-            "hotValue": 32518657
+            "hotValue": 32527074
           },
           {
             "dramaId": "1541815834156990959",
-            "hotValue": 30400774
+            "hotValue": 30402876
           },
           {
             "dramaId": "1685988437355659307",
-            "hotValue": 29692111
+            "hotValue": 29693382
           },
           {
             "dramaId": "1651233407377604656",
-            "hotValue": 25873784
+            "hotValue": 25875877
           },
           {
             "dramaId": "1811968765974282305",
-            "hotValue": 25292583
+            "hotValue": 25302570
           },
           {
             "dramaId": "1531652893562634282",
-            "hotValue": 23991132
+            "hotValue": 23992568
           },
           {
             "dramaId": "1817070006005923931",
-            "hotValue": 23554692
+            "hotValue": 23559615
           },
           {
             "dramaId": "1983255583611945059",
-            "hotValue": 21478891
+            "hotValue": 21487730
           },
           {
             "dramaId": "1871610739135873099",
-            "hotValue": 20872922
+            "hotValue": 20882196
           },
           {
             "dramaId": "1682721779719602251",
-            "hotValue": 20047483
+            "hotValue": 20050053
           },
           {
             "dramaId": "1719409274397917242",
-            "hotValue": 19653225
+            "hotValue": 19659473
           },
           {
             "dramaId": "1615570361183633506",
-            "hotValue": 17690561
+            "hotValue": 17691592
           },
           {
             "dramaId": "1722442762554441784",
-            "hotValue": 17286667
+            "hotValue": 17287934
           },
           {
             "dramaId": "1909122352138944584",
-            "hotValue": 16893151
+            "hotValue": 16930468
           },
           {
             "dramaId": "1822308538962149425",
-            "hotValue": 16225215
+            "hotValue": 16240928
           },
           {
             "dramaId": "1666731689491038305",
-            "hotValue": 15612510
+            "hotValue": 15622037
           },
           {
             "dramaId": "2083142877805805672",
-            "hotValue": 15504767
+            "hotValue": 15600296
           },
           {
             "dramaId": "1831582687614205983",
-            "hotValue": 15442183
+            "hotValue": 15442534
           },
           {
             "dramaId": "1737280629021605914",
-            "hotValue": 15143778
+            "hotValue": 15147455
           },
           {
             "dramaId": "1653424609497710659",
-            "hotValue": 15019306
+            "hotValue": 15023680
           },
           {
             "dramaId": "1926101092299440280",
-            "hotValue": 14807454
+            "hotValue": 14811689
           },
           {
             "dramaId": "1755414917248188486",
-            "hotValue": 14746969
+            "hotValue": 14760406
           },
           {
             "dramaId": "1676755829627289616",
-            "hotValue": 14391686
+            "hotValue": 14392212
           },
           {
             "dramaId": "1705799472224665659",
-            "hotValue": 14151924
+            "hotValue": 14161348
           },
           {
             "dramaId": "1834138790155780240",
-            "hotValue": 13618954
+            "hotValue": 13623054
           },
           {
             "dramaId": "1884958690037989399",
-            "hotValue": 13617086
+            "hotValue": 13620549
           },
           {
             "dramaId": "1997467750653493400",
-            "hotValue": 13591514
+            "hotValue": 13594810
           },
           {
             "dramaId": "1833068565909995609",
-            "hotValue": 13282358
+            "hotValue": 13282464
           },
           {
             "dramaId": "1710951908266475655",
-            "hotValue": 12969188
+            "hotValue": 12970804
           },
           {
             "dramaId": "1596246719203377239",
-            "hotValue": 12884244
+            "hotValue": 12885181
           },
           {
             "dramaId": "1681664693778776107",
-            "hotValue": 12651409
+            "hotValue": 12652599
           },
           {
             "dramaId": "1812267721467887665",
-            "hotValue": 12585629
+            "hotValue": 12596023
           },
           {
             "dramaId": "1697945510343606402",
-            "hotValue": 12465776
+            "hotValue": 12468719
           },
           {
             "dramaId": "1482457199987916894",
-            "hotValue": 12447730
+            "hotValue": 12448107
           }
         ]
       }
@@ -2945,13 +2978,13 @@
       "1467197155415425161": {
         "name": "针锋对决·第一季",
         "cover": "https://img.kilamanbo.com/h5/1653623556006694.jpg",
-        "view_count": 33803377,
-        "favorite_count": 516759,
-        "pay_count": 214075,
+        "view_count": 33812821,
+        "favorite_count": 516871,
+        "pay_count": 214141,
         "diamond_value": 3077129,
         "updated_at": "2026-04-03T08:55:32.209000+00:00",
         "danmaku_uid_count": 22958,
-        "fetched_at": "2026-04-21T00:17:06.363562+00:00",
+        "fetched_at": "2026-04-22T00:12:24.148349+00:00",
         "maincvs": [
           "金弦",
           "谷江山"
@@ -2964,13 +2997,13 @@
       "1478200608224706661": {
         "name": "谁把谁当真",
         "cover": "https://img.kilamanbo.com/h5/1660983911018772.jpg",
-        "view_count": 32598446,
-        "favorite_count": 476258,
-        "pay_count": 295180,
+        "view_count": 32602321,
+        "favorite_count": 476284,
+        "pay_count": 295205,
         "diamond_value": 4838711,
         "updated_at": "2025-10-27T08:50:54.334000+00:00",
         "danmaku_uid_count": 36619,
-        "fetched_at": "2026-04-21T00:17:07.424241+00:00",
+        "fetched_at": "2026-04-22T00:12:25.298218+00:00",
         "maincvs": [
           "柯暮卿",
           "夏磊"
@@ -2983,13 +3016,13 @@
       "1482457199987916894": {
         "name": "少汪几句·第一季",
         "cover": "https://img.kilamanbo.com/h5/ff7a136d82d625084f9db38d2330c175.jpg",
-        "view_count": 12447755,
-        "favorite_count": 440808,
+        "view_count": 12448154,
+        "favorite_count": 440820,
         "pay_count": 0,
         "diamond_value": 299835,
         "updated_at": "2025-12-23T04:26:01.463000+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:17:08.351719+00:00",
+        "fetched_at": "2026-04-22T00:12:26.117854+00:00",
         "maincvs": [
           "正经太郎",
           "君心不雨"
@@ -3002,13 +3035,13 @@
       "1509120515875274832": {
         "name": "针锋对决·第二季",
         "cover": "https://img.kilamanbo.com/h5/18d68148e506d9e325d3ee84257aef69.jpg",
-        "view_count": 32519315,
-        "favorite_count": 386817,
-        "pay_count": 178067,
-        "diamond_value": 3223454,
+        "view_count": 32527678,
+        "favorite_count": 386892,
+        "pay_count": 178113,
+        "diamond_value": 3223464,
         "updated_at": "2026-04-03T08:58:39.505000+00:00",
         "danmaku_uid_count": 27004,
-        "fetched_at": "2026-04-21T00:17:09.515359+00:00",
+        "fetched_at": "2026-04-22T00:12:27.378813+00:00",
         "maincvs": [
           "谷江山",
           "金弦"
@@ -3021,13 +3054,13 @@
       "1516526645811347512": {
         "name": "垂耳执事",
         "cover": "https://img.kilamanbo.com/h5/1701082077866897.jpg",
-        "view_count": 39269785,
-        "favorite_count": 720592,
-        "pay_count": 385807,
-        "diamond_value": 4847506,
+        "view_count": 39271039,
+        "favorite_count": 720625,
+        "pay_count": 385824,
+        "diamond_value": 4847516,
         "updated_at": "2025-11-17T10:22:20.419000+00:00",
         "danmaku_uid_count": 50245,
-        "fetched_at": "2026-04-21T00:17:10.647315+00:00",
+        "fetched_at": "2026-04-22T00:12:28.353786+00:00",
         "maincvs": [
           "李兰陵",
           "郭浩然"
@@ -3040,13 +3073,13 @@
       "1521746834962251929": {
         "name": "江山许你",
         "cover": "https://img.kilamanbo.com/h5/1658933123884750.jpg",
-        "view_count": 50188777,
-        "favorite_count": 581448,
-        "pay_count": 361183,
+        "view_count": 50194157,
+        "favorite_count": 581476,
+        "pay_count": 361226,
         "diamond_value": 9995195,
         "updated_at": "2026-03-26T02:09:42.538000+00:00",
         "danmaku_uid_count": 44704,
-        "fetched_at": "2026-04-21T00:17:11.846363+00:00",
+        "fetched_at": "2026-04-22T00:12:29.572041+00:00",
         "maincvs": [
           "赵毅",
           "羊仔"
@@ -3059,13 +3092,13 @@
       "1531652893562634282": {
         "name": "娘娘腔",
         "cover": "https://img.kilamanbo.com/h5/de514d3e5d8ba5fe451261ba64724adf.jpg",
-        "view_count": 23991212,
-        "favorite_count": 504811,
+        "view_count": 23992675,
+        "favorite_count": 504821,
         "pay_count": 0,
         "diamond_value": 533267,
         "updated_at": "2025-12-23T04:11:06.349000+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:17:12.914895+00:00",
+        "fetched_at": "2026-04-22T00:12:30.689120+00:00",
         "maincvs": [
           "用户1861361811459",
           "甜甜的贾诩…"
@@ -3078,13 +3111,13 @@
       "1541815834156990959": {
         "name": "这个Alpha为何那样？",
         "cover": "https://img.kilamanbo.com/h5/1647945359519753.jpg",
-        "view_count": 30400872,
-        "favorite_count": 402937,
+        "view_count": 30403058,
+        "favorite_count": 402947,
         "pay_count": 0,
         "diamond_value": 0,
         "updated_at": "2025-12-23T03:33:28.062000+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:17:13.943324+00:00",
+        "fetched_at": "2026-04-22T00:12:31.681358+00:00",
         "maincvs": [
           "小K很好",
           "倒吊男"
@@ -3097,13 +3130,13 @@
       "1553264331477483561": {
         "name": "天潢贵胄",
         "cover": "https://img.kilamanbo.com/h5/1761275680152237.jpg",
-        "view_count": 36266060,
-        "favorite_count": 345103,
-        "pay_count": 92215,
-        "diamond_value": 3134244,
+        "view_count": 36271865,
+        "favorite_count": 345121,
+        "pay_count": 92219,
+        "diamond_value": 3134254,
         "updated_at": "2026-03-09T04:02:38.333000+00:00",
         "danmaku_uid_count": 18650,
-        "fetched_at": "2026-04-21T00:17:15.005328+00:00",
+        "fetched_at": "2026-04-22T00:12:32.724923+00:00",
         "maincvs": [
           "李轻扬",
           "弋凡"
@@ -3116,13 +3149,13 @@
       "1554716979611303976": {
         "name": "我行让我来·第一季",
         "cover": "https://img.kilamanbo.com/h5/164757706674197.jpg",
-        "view_count": 36462721,
-        "favorite_count": 495021,
-        "pay_count": 123143,
+        "view_count": 36469477,
+        "favorite_count": 495053,
+        "pay_count": 123159,
         "diamond_value": 7494970,
         "updated_at": "2025-10-23T06:49:47.909000+00:00",
         "danmaku_uid_count": 20562,
-        "fetched_at": "2026-04-21T00:17:16.124054+00:00",
+        "fetched_at": "2026-04-22T00:12:33.845788+00:00",
         "maincvs": [
           "叶清",
           "夏磊"
@@ -3135,13 +3168,13 @@
       "1574380284785197130": {
         "name": "提灯映桃花·第一季",
         "cover": "https://img.kilamanbo.com/h5/1701082259101314.jpg",
-        "view_count": 33598517,
-        "favorite_count": 333543,
-        "pay_count": 92030,
+        "view_count": 33618244,
+        "favorite_count": 333564,
+        "pay_count": 92042,
         "diamond_value": 7371082,
         "updated_at": "2025-12-04T09:14:28.235000+00:00",
         "danmaku_uid_count": 11534,
-        "fetched_at": "2026-04-21T00:17:17.410435+00:00",
+        "fetched_at": "2026-04-22T00:12:34.931487+00:00",
         "maincvs": [
           "袁铭喆",
           "赵成晨"
@@ -3154,13 +3187,13 @@
       "1596246719203377239": {
         "name": "恣睢之臣",
         "cover": "https://img.kilamanbo.com/h5/248072808f870391f4a1983b99eb083c.jpg",
-        "view_count": 12884326,
-        "favorite_count": 267553,
-        "pay_count": 59201,
+        "view_count": 12885244,
+        "favorite_count": 267558,
+        "pay_count": 59204,
         "diamond_value": 3963943,
         "updated_at": "2025-10-27T05:18:36.403000+00:00",
         "danmaku_uid_count": 10637,
-        "fetched_at": "2026-04-21T00:17:18.469415+00:00",
+        "fetched_at": "2026-04-22T00:12:36.067116+00:00",
         "maincvs": [
           "锦鲤",
           "倔强的小红"
@@ -3173,13 +3206,13 @@
       "1596401836242239612": {
         "name": "我喜欢你男朋友很久了",
         "cover": "https://img.kilamanbo.com/h5/1701090966988995.jpg",
-        "view_count": 42424981,
-        "favorite_count": 405808,
-        "pay_count": 308596,
-        "diamond_value": 4356644,
+        "view_count": 42428995,
+        "favorite_count": 405832,
+        "pay_count": 308636,
+        "diamond_value": 4356744,
         "updated_at": "2025-10-23T07:21:54.156000+00:00",
         "danmaku_uid_count": 34003,
-        "fetched_at": "2026-04-21T00:17:19.671046+00:00",
+        "fetched_at": "2026-04-22T00:12:37.101629+00:00",
         "maincvs": [
           "史泽鲲",
           "钱文青"
@@ -3192,13 +3225,13 @@
       "1598818249267478612": {
         "name": "穿成反派的我靠沙雕苟活",
         "cover": "https://img.kilamanbo.com/h5/164756938601712.jpg",
-        "view_count": 33737990,
-        "favorite_count": 309023,
-        "pay_count": 264905,
-        "diamond_value": 1706090,
+        "view_count": 33741731,
+        "favorite_count": 309036,
+        "pay_count": 264923,
+        "diamond_value": 1706256,
         "updated_at": "2025-10-24T06:23:58.394000+00:00",
         "danmaku_uid_count": 29301,
-        "fetched_at": "2026-04-21T00:17:20.828784+00:00",
+        "fetched_at": "2026-04-22T00:12:38.075647+00:00",
         "maincvs": [
           "糖醋排骨",
           "陈冠豪"
@@ -3211,13 +3244,13 @@
       "1610319737894469722": {
         "name": "Remix混音人生",
         "cover": "https://img.kilamanbo.com/h5/1761116041811618.jpg",
-        "view_count": 57389708,
-        "favorite_count": 674014,
+        "view_count": 57392263,
+        "favorite_count": 674022,
         "pay_count": 0,
         "diamond_value": 2544633,
         "updated_at": "2026-04-03T10:23:09.330000+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:17:21.883210+00:00",
+        "fetched_at": "2026-04-22T00:12:39.307311+00:00",
         "maincvs": [
           "机智少年Cifer🎧单向波形",
           "轩ZONE"
@@ -3230,13 +3263,13 @@
       "1615570361183633506": {
         "name": "哎我刀呢",
         "cover": "https://img.kilamanbo.com/h5/1701082475961522.jpg",
-        "view_count": 17690633,
-        "favorite_count": 202966,
-        "pay_count": 143418,
-        "diamond_value": 4751310,
+        "view_count": 17691629,
+        "favorite_count": 202969,
+        "pay_count": 143421,
+        "diamond_value": 4751320,
         "updated_at": "2025-10-29T11:32:35.810000+00:00",
         "danmaku_uid_count": 24551,
-        "fetched_at": "2026-04-21T00:17:22.908928+00:00",
+        "fetched_at": "2026-04-22T00:12:40.472729+00:00",
         "maincvs": [
           "吴磊",
           "赵乾景"
@@ -3249,13 +3282,13 @@
       "1651233407377604656": {
         "name": "坦白从严",
         "cover": "https://img.kilamanbo.com/h5/1656493762829891.jpg",
-        "view_count": 25873931,
-        "favorite_count": 240469,
+        "view_count": 25875945,
+        "favorite_count": 240477,
         "pay_count": 0,
         "diamond_value": 1668083,
         "updated_at": "2025-10-27T04:30:59.322000+00:00",
         "danmaku_uid_count": 28516,
-        "fetched_at": "2026-04-21T00:17:23.860551+00:00",
+        "fetched_at": "2026-04-22T00:12:41.299514+00:00",
         "maincvs": [
           "边江",
           "锦鲤"
@@ -3268,13 +3301,13 @@
       "1651969680736256039": {
         "name": "玲珑月·第一季",
         "cover": "https://img.kilamanbo.com/h5/166381699549555.jpg",
-        "view_count": 32834006,
-        "favorite_count": 173869,
+        "view_count": 32835082,
+        "favorite_count": 173876,
         "pay_count": 0,
         "diamond_value": 2806703,
         "updated_at": "2025-12-22T07:15:16.635000+00:00",
         "danmaku_uid_count": 15446,
-        "fetched_at": "2026-04-21T00:17:24.947409+00:00",
+        "fetched_at": "2026-04-22T00:12:42.320713+00:00",
         "maincvs": [
           "锦鲤",
           "魅影之声"
@@ -3287,13 +3320,13 @@
       "1653424609497710659": {
         "name": "心眼·第一季",
         "cover": "https://img.kilamanbo.com/h5/1701189900396700.jpg",
-        "view_count": 15019661,
-        "favorite_count": 196589,
-        "pay_count": 135436,
+        "view_count": 15024020,
+        "favorite_count": 196607,
+        "pay_count": 135459,
         "diamond_value": 3368399,
         "updated_at": "2025-10-30T09:07:04.793000+00:00",
         "danmaku_uid_count": 15013,
-        "fetched_at": "2026-04-21T00:17:25.806768+00:00",
+        "fetched_at": "2026-04-22T00:12:43.137344+00:00",
         "maincvs": [
           "陈张太康",
           "文森"
@@ -3306,13 +3339,13 @@
       "1666731689491038305": {
         "name": "提灯映桃花·第二季",
         "cover": "https://img.kilamanbo.com/h5/1701082783424979.jpg",
-        "view_count": 15612665,
-        "favorite_count": 149450,
-        "pay_count": 56888,
-        "diamond_value": 2137603,
+        "view_count": 15622140,
+        "favorite_count": 149472,
+        "pay_count": 56900,
+        "diamond_value": 2137623,
         "updated_at": "2025-12-04T06:37:02.943000+00:00",
         "danmaku_uid_count": 8342,
-        "fetched_at": "2026-04-21T00:17:26.934789+00:00",
+        "fetched_at": "2026-04-22T00:12:44.269276+00:00",
         "maincvs": [
           "袁铭喆",
           "赵成晨"
@@ -3325,13 +3358,13 @@
       "1676755829627289616": {
         "name": "玩物丧志",
         "cover": "https://img.kilamanbo.com/h5/1706766932729440.jpg",
-        "view_count": 14391741,
-        "favorite_count": 333452,
-        "pay_count": 4608,
+        "view_count": 14392244,
+        "favorite_count": 333459,
+        "pay_count": 4616,
         "diamond_value": 406276,
         "updated_at": "2025-12-23T03:08:14.514000+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:17:28.051591+00:00",
+        "fetched_at": "2026-04-22T00:12:45.319977+00:00",
         "maincvs": [
           "陈冠豪",
           "家康"
@@ -3344,13 +3377,13 @@
       "1681664693778776107": {
         "name": "沙雕渣攻今天又渣了我",
         "cover": "https://img.kilamanbo.com/h5/1654157201706890.jpg",
-        "view_count": 12651461,
-        "favorite_count": 205653,
-        "pay_count": 104740,
-        "diamond_value": 1195944,
+        "view_count": 12652664,
+        "favorite_count": 205658,
+        "pay_count": 104752,
+        "diamond_value": 1195954,
         "updated_at": "2025-11-04T07:21:38.598000+00:00",
         "danmaku_uid_count": 18166,
-        "fetched_at": "2026-04-21T00:17:29.028770+00:00",
+        "fetched_at": "2026-04-22T00:12:46.313629+00:00",
         "maincvs": [
           "苏尚卿",
           "DK"
@@ -3363,13 +3396,13 @@
       "1682721779719602251": {
         "name": "邪门的爱情出现了",
         "cover": "https://img.kilamanbo.com/h5/1701084635107381.jpg",
-        "view_count": 20047628,
-        "favorite_count": 214849,
-        "pay_count": 134196,
+        "view_count": 20050198,
+        "favorite_count": 214857,
+        "pay_count": 134211,
         "diamond_value": 3289838,
         "updated_at": "2026-03-21T14:33:51.291000+00:00",
         "danmaku_uid_count": 23089,
-        "fetched_at": "2026-04-21T00:17:30.281082+00:00",
+        "fetched_at": "2026-04-22T00:12:47.436540+00:00",
         "maincvs": [
           "许凯",
           "刘思岑"
@@ -3382,13 +3415,13 @@
       "1685988437355659307": {
         "name": "美人丞相的千层套路",
         "cover": "https://img.kilamanbo.com/h5/1656040809792845.jpg",
-        "view_count": 29692204,
-        "favorite_count": 500613,
+        "view_count": 29693435,
+        "favorite_count": 500623,
         "pay_count": 0,
         "diamond_value": 525493,
         "updated_at": "2026-02-05T12:57:58.196000+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:17:31.447138+00:00",
+        "fetched_at": "2026-04-22T00:12:48.452784+00:00",
         "maincvs": [
           "-岑先生-",
           "柳凄"
@@ -3401,13 +3434,13 @@
       "1697533863498088523": {
         "name": "人鱼陷落·第一季",
         "cover": "https://img.kilamanbo.com/h5/1701078242196986.jpg",
-        "view_count": 57801620,
-        "favorite_count": 852475,
-        "pay_count": 171341,
-        "diamond_value": 8945453,
+        "view_count": 57814277,
+        "favorite_count": 852557,
+        "pay_count": 171362,
+        "diamond_value": 8945573,
         "updated_at": "2026-03-04T07:59:05.587000+00:00",
         "danmaku_uid_count": 25670,
-        "fetched_at": "2026-04-21T00:17:32.501395+00:00",
+        "fetched_at": "2026-04-22T00:12:49.670580+00:00",
         "maincvs": [
           "张福正",
           "马正阳"
@@ -3420,13 +3453,13 @@
       "1697945510343606402": {
         "name": "二锅水·第一季",
         "cover": "https://img.kilamanbo.com/h5/1657607426434201.jpg",
-        "view_count": 12466036,
-        "favorite_count": 199913,
+        "view_count": 12468919,
+        "favorite_count": 199948,
         "pay_count": 0,
-        "diamond_value": 3106035,
+        "diamond_value": 3106055,
         "updated_at": "2026-04-13T14:31:55.494000+00:00",
         "danmaku_uid_count": 11205,
-        "fetched_at": "2026-04-21T00:17:33.625522+00:00",
+        "fetched_at": "2026-04-22T00:12:50.924281+00:00",
         "maincvs": [
           "马正阳",
           "谷江山"
@@ -3439,13 +3472,13 @@
       "1705799472224665659": {
         "name": "提灯映桃花·第三季",
         "cover": "https://img.kilamanbo.com/h5/1701083456432818.jpg",
-        "view_count": 14152011,
-        "favorite_count": 98195,
-        "pay_count": 40392,
+        "view_count": 14161406,
+        "favorite_count": 98211,
+        "pay_count": 40403,
         "diamond_value": 2132468,
         "updated_at": "2025-12-04T06:32:55.776000+00:00",
         "danmaku_uid_count": 5518,
-        "fetched_at": "2026-04-21T00:17:34.776332+00:00",
+        "fetched_at": "2026-04-22T00:12:52.014297+00:00",
         "maincvs": [
           "袁铭喆",
           "赵成晨"
@@ -3458,13 +3491,13 @@
       "1710951908266475655": {
         "name": "大珰",
         "cover": "https://img.kilamanbo.com/h5/1660636132369604.jpg",
-        "view_count": 12969297,
-        "favorite_count": 158779,
-        "pay_count": 72166,
+        "view_count": 12970914,
+        "favorite_count": 158794,
+        "pay_count": 72176,
         "diamond_value": 4250543,
         "updated_at": "2025-10-29T12:53:57.537000+00:00",
         "danmaku_uid_count": 12444,
-        "fetched_at": "2026-04-21T00:17:35.857165+00:00",
+        "fetched_at": "2026-04-22T00:12:53.020752+00:00",
         "maincvs": [
           "谷江山",
           "陈家恒"
@@ -3477,13 +3510,13 @@
       "1719409274397917242": {
         "name": "我行让我来·第二季",
         "cover": "https://img.kilamanbo.com/h5/1662605463875972.jpg",
-        "view_count": 19653648,
-        "favorite_count": 210356,
-        "pay_count": 86584,
+        "view_count": 19659954,
+        "favorite_count": 210378,
+        "pay_count": 86600,
         "diamond_value": 2119638,
         "updated_at": "2025-10-24T07:25:24.683000+00:00",
         "danmaku_uid_count": 17383,
-        "fetched_at": "2026-04-21T00:17:36.915083+00:00",
+        "fetched_at": "2026-04-22T00:12:53.854969+00:00",
         "maincvs": [
           "叶清",
           "夏磊"
@@ -3496,13 +3529,13 @@
       "1722442762554441784": {
         "name": "这位alpha身残志坚·第一季",
         "cover": "https://img.kilamanbo.com/h5/166331038070979.jpg",
-        "view_count": 17286714,
-        "favorite_count": 247323,
-        "pay_count": 61362,
+        "view_count": 17288048,
+        "favorite_count": 247331,
+        "pay_count": 61370,
         "diamond_value": 623528,
         "updated_at": "2025-12-06T04:05:58.405000+00:00",
         "danmaku_uid_count": 10935,
-        "fetched_at": "2026-04-21T00:17:38.020338+00:00",
+        "fetched_at": "2026-04-22T00:12:55.020521+00:00",
         "maincvs": [
           "倔强的小红",
           "陈冠豪"
@@ -3515,13 +3548,13 @@
       "1737280629021605914": {
         "name": "折枝",
         "cover": "https://img.kilamanbo.com/h5/1666766347803270.jpg",
-        "view_count": 15144106,
-        "favorite_count": 210878,
-        "pay_count": 70546,
+        "view_count": 15147674,
+        "favorite_count": 210894,
+        "pay_count": 70557,
         "diamond_value": 8280511,
         "updated_at": "2025-10-29T02:29:37.122000+00:00",
         "danmaku_uid_count": 14596,
-        "fetched_at": "2026-04-21T00:17:39.247084+00:00",
+        "fetched_at": "2026-04-22T00:12:56.100016+00:00",
         "maincvs": [
           "金弦",
           "谷江山"
@@ -3534,13 +3567,13 @@
       "1755414917248188486": {
         "name": "飞来横犬•第一季",
         "cover": "https://img.kilamanbo.com/h5/167187346203274.jpg",
-        "view_count": 14747427,
-        "favorite_count": 146282,
-        "pay_count": 125491,
+        "view_count": 14760711,
+        "favorite_count": 146306,
+        "pay_count": 125522,
         "diamond_value": 2438050,
         "updated_at": "2025-10-29T08:41:23.645000+00:00",
         "danmaku_uid_count": 14298,
-        "fetched_at": "2026-04-21T00:17:40.243558+00:00",
+        "fetched_at": "2026-04-22T00:12:57.084449+00:00",
         "maincvs": [
           "金弦",
           "史泽鲲"
@@ -3553,13 +3586,13 @@
       "1811968765974282305": {
         "name": "人鱼陷落·第二季",
         "cover": "https://img.kilamanbo.com/h5/1701078159970376.jpg",
-        "view_count": 25293249,
-        "favorite_count": 284832,
-        "pay_count": 114181,
+        "view_count": 25303011,
+        "favorite_count": 284880,
+        "pay_count": 114207,
         "diamond_value": 2699431,
         "updated_at": "2026-03-04T07:58:56.542000+00:00",
         "danmaku_uid_count": 20887,
-        "fetched_at": "2026-04-21T00:17:42.319632+00:00",
+        "fetched_at": "2026-04-22T00:12:59.099002+00:00",
         "maincvs": [
           "张福正",
           "马正阳"
@@ -3572,13 +3605,13 @@
       "1812267721467887665": {
         "name": "唇间",
         "cover": "https://img.kilamanbo.com/h5/1711345699441444.jpg",
-        "view_count": 12588477,
-        "favorite_count": 137370,
+        "view_count": 12596267,
+        "favorite_count": 137402,
         "pay_count": 0,
         "diamond_value": 964785,
         "updated_at": "2026-01-26T03:01:28.561000+00:00",
         "danmaku_uid_count": 13977,
-        "fetched_at": "2026-04-21T00:17:43.360398+00:00",
+        "fetched_at": "2026-04-22T00:13:00.194347+00:00",
         "maincvs": [
           "史泽鲲",
           "张福正"
@@ -3591,13 +3624,13 @@
       "1817070006005923931": {
         "name": "在古代上学的日子",
         "cover": "https://img.kilamanbo.com/h5/170107926912348.jpg",
-        "view_count": 23555045,
-        "favorite_count": 164452,
-        "pay_count": 107185,
+        "view_count": 23559928,
+        "favorite_count": 164468,
+        "pay_count": 107207,
         "diamond_value": 2350242,
         "updated_at": "2025-12-09T07:07:49.748000+00:00",
         "danmaku_uid_count": 18516,
-        "fetched_at": "2026-04-21T00:17:44.406697+00:00",
+        "fetched_at": "2026-04-22T00:13:01.188411+00:00",
         "maincvs": [
           "钱文青",
           "马正阳"
@@ -3610,13 +3643,13 @@
       "1822308538962149425": {
         "name": "飞来横犬·第二季",
         "cover": "https://img.kilamanbo.com/h5/1686564219826172.jpg",
-        "view_count": 16225739,
-        "favorite_count": 105870,
-        "pay_count": 112067,
-        "diamond_value": 4107129,
+        "view_count": 16243113,
+        "favorite_count": 105892,
+        "pay_count": 112092,
+        "diamond_value": 4107195,
         "updated_at": "2025-10-24T10:15:28.634000+00:00",
         "danmaku_uid_count": 15367,
-        "fetched_at": "2026-04-21T00:17:45.364480+00:00",
+        "fetched_at": "2026-04-22T00:13:02.169920+00:00",
         "maincvs": [
           "史泽鲲",
           "金弦"
@@ -3629,13 +3662,13 @@
       "1831582687614205983": {
         "name": "限定暧昧·第一季",
         "cover": "https://img.kilamanbo.com/h5/1701090229897430.jpg",
-        "view_count": 15442225,
-        "favorite_count": 67506,
-        "pay_count": 38862,
+        "view_count": 15442568,
+        "favorite_count": 67511,
+        "pay_count": 38864,
         "diamond_value": 1502893,
         "updated_at": "2025-10-28T10:24:31.865000+00:00",
         "danmaku_uid_count": 3170,
-        "fetched_at": "2026-04-21T00:17:46.364699+00:00",
+        "fetched_at": "2026-04-22T00:13:03.304718+00:00",
         "maincvs": [
           "柒夜『scc7000』",
           "無之少年"
@@ -3648,13 +3681,13 @@
       "1833068565909995609": {
         "name": "重生之幽灵棋手",
         "cover": "https://img.kilamanbo.com/h5/1701082663921707.jpg",
-        "view_count": 13282363,
-        "favorite_count": 34092,
+        "view_count": 13282474,
+        "favorite_count": 34095,
         "pay_count": 0,
         "diamond_value": 2117892,
         "updated_at": "2025-10-24T08:30:34.807000+00:00",
         "danmaku_uid_count": 2675,
-        "fetched_at": "2026-04-21T00:17:47.196710+00:00",
+        "fetched_at": "2026-04-22T00:13:04.133410+00:00",
         "maincvs": [
           "X杰",
           "刘思岑"
@@ -3667,13 +3700,13 @@
       "1834138790155780240": {
         "name": "心眼·第二季",
         "cover": "https://img.kilamanbo.com/h5/1701189959524757.jpg",
-        "view_count": 13619260,
-        "favorite_count": 105086,
-        "pay_count": 103033,
-        "diamond_value": 1943842,
+        "view_count": 13623407,
+        "favorite_count": 105098,
+        "pay_count": 103055,
+        "diamond_value": 1944238,
         "updated_at": "2025-10-30T08:02:47.569000+00:00",
         "danmaku_uid_count": 14467,
-        "fetched_at": "2026-04-21T00:17:48.165621+00:00",
+        "fetched_at": "2026-04-22T00:13:05.088654+00:00",
         "maincvs": [
           "陈张太康",
           "文森"
@@ -3707,13 +3740,13 @@
       "1871610739135873099": {
         "name": "人鱼陷落·第三季",
         "cover": "https://img.kilamanbo.com/h5/1701078173641203.jpg",
-        "view_count": 20873440,
-        "favorite_count": 199324,
-        "pay_count": 81816,
-        "diamond_value": 1520960,
+        "view_count": 20882659,
+        "favorite_count": 199370,
+        "pay_count": 81840,
+        "diamond_value": 1520980,
         "updated_at": "2026-03-04T07:58:47.218000+00:00",
         "danmaku_uid_count": 15129,
-        "fetched_at": "2026-04-21T00:17:49.295429+00:00",
+        "fetched_at": "2026-04-22T00:13:06.135020+00:00",
         "maincvs": [
           "马正阳",
           "张福正"
@@ -3726,13 +3759,13 @@
       "1878242245950308469": {
         "name": "观鹤笔记·第一季",
         "cover": "https://img.kilamanbo.com/h5/1702456476819617.jpg",
-        "view_count": 3525068,
-        "favorite_count": 41384,
-        "pay_count": 11514,
-        "diamond_value": 1458401,
+        "view_count": 3527011,
+        "favorite_count": 41399,
+        "pay_count": 11521,
+        "diamond_value": 1458489,
         "updated_at": "2025-11-20T09:35:07.825000+00:00",
         "danmaku_uid_count": 1536,
-        "fetched_at": "2026-04-21T00:17:50.408987+00:00",
+        "fetched_at": "2026-04-22T00:13:07.192561+00:00",
         "maincvs": [
           "陈家恒",
           "赵秋融"
@@ -3764,13 +3797,13 @@
       "1884958690037989399": {
         "name": "妻为上·第一季",
         "cover": "https://img.kilamanbo.com/h5/1702552443066528.jpg",
-        "view_count": 13617356,
-        "favorite_count": 159149,
-        "pay_count": 60987,
-        "diamond_value": 1747429,
+        "view_count": 13620831,
+        "favorite_count": 159170,
+        "pay_count": 60994,
+        "diamond_value": 1747439,
         "updated_at": "2025-10-24T11:16:21.602000+00:00",
         "danmaku_uid_count": 6509,
-        "fetched_at": "2026-04-21T00:17:52.359786+00:00",
+        "fetched_at": "2026-04-22T00:13:08.236963+00:00",
         "maincvs": [
           "凌飞",
           "羊仔"
@@ -3783,13 +3816,13 @@
       "1909122352138944584": {
         "name": "欲言难止 有声剧",
         "cover": "https://img.kilamanbo.com/h5/1706957938342781.jpg",
-        "view_count": 16894763,
-        "favorite_count": 161465,
+        "view_count": 16931827,
+        "favorite_count": 161603,
         "pay_count": 0,
-        "diamond_value": 368146,
+        "diamond_value": 368456,
         "updated_at": "2026-03-06T02:34:01.566000+00:00",
         "danmaku_uid_count": 5422,
-        "fetched_at": "2026-04-21T00:17:53.400486+00:00",
+        "fetched_at": "2026-04-22T00:13:09.278215+00:00",
         "maincvs": [
           "顺子",
           "倒霉死勒"
@@ -3802,13 +3835,13 @@
       "1926101092299440280": {
         "name": "我乘风雪",
         "cover": "https://img.kilamanbo.com/h5/1710732307222204.jpg",
-        "view_count": 14807671,
-        "favorite_count": 103402,
+        "view_count": 14811909,
+        "favorite_count": 103442,
         "pay_count": 0,
         "diamond_value": 12056044,
         "updated_at": "2025-12-29T09:00:17.213000+00:00",
         "danmaku_uid_count": 768,
-        "fetched_at": "2026-04-21T00:17:54.436484+00:00",
+        "fetched_at": "2026-04-22T00:13:10.358930+00:00",
         "maincvs": [
           "金弦",
           "顺子"
@@ -3821,13 +3854,13 @@
       "1944764730950287431": {
         "name": "从万米高空降临",
         "cover": "https://img.kilamanbo.com/h5/1727585705244874.jpg",
-        "view_count": 59399013,
-        "favorite_count": 341553,
+        "view_count": 59424954,
+        "favorite_count": 341673,
         "pay_count": 0,
-        "diamond_value": 6865679,
+        "diamond_value": 6866197,
         "updated_at": "2025-12-22T08:10:12.976000+00:00",
         "danmaku_uid_count": 23660,
-        "fetched_at": "2026-04-21T00:17:55.497816+00:00",
+        "fetched_at": "2026-04-22T00:13:11.407805+00:00",
         "maincvs": [
           "徐宇隆",
           "马洋"
@@ -3840,13 +3873,13 @@
       "1946295508834189409": {
         "name": "四面佛",
         "cover": "https://img.kilamanbo.com/h5/1721400532856107.jpg",
-        "view_count": 83733821,
-        "favorite_count": 243893,
-        "pay_count": 99123,
-        "diamond_value": 9640444,
+        "view_count": 83818014,
+        "favorite_count": 244035,
+        "pay_count": 99194,
+        "diamond_value": 9640464,
         "updated_at": "2025-12-22T07:00:17.205000+00:00",
         "danmaku_uid_count": 15296,
-        "fetched_at": "2026-04-21T00:17:56.515899+00:00",
+        "fetched_at": "2026-04-22T00:13:12.455023+00:00",
         "maincvs": [
           "袁铭喆",
           "赵成晨"
@@ -3859,13 +3892,13 @@
       "1955825512983036032": {
         "name": "奇洛李维斯回信",
         "cover": "https://img.kilamanbo.com/h5/1720941990365542.jpg",
-        "view_count": 81245070,
-        "favorite_count": 474241,
-        "pay_count": 225504,
-        "diamond_value": 9448166,
+        "view_count": 81306666,
+        "favorite_count": 474466,
+        "pay_count": 225610,
+        "diamond_value": 9448713,
         "updated_at": "2026-03-31T02:31:38.649000+00:00",
         "danmaku_uid_count": 39137,
-        "fetched_at": "2026-04-21T00:17:57.563984+00:00",
+        "fetched_at": "2026-04-22T00:13:13.544885+00:00",
         "maincvs": [
           "孙路路",
           "刘思岑"
@@ -3878,13 +3911,13 @@
       "1983255583611945059": {
         "name": "铜雀锁金钗",
         "cover": "https://img.kilamanbo.com/h5/1724051717394153.jpg",
-        "view_count": 21479403,
-        "favorite_count": 125386,
-        "pay_count": 32101,
-        "diamond_value": 12873270,
+        "view_count": 21488252,
+        "favorite_count": 125480,
+        "pay_count": 32148,
+        "diamond_value": 12874604,
         "updated_at": "2025-12-22T07:06:51.098000+00:00",
         "danmaku_uid_count": 5989,
-        "fetched_at": "2026-04-21T00:17:58.601655+00:00",
+        "fetched_at": "2026-04-22T00:13:14.604821+00:00",
         "maincvs": [
           "金弦",
           "刘琮"
@@ -3897,13 +3930,13 @@
       "1997467750653493400": {
         "name": "深巷有光·第二季",
         "cover": "https://img.kilamanbo.com/h5/1737622279937140.jpg",
-        "view_count": 13591800,
-        "favorite_count": 44050,
-        "pay_count": 44012,
+        "view_count": 13595032,
+        "favorite_count": 44061,
+        "pay_count": 44026,
         "diamond_value": 6469688,
         "updated_at": "2025-12-04T04:09:36.990000+00:00",
         "danmaku_uid_count": 6616,
-        "fetched_at": "2026-04-21T00:17:59.666014+00:00",
+        "fetched_at": "2026-04-22T00:13:15.640772+00:00",
         "maincvs": [
           "金弦",
           "兰陶倚"
@@ -3916,13 +3949,13 @@
       "2051248540860022865": {
         "name": "锁帝翎",
         "cover": "https://img.kilamanbo.com/h5/1754729415744908.jpg",
-        "view_count": 1211447,
-        "favorite_count": 39061,
+        "view_count": 1216367,
+        "favorite_count": 39087,
         "pay_count": 0,
         "diamond_value": 620607,
         "updated_at": "2026-04-18T09:00:00.082000+00:00",
         "danmaku_uid_count": 1232,
-        "fetched_at": "2026-04-21T00:18:01.844397+00:00",
+        "fetched_at": "2026-04-22T00:13:17.728458+00:00",
         "maincvs": [
           "张福正",
           "文森"
@@ -3935,13 +3968,13 @@
       "2069873254222266552": {
         "name": "逐云墓场",
         "cover": "https://img.kilamanbo.com/h5/1770906736245746.jpg",
-        "view_count": 400358,
-        "favorite_count": 13037,
+        "view_count": 420333,
+        "favorite_count": 13266,
         "pay_count": 0,
-        "diamond_value": 647055,
-        "updated_at": "2026-04-20T10:00:00.178000+00:00",
+        "diamond_value": 648990,
+        "updated_at": "2026-04-21T18:13:40.834000+00:00",
         "danmaku_uid_count": 419,
-        "fetched_at": "2026-04-21T00:18:02.668002+00:00",
+        "fetched_at": "2026-04-22T00:13:18.713277+00:00",
         "maincvs": [
           "马正阳",
           "蠢蠢鱼冻sang"
@@ -3954,13 +3987,13 @@
       "2083142877805805672": {
         "name": "Endless Echoes",
         "cover": "https://img.kilamanbo.com/h5/1770259304876681.jpg",
-        "view_count": 15508824,
-        "favorite_count": 139782,
-        "pay_count": 37512,
-        "diamond_value": 6755050,
+        "view_count": 15604393,
+        "favorite_count": 140027,
+        "pay_count": 37612,
+        "diamond_value": 6756616,
         "updated_at": "2026-04-16T10:00:00.130000+00:00",
         "danmaku_uid_count": 9175,
-        "fetched_at": "2026-04-21T00:18:03.780772+00:00",
+        "fetched_at": "2026-04-22T00:13:19.742585+00:00",
         "maincvs": [
           "胡良伟",
           "史泽鲲"
@@ -3973,13 +4006,13 @@
       "2087206604062588962": {
         "name": "囚于永夜",
         "cover": "https://img.kilamanbo.com/h5/1755399154692811.jpg",
-        "view_count": 33773849,
-        "favorite_count": 218141,
+        "view_count": 33889411,
+        "favorite_count": 218545,
         "pay_count": 0,
-        "diamond_value": 7984065,
+        "diamond_value": 7985400,
         "updated_at": "2026-04-08T04:00:00.681000+00:00",
         "danmaku_uid_count": 20927,
-        "fetched_at": "2026-04-21T00:18:04.860618+00:00",
+        "fetched_at": "2026-04-22T00:13:20.836978+00:00",
         "maincvs": [
           "孙路路",
           "张福正"
@@ -3992,13 +4025,13 @@
       "2090556936251506742": {
         "name": "贺新朝",
         "cover": "https://img.kilamanbo.com/h5/1750848215831437.jpg",
-        "view_count": 8440005,
-        "favorite_count": 59267,
-        "pay_count": 35177,
+        "view_count": 8448930,
+        "favorite_count": 59286,
+        "pay_count": 35210,
         "diamond_value": 3767714,
         "updated_at": "2025-12-19T09:00:00.381000+00:00",
         "danmaku_uid_count": 5105,
-        "fetched_at": "2026-04-21T00:18:05.891812+00:00",
+        "fetched_at": "2026-04-22T00:13:21.917149+00:00",
         "maincvs": [
           "羊仔",
           "袁铭喆"
@@ -4011,13 +4044,13 @@
       "2096474602321477724": {
         "name": "爱情公园",
         "cover": "https://img.kilamanbo.com/h5/1753240046679342.jpg",
-        "view_count": 3716016,
-        "favorite_count": 54939,
+        "view_count": 3720238,
+        "favorite_count": 54969,
         "pay_count": 0,
-        "diamond_value": 15128683,
+        "diamond_value": 15128743,
         "updated_at": "2026-01-30T10:42:14.406000+00:00",
         "danmaku_uid_count": 3317,
-        "fetched_at": "2026-04-21T00:18:06.947834+00:00",
+        "fetched_at": "2026-04-22T00:13:22.949748+00:00",
         "maincvs": [
           "苏尚卿",
           "姜贺"
@@ -4030,13 +4063,13 @@
       "2099832214479962276": {
         "name": "婚后暗恋",
         "cover": "https://img.kilamanbo.com/h5/1767887779226885.jpg",
-        "view_count": 551896,
-        "favorite_count": 15196,
+        "view_count": 555367,
+        "favorite_count": 15215,
         "pay_count": 0,
-        "diamond_value": 111583,
+        "diamond_value": 111593,
         "updated_at": "2026-04-11T10:00:00.469000+00:00",
         "danmaku_uid_count": 821,
-        "fetched_at": "2026-04-21T00:18:07.896734+00:00",
+        "fetched_at": "2026-04-22T00:13:23.915221+00:00",
         "maincvs": [
           "三石",
           "倔强的小红"
@@ -4049,13 +4082,13 @@
       "2103530877106520082": {
         "name": "别读博，会脱单",
         "cover": "https://img.kilamanbo.com/h5/1752053193796923.jpg",
-        "view_count": 6590375,
-        "favorite_count": 60960,
-        "pay_count": 25191,
-        "diamond_value": 2498407,
+        "view_count": 6615501,
+        "favorite_count": 60998,
+        "pay_count": 25215,
+        "diamond_value": 2506572,
         "updated_at": "2025-12-22T08:22:28.576000+00:00",
         "danmaku_uid_count": 4260,
-        "fetched_at": "2026-04-21T00:18:08.959024+00:00",
+        "fetched_at": "2026-04-22T00:13:24.934412+00:00",
         "maincvs": [
           "倒霉死勒",
           "魏超"
@@ -4068,13 +4101,13 @@
       "2106168395048157341": {
         "name": "劣性宠溺",
         "cover": "https://img.kilamanbo.com/h5/1757991874807172.jpg",
-        "view_count": 1153572,
-        "favorite_count": 29435,
-        "pay_count": 4859,
-        "diamond_value": 1145109,
+        "view_count": 1164570,
+        "favorite_count": 29511,
+        "pay_count": 4890,
+        "diamond_value": 1146317,
         "updated_at": "2026-04-20T10:00:00.289000+00:00",
         "danmaku_uid_count": 510,
-        "fetched_at": "2026-04-21T00:18:10.008998+00:00",
+        "fetched_at": "2026-04-22T00:13:25.992697+00:00",
         "maincvs": [
           "顺子",
           "羊仔"
@@ -4087,13 +4120,13 @@
       "2106915161011912707": {
         "name": "重生之扫墓",
         "cover": "https://img.kilamanbo.com/h5/1768564949157596.jpg",
-        "view_count": 831210,
-        "favorite_count": 20915,
+        "view_count": 833440,
+        "favorite_count": 20943,
         "pay_count": 0,
-        "diamond_value": 2438211,
+        "diamond_value": 2450109,
         "updated_at": "2026-04-19T07:43:56.562000+00:00",
         "danmaku_uid_count": 718,
-        "fetched_at": "2026-04-21T00:18:11.044634+00:00",
+        "fetched_at": "2026-04-22T00:13:26.998798+00:00",
         "maincvs": [
           "顺子",
           "孙睿扬"
@@ -4106,13 +4139,13 @@
       "2108102247022854570": {
         "name": "藏青",
         "cover": "https://img.kilamanbo.com/h5/176499932303821.jpg",
-        "view_count": 4119584,
-        "favorite_count": 53212,
+        "view_count": 4131706,
+        "favorite_count": 53264,
         "pay_count": 0,
-        "diamond_value": 2402518,
+        "diamond_value": 2402538,
         "updated_at": "2026-04-17T06:30:00.077000+00:00",
         "danmaku_uid_count": 2180,
-        "fetched_at": "2026-04-21T00:18:12.088868+00:00",
+        "fetched_at": "2026-04-22T00:13:28.105036+00:00",
         "maincvs": [
           "马正阳",
           "张福正"
@@ -4125,13 +4158,13 @@
       "2114219113676013652": {
         "name": "少爷归家广播短剧",
         "cover": "https://img.kilamanbo.com/h5/1772070047765999.jpg",
-        "view_count": 657217,
-        "favorite_count": 21771,
+        "view_count": 664658,
+        "favorite_count": 21795,
         "pay_count": 0,
         "diamond_value": 67787,
         "updated_at": "2026-04-13T01:34:06.816000+00:00",
         "danmaku_uid_count": 541,
-        "fetched_at": "2026-04-21T00:18:13.114839+00:00",
+        "fetched_at": "2026-04-22T00:13:29.185286+00:00",
         "maincvs": [
           "-岑先生-",
           "倔强的小红"
@@ -4144,13 +4177,13 @@
       "2117301040473702473": {
         "name": "跛子",
         "cover": "https://img.kilamanbo.com/h5/175550308485787.jpg",
-        "view_count": 303378,
-        "favorite_count": 19391,
-        "pay_count": 8003,
-        "diamond_value": 227342,
+        "view_count": 311729,
+        "favorite_count": 19445,
+        "pay_count": 8034,
+        "diamond_value": 227441,
         "updated_at": "2026-04-16T10:00:00.504000+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:18:14.118360+00:00",
+        "fetched_at": "2026-04-22T00:13:30.173965+00:00",
         "maincvs": [
           "刘明月",
           "郭浩然"
@@ -4163,13 +4196,13 @@
       "2126945977947390043": {
         "name": "不安于室",
         "cover": "https://img.kilamanbo.com/h5/1757573397987922.jpg",
-        "view_count": 44495,
-        "favorite_count": 5972,
+        "view_count": 48504,
+        "favorite_count": 6245,
         "pay_count": 0,
-        "diamond_value": 123935,
+        "diamond_value": 124185,
         "updated_at": "2026-04-20T07:53:04.984000+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:18:14.894384+00:00",
+        "fetched_at": "2026-04-22T00:13:30.999544+00:00",
         "maincvs": [
           "柯暮卿",
           "Fn_宁宝"
@@ -4182,13 +4215,13 @@
       "2152882568188395742": {
         "name": "观鹤笔记·第二季",
         "cover": "https://img.kilamanbo.com/h5/1765768105933912.jpg",
-        "view_count": 221906,
-        "favorite_count": 6344,
-        "pay_count": 2249,
+        "view_count": 223638,
+        "favorite_count": 6359,
+        "pay_count": 2262,
         "diamond_value": 108670,
         "updated_at": "2026-04-17T10:00:00.491000+00:00",
         "danmaku_uid_count": 243,
-        "fetched_at": "2026-04-21T00:18:15.731757+00:00",
+        "fetched_at": "2026-04-22T00:13:31.801686+00:00",
         "maincvs": [
           "赵秋融",
           "陈家恒"
@@ -4201,13 +4234,13 @@
       "2153578778092109868": {
         "name": "满城衣冠",
         "cover": "https://img.kilamanbo.com/h5/1768458887339908.jpg",
-        "view_count": 2057647,
-        "favorite_count": 31064,
+        "view_count": 2079637,
+        "favorite_count": 31153,
         "pay_count": 0,
-        "diamond_value": 736387,
-        "updated_at": "2026-04-20T04:00:00.304000+00:00",
+        "diamond_value": 739940,
+        "updated_at": "2026-04-21T12:49:51.473000+00:00",
         "danmaku_uid_count": 1259,
-        "fetched_at": "2026-04-21T00:18:16.769316+00:00",
+        "fetched_at": "2026-04-22T00:13:32.843782+00:00",
         "maincvs": [
           "赵毅",
           "羊仔"
@@ -4239,13 +4272,13 @@
       "2180734748203155603": {
         "name": "皇恩浩荡",
         "cover": "https://img.kilamanbo.com/h5/1770017479782283.jpg",
-        "view_count": 6070490,
-        "favorite_count": 46358,
-        "pay_count": 35837,
-        "diamond_value": 5921622,
+        "view_count": 6133654,
+        "favorite_count": 46424,
+        "pay_count": 35935,
+        "diamond_value": 5924120,
         "updated_at": "2026-03-30T03:25:32.480000+00:00",
         "danmaku_uid_count": 6262,
-        "fetched_at": "2026-04-21T00:18:17.758860+00:00",
+        "fetched_at": "2026-04-22T00:13:33.874092+00:00",
         "maincvs": [
           "刘思岑",
           "史泽鲲"
@@ -4258,13 +4291,13 @@
       "2182687618293039383": {
         "name": "干涸地",
         "cover": "https://img.kilamanbo.com/h5/1775053379398668.jpg",
-        "view_count": 197823,
-        "favorite_count": 22723,
+        "view_count": 223551,
+        "favorite_count": 24487,
         "pay_count": 0,
-        "diamond_value": 28426,
+        "diamond_value": 30476,
         "updated_at": "2026-04-20T12:00:00.240000+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:18:18.584873+00:00",
+        "fetched_at": "2026-04-22T00:13:34.684932+00:00",
         "maincvs": [
           "顺子",
           "杨昕燃"
@@ -4277,13 +4310,13 @@
       "2188837813892415606": {
         "name": "靡言",
         "cover": "https://img.kilamanbo.com/h5/1771904519256217.jpg",
-        "view_count": 2104330,
-        "favorite_count": 37376,
-        "pay_count": 9489,
-        "diamond_value": 5601077,
+        "view_count": 2158401,
+        "favorite_count": 37648,
+        "pay_count": 9712,
+        "diamond_value": 5603033,
         "updated_at": "2026-04-20T12:15:00.185000+00:00",
         "danmaku_uid_count": 1661,
-        "fetched_at": "2026-04-21T00:18:19.402712+00:00",
+        "fetched_at": "2026-04-22T00:13:35.492764+00:00",
         "maincvs": [
           "金弦",
           "文森"
@@ -4296,13 +4329,13 @@
       "2191530234400997469": {
         "name": "安慰剂效应",
         "cover": "https://img.kilamanbo.com/h5/1772530726473176.jpg",
-        "view_count": 170759,
-        "favorite_count": 10996,
-        "pay_count": 2646,
-        "diamond_value": 2577677,
-        "updated_at": "2026-04-20T02:19:35.919000+00:00",
+        "view_count": 182677,
+        "favorite_count": 11453,
+        "pay_count": 2710,
+        "diamond_value": 2579536,
+        "updated_at": "2026-04-21T09:02:51.453000+00:00",
         "danmaku_uid_count": 0,
-        "fetched_at": "2026-04-21T00:18:20.215409+00:00",
+        "fetched_at": "2026-04-22T00:13:36.338492+00:00",
         "maincvs": [
           "苏尚卿",
           "杨天翔"
@@ -4315,13 +4348,13 @@
       "2195128381907927121": {
         "name": "吞雨",
         "cover": "https://img.kilamanbo.com/h5/1773722686331608.jpg",
-        "view_count": 445919,
-        "favorite_count": 10952,
+        "view_count": 460223,
+        "favorite_count": 11045,
         "pay_count": 0,
-        "diamond_value": 1626227,
-        "updated_at": "2026-04-20T04:00:00.161000+00:00",
+        "diamond_value": 1630107,
+        "updated_at": "2026-04-21T03:46:31.141000+00:00",
         "danmaku_uid_count": 533,
-        "fetched_at": "2026-04-21T00:18:21.208681+00:00",
+        "fetched_at": "2026-04-22T00:13:37.318135+00:00",
         "maincvs": [
           "陈张太康",
           "史泽鲲"
@@ -4430,13 +4463,13 @@
       "1800304751489843262": {
         "name": "奕曲同工",
         "cover": "https://img.kilamanbo.com/h5/1701157930208156.jpg",
-        "view_count": 7502893,
-        "favorite_count": 89706,
+        "view_count": 7508456,
+        "favorite_count": 89745,
         "isVIP": true,
         "pay_count": 0,
         "diamond_value": 258555,
         "updated_at": "2026-04-13T06:46:15.933000+00:00",
-        "fetched_at": "2026-04-21T00:17:41.263328+00:00",
+        "fetched_at": "2026-04-22T00:12:58.102342+00:00",
         "maincvs": [
           "赵成晨",
           "尘霜满眸🌲琅声雅集"
@@ -4448,13 +4481,13 @@
       "2004409671934279838": {
         "name": "行行重行行",
         "cover": "https://img.kilamanbo.com/h5/1746710404701393.jpg",
-        "view_count": 883434,
-        "favorite_count": 26867,
+        "view_count": 885558,
+        "favorite_count": 26880,
         "isVIP": false,
         "pay_count": 0,
-        "diamond_value": 1281445,
+        "diamond_value": 1287011,
         "updated_at": "2025-11-19T11:51:03.471000+00:00",
-        "fetched_at": "2026-04-21T00:18:00.773194+00:00",
+        "fetched_at": "2026-04-22T00:13:16.714429+00:00",
         "maincvs": [
           "孙路路",
           "张福正"
