@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-22T00:13:44+00:00",
+  "updatedAt": "2026-04-23T00:20:53+00:00",
   "records": [
     {
       "dramaId": "1467142227078676553",
@@ -9544,6 +9544,33 @@
       "createTime": "2026.04",
       "needpay": true,
       "seriesTitle": "安慰剂效应"
+    },
+    {
+      "dramaId": "1980419054065680620",
+      "name": "温柔哄睡小故事",
+      "normalizedName": "温柔哄睡小故事",
+      "aliases": [],
+      "cover": "",
+      "author": "",
+      "mainCvNames": [
+        ""
+      ],
+      "catalog": 4,
+      "catalogName": "播客",
+      "type": 3,
+      "genre": "全年龄",
+      "mainCvIds": [
+        3675182051357
+      ],
+      "mainCvNicknames": [
+        "雨臣✨𝓨𝓬🍼【琅声雅集】"
+      ],
+      "mainCvRoleNames": [
+        "主角"
+      ],
+      "createTime": "",
+      "needpay": false,
+      "seriesTitle": "温柔哄睡小故事"
     }
   ]
 }
