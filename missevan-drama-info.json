@@ -51792,14 +51792,17 @@
     "soundIds": [
       "12592420",
       "12602817",
-      "12602745"
+      "12602745",
+      "12608283",
+      "12608312",
+      "12608324"
     ],
     "maincvs": [],
     "type": 4,
     "cvroles": {},
     "cvnames": {},
     "catalog": 93,
-    "createTime": "",
+    "createTime": "2026.04",
     "author": "彻夜流香",
     "needpay": true,
     "seriesTitle": "嫁入高门的人"
@@ -51809,12 +51812,19 @@
     "dramaId": 93196,
     "soundIds": [
       "12581103",
-      "12603275"
+      "12603275",
+      "12608448"
     ],
-    "maincvs": [],
+    "maincvs": [
+      2477
+    ],
     "type": 4,
-    "cvroles": {},
-    "cvnames": {},
+    "cvroles": {
+      "2477": "沈未亭"
+    },
+    "cvnames": {
+      "2477": "DK"
+    },
     "catalog": 89,
     "createTime": "",
     "author": "八月幸识",
