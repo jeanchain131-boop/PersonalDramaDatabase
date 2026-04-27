@@ -53,6 +53,11 @@ RANK_HISTORY_RETENTION_DAYS = 90
 load_env_file(HERE / ".env")
 
 QUEUE_KEY = "new:dramaIDs"
+PLATFORMS = ("missevan", "manbo")
+RANK_PARTIAL_KEYS = {
+    "missevan": "ranks:partial:missevan",
+    "manbo": "ranks:partial:manbo",
+}
 
 # -- Missevan rank definitions (key -> (type, sub_type, display_name)) ------
 MISSEVAN_RANKS = {
@@ -125,6 +130,60 @@ def save_queue(queue: dict[str, list[str]]) -> None:
     print(f"[ok] updated queue: manbo={len(queue.get('manbo', []))}, missevan={len(queue.get('missevan', []))}")
 
 
+def append_new_drama_ids_atomic(missevan_ids: list[str], manbo_ids: list[str]) -> None:
+    """Atomically merge new drama IDs into Upstash queue."""
+    if not missevan_ids and not manbo_ids:
+        return
+    script = r'''
+local raw = redis.call("GET", KEYS[1])
+local queue = {missevan = {}, manbo = {}}
+if raw and raw ~= false and raw ~= "" then
+  queue = cjson.decode(raw)
+  queue["missevan"] = queue["missevan"] or {}
+  queue["manbo"] = queue["manbo"] or {}
+end
+
+local function merge(field, additions_json)
+  local seen = {}
+  local merged = {}
+  for _, value in ipairs(queue[field] or {}) do
+    local text = tostring(value)
+    if not seen[text] then
+      seen[text] = true
+      table.insert(merged, text)
+    end
+  end
+  for _, value in ipairs(cjson.decode(additions_json)) do
+    local text = tostring(value)
+    if not seen[text] then
+      seen[text] = true
+      table.insert(merged, text)
+    end
+  end
+  queue[field] = merged
+end
+
+merge("missevan", ARGV[1])
+merge("manbo", ARGV[2])
+local payload = cjson.encode(queue)
+redis.call("SET", KEYS[1], payload)
+return payload
+'''
+    raw = upstash_request([
+        "EVAL",
+        script,
+        1,
+        QUEUE_KEY,
+        json.dumps([str(value) for value in missevan_ids], ensure_ascii=False),
+        json.dumps([str(value) for value in manbo_ids], ensure_ascii=False),
+    ])
+    updated = json.loads(raw) if isinstance(raw, str) else (raw or {})
+    print(
+        f"[ok] updated queue: manbo={len(updated.get('manbo', []))}, "
+        f"missevan={len(updated.get('missevan', []))}"
+    )
+
+
 def upload_ranks(store: dict) -> None:
     """Upload ranks store to Upstash under the 'ranks' key."""
     payload = json.dumps(store, ensure_ascii=False)
@@ -132,6 +191,114 @@ def upload_ranks(store: dict) -> None:
     if result != "OK":
         raise RuntimeError(f"Failed to upload ranks: {result!r}")
     print(f"[ok] uploaded ranks to Upstash ({len(payload)} bytes)")
+
+
+def upload_full_ranks(store: dict) -> None:
+    """Upload complete merged ranks under all full-rank keys."""
+    payload = json.dumps(store, ensure_ascii=False)
+    for key in ("ranks", "ranks:latest"):
+        result = upstash_request(["SET", key, payload])
+        if result != "OK":
+            raise RuntimeError(f"Failed to upload {key}: {result!r}")
+    print(f"[ok] uploaded merged ranks to Upstash ({len(payload)} bytes)")
+
+
+def decode_upstash_json(raw: object, default: object = None) -> object:
+    if raw in (None, ""):
+        return default
+    if isinstance(raw, str):
+        return json.loads(raw)
+    return raw
+
+
+def platform_store(value: object) -> dict:
+    if isinstance(value, dict):
+        value.setdefault("ranks", {})
+        value.setdefault("dramas", {})
+        return value
+    return {"ranks": {}, "dramas": {}}
+
+
+def build_rank_partial_payload(store: dict, platform: str, *, generated_at: str | None = None) -> dict:
+    if platform not in RANK_PARTIAL_KEYS:
+        raise ValueError(f"Unsupported platform: {platform}")
+    return {
+        "version": 1,
+        "platform": platform,
+        "updated_at": generated_at or now_iso(),
+        "data": platform_store(store.get(platform)),
+    }
+
+
+def upload_rank_partials(store: dict, platforms: tuple[str, ...] | list[str]) -> None:
+    generated_at = now_iso()
+    for platform in platforms:
+        key = RANK_PARTIAL_KEYS[platform]
+        payload = json.dumps(build_rank_partial_payload(store, platform, generated_at=generated_at), ensure_ascii=False)
+        result = upstash_request(["SET", key, payload])
+        if result != "OK":
+            raise RuntimeError(f"Failed to upload {key}: {result!r}")
+        print(f"[ok] uploaded {key} ({len(payload)} bytes)")
+
+
+def load_rank_partial(platform: str) -> dict | None:
+    raw = upstash_request(["GET", RANK_PARTIAL_KEYS[platform]])
+    payload = decode_upstash_json(raw)
+    if not isinstance(payload, dict):
+        return None
+    if payload.get("platform") != platform:
+        return None
+    data = payload.get("data")
+    return platform_store(data) if isinstance(data, dict) else None
+
+
+def load_remote_full_ranks() -> dict | None:
+    for key in ("ranks", "ranks:latest"):
+        payload = decode_upstash_json(upstash_request(["GET", key]))
+        if isinstance(payload, dict):
+            return payload
+    return None
+
+
+def merge_rank_partials(
+    partials: dict[str, dict | None],
+    *,
+    fallback_store: dict | None = None,
+    local_store: dict | None = None,
+    generated_at: str | None = None,
+) -> dict:
+    merged = init_ranks_store()
+    merged["_meta"] = dict((fallback_store or {}).get("_meta") or {})
+    merged["_meta"]["updated_at"] = generated_at or now_iso()
+    for platform in PLATFORMS:
+        source = partials.get(platform)
+        if source is None and isinstance(fallback_store, dict):
+            source = fallback_store.get(platform)
+        if source is None and isinstance(local_store, dict):
+            source = local_store.get(platform)
+        merged[platform] = platform_store(source)
+    return merged
+
+
+def merge_remote_rank_partials(local_store: dict | None = None) -> dict:
+    partials = {platform: load_rank_partial(platform) for platform in PLATFORMS}
+    return merge_rank_partials(
+        partials,
+        fallback_store=load_remote_full_ranks(),
+        local_store=local_store,
+    )
+
+
+def merge_and_upload_remote_ranks(local_store: dict | None = None) -> dict:
+    merged = merge_remote_rank_partials(local_store)
+    upload_full_ranks(merged)
+    return merged
+
+
+def upload_rank_outputs(store: dict, platforms: tuple[str, ...] | list[str]) -> dict:
+    upload_rank_partials(store, platforms)
+    upload_rank_history(store, platforms=platforms)
+    return merge_and_upload_remote_ranks(store)
 
 
 def _coerce_rank_item(item: object, position: int) -> dict:
@@ -216,12 +383,18 @@ def _build_metric_payload(store: dict, platform: str, history_date: str, generat
     }
 
 
-def build_rank_history_payloads(store: dict, *, history_date: str | None = None, generated_at: str | None = None) -> dict[str, dict]:
+def build_rank_history_payloads(
+    store: dict,
+    *,
+    platforms: tuple[str, ...] | list[str] = PLATFORMS,
+    history_date: str | None = None,
+    generated_at: str | None = None,
+) -> dict[str, dict]:
     generated = generated_at or now_iso()
     if history_date is None:
         history_date = generated[:10]
-    payloads: dict[str, dict] = {"ranks:latest": store}
-    for platform in ("missevan", "manbo"):
+    payloads: dict[str, dict] = {}
+    for platform in platforms:
         payloads[f"ranks:list:{history_date}:{platform}"] = _build_rank_list_payload(store, platform, history_date, generated)
         payloads[f"ranks:metrics:{history_date}:{platform}"] = _build_metric_payload(store, platform, history_date, generated)
     return payloads
@@ -259,22 +432,92 @@ def load_rank_history_index() -> dict:
     raise RuntimeError(f"Unsupported payload type for ranks:index: {type(raw).__name__}")
 
 
-def upload_rank_history(store: dict, *, retention_days: int = RANK_HISTORY_RETENTION_DAYS) -> None:
+def update_rank_history_index_atomic(
+    history_date: str,
+    *,
+    generated_at: str,
+    retention_days: int = RANK_HISTORY_RETENTION_DAYS,
+) -> list[str]:
+    script = r'''
+local raw = redis.call("GET", KEYS[1])
+local current = {version = 1, dates = {}, updated_at = nil}
+if raw and raw ~= false and raw ~= "" then
+  current = cjson.decode(raw)
+  current["dates"] = current["dates"] or {}
+end
+
+local seen = {}
+local dates = {}
+for _, value in ipairs(current["dates"] or {}) do
+  local text = tostring(value)
+  if not seen[text] then
+    seen[text] = true
+    table.insert(dates, text)
+  end
+end
+
+local history_date = tostring(ARGV[1])
+if not seen[history_date] then
+  seen[history_date] = true
+  table.insert(dates, history_date)
+end
+
+table.sort(dates)
+local retention_days = tonumber(ARGV[3]) or 90
+local pruned = {}
+while #dates > retention_days do
+  table.insert(pruned, table.remove(dates, 1))
+end
+
+local updated = {version = 1, dates = dates, updated_at = tostring(ARGV[2])}
+redis.call("SET", KEYS[1], cjson.encode(updated))
+return cjson.encode(pruned)
+'''
+    raw = upstash_request([
+        "EVAL",
+        script,
+        1,
+        "ranks:index",
+        history_date,
+        generated_at,
+        str(retention_days),
+    ])
+    pruned = decode_upstash_json(raw, [])
+    return [str(value) for value in pruned] if isinstance(pruned, list) else []
+
+
+def upload_rank_history(
+    store: dict,
+    *,
+    platforms: tuple[str, ...] | list[str] = PLATFORMS,
+    retention_days: int = RANK_HISTORY_RETENTION_DAYS,
+) -> None:
     generated_at = now_iso()
     history_date = generated_at[:10]
-    payloads = build_rank_history_payloads(store, history_date=history_date, generated_at=generated_at)
-    index, pruned_dates = update_rank_history_index(load_rank_history_index(), history_date, now=generated_at, retention_days=retention_days)
-    payloads["ranks:index"] = index
+    payloads = build_rank_history_payloads(
+        store,
+        platforms=platforms,
+        history_date=history_date,
+        generated_at=generated_at,
+    )
+    pruned_dates = update_rank_history_index_atomic(
+        history_date,
+        generated_at=generated_at,
+        retention_days=retention_days,
+    )
     for key, value in payloads.items():
         payload = json.dumps(value, ensure_ascii=False)
         result = upstash_request(["SET", key, payload])
         if result != "OK":
             raise RuntimeError(f"Failed to upload {key}: {result!r}")
     for old_date in pruned_dates:
-        for platform in ("missevan", "manbo"):
+        for platform in PLATFORMS:
             upstash_request(["DEL", f"ranks:list:{old_date}:{platform}"])
             upstash_request(["DEL", f"ranks:metrics:{old_date}:{platform}"])
-    print(f"[ok] uploaded rank history shards to Upstash ({len(payloads)} keys, date={history_date})")
+    print(
+        f"[ok] uploaded rank history shards to Upstash "
+        f"({len(payloads)} keys, date={history_date}, platforms={','.join(platforms)})"
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -336,13 +579,16 @@ def collect_missevan_danmaku_target_ids(store: dict) -> set[str]:
 
 
 def collect_manbo_danmaku_target_ids(store: dict) -> set[str]:
-    """Collect Manbo hot-rank top 20 drama IDs for paid danmaku UID refresh."""
-    hot_rank = (store.get("manbo", {}).get("ranks") or {}).get("hot") or {}
+    """Collect Manbo rank drama IDs whose paid danmaku UID counts should refresh."""
     targets: set[str] = set()
-    for item in (hot_rank.get("items") or [])[:20]:
-        drama_id = _rank_item_drama_id(item)
-        if drama_id:
-            targets.add(drama_id)
+    ranks = store.get("manbo", {}).get("ranks") or {}
+    for rank_key, rank in ranks.items():
+        if rank_key == "peak":
+            continue
+        for item in rank.get("items") or []:
+            drama_id = _rank_item_drama_id(item)
+            if drama_id:
+                targets.add(drama_id)
     return targets
 
 
@@ -1088,14 +1334,7 @@ def lookup_cvs(store: dict) -> None:
     if new_missevan or new_manbo:
         print(f"  [upstash] registering new IDs: missevan={len(new_missevan)}, manbo={len(new_manbo)}")
         try:
-            queue = load_queue()
-            existing_m = set(queue.get("missevan") or [])
-            existing_b = set(queue.get("manbo") or [])
-            existing_m.update(new_missevan)
-            existing_b.update(new_manbo)
-            queue["missevan"] = list(existing_m)
-            queue["manbo"] = list(existing_b)
-            save_queue(queue)
+            append_new_drama_ids_atomic(new_missevan, new_manbo)
         except Exception as exc:
             print(f"  [upstash] WARN: failed to update queue: {exc}")
     else:
@@ -1153,7 +1392,7 @@ def only_danmaku_mode(store: dict, *, force: bool, do_missevan: bool, do_manbo: 
 
     if do_manbo:
         danmaku_eligible = collect_manbo_danmaku_target_ids(store)
-        print(f"[only-danmaku] manbo: 热播榜前20 selected")
+        print(f"[only-danmaku] manbo: {len(danmaku_eligible)} dramas selected (all ranks except 巅峰榜)")
         fetch_manbo_danmaku_details(danmaku_eligible, store, force=force)
 
 
@@ -1197,6 +1436,11 @@ def main() -> None:
 
     do_missevan = not args.manbo_only
     do_manbo = not args.missevan_only
+    active_platforms = tuple(
+        platform
+        for platform, enabled in (("missevan", do_missevan), ("manbo", do_manbo))
+        if enabled
+    )
 
     # Load or init store
     store = load_json(RANKS_PATH, None)
@@ -1217,9 +1461,9 @@ def main() -> None:
         store["_meta"]["updated_at"] = now_iso()
         save_json(RANKS_PATH, store)
         try:
-            upload_ranks(store)
+            upload_rank_outputs(store, active_platforms)
         except Exception as exc:
-            print(f"  [upstash] WARN: failed to upload ranks: {exc}")
+            print(f"  [upstash] WARN: failed to upload rank outputs: {exc}")
         print("=== Done (only-danmaku) ===")
         return
 
@@ -1282,7 +1526,7 @@ def main() -> None:
         )
 
     if do_manbo and not args.skip_danmaku:
-        print("=== Phase 5b: Manbo paid danmaku IDs (热播榜前20) ===")
+        print("=== Phase 5b: Manbo paid danmaku IDs (all ranks except 巅峰榜) ===")
         fetch_manbo_danmaku_details(
             collect_manbo_danmaku_target_ids(store),
             store,
@@ -1303,13 +1547,9 @@ def main() -> None:
     # Upload to Upstash
     print("=== Uploading ranks to Upstash ===")
     try:
-        upload_ranks(store)
+        upload_rank_outputs(store, active_platforms)
     except Exception as exc:
-        print(f"  [upstash] WARN: failed to upload ranks: {exc}")
-    try:
-        upload_rank_history(store)
-    except Exception as exc:
-        print(f"  [upstash] WARN: failed to upload rank history shards: {exc}")
+        print(f"  [upstash] WARN: failed to upload rank outputs: {exc}")
 
     print("=== Done ===")
 
