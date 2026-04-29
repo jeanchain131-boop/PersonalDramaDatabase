@@ -2,9 +2,9 @@ name: Fetch Rank Data
 
 on:
   schedule:
-    # 7:08 PM EDT (UTC-4) = 23:08 UTC
-    # 冬令时 (EST, UTC-5) 则为 6:08 PM
-    - cron: '8 23 * * *'
+    # 7:17 PM EDT (UTC-4) = 23:17 UTC
+    # 冬令时 (EST, UTC-5) 则为 6:17 PM
+    - cron: '17 23 * * *'
   workflow_dispatch: # 允许在 GitHub 页面上手动触发
 
 permissions:
@@ -28,7 +28,7 @@ jobs:
         run: pip install requests
 
       - name: Run fetch_rank_data.py
-        run: python fetch_rank_data.py --missevan-only --force
+        run: python fetch_rank_data.py --manbo-only --force
         env:
           UPSTASH_REDIS_REST_URL: ${{ secrets.UPSTASH_REDIS_REST_URL }}
           UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
