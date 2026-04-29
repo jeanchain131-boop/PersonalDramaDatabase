@@ -58,6 +58,10 @@ RANK_PARTIAL_KEYS = {
     "missevan": "ranks:partial:missevan",
     "manbo": "ranks:partial:manbo",
 }
+ONGOING_KEYS = {
+    "missevan": "ongoing:missevan",
+    "manbo": "ongoing:manbo",
+}
 
 # -- Missevan rank definitions (key -> (type, sub_type, display_name)) ------
 MISSEVAN_RANKS = {
@@ -301,6 +305,68 @@ def upload_rank_outputs(store: dict, platforms: tuple[str, ...] | list[str]) -> 
     return merge_and_upload_remote_ranks(store)
 
 
+def latest_rank_history_date() -> str | None:
+    try:
+        index = load_rank_history_index()
+    except Exception as exc:
+        print(f"  [upstash] WARN: failed to load ranks:index: {exc}")
+        return None
+    dates = [str(value) for value in (index.get("dates") or []) if value not in (None, "")]
+    return max(dates) if dates else None
+
+
+def load_rank_metrics(platform: str, history_date: str) -> dict[str, dict]:
+    payload = _load_upstash_json(f"ranks:metrics:{history_date}:{platform}")
+    if not isinstance(payload, dict):
+        return {}
+    dramas = payload.get("dramas")
+    if not isinstance(dramas, dict):
+        return {}
+    return {
+        str(drama_id): dict(entry)
+        for drama_id, entry in dramas.items()
+        if isinstance(entry, dict)
+    }
+
+
+def load_remote_platform_store_for_fetch(platform: str) -> dict | None:
+    partial = load_rank_partial(platform)
+    history_date = latest_rank_history_date()
+    if partial is None and history_date is None:
+        return None
+    metrics = load_rank_metrics(platform, history_date) if history_date else {}
+    partial_store = platform_store(partial)
+    if partial is None and not metrics:
+        return None
+    return {
+        "ranks": partial_store.get("ranks") or {},
+        "dramas": metrics if metrics else (partial_store.get("dramas") or {}),
+    }
+
+
+def load_initial_rank_store() -> dict:
+    try:
+        remote = init_ranks_store()
+        loaded_any = False
+        for platform in PLATFORMS:
+            platform_store_remote = load_remote_platform_store_for_fetch(platform)
+            if platform_store_remote is not None:
+                remote[platform] = platform_store(platform_store_remote)
+                loaded_any = True
+        if loaded_any:
+            print("  [upstash] loaded initial ranks store from remote partials/metrics")
+            return remote
+    except Exception as exc:
+        print(f"  [upstash] WARN: failed to load remote initial ranks store: {exc}")
+
+    store = load_json(RANKS_PATH, None)
+    if store is not None:
+        print(f"  [local] loaded initial ranks store from {RANKS_PATH}")
+        return store
+    print("  [local] no ranks.json found; initializing empty ranks store")
+    return init_ranks_store()
+
+
 def _coerce_rank_item(item: object, position: int) -> dict:
     row: dict[str, object] = {"position": position}
     if isinstance(item, dict):
@@ -362,6 +428,11 @@ def _build_metric_payload(store: dict, platform: str, history_date: str, generat
         "reward_total",
         "pay_count",
         "diamond_value",
+        "cover",
+        "maincvs",
+        "catalogName",
+        "payStatus",
+        "createTime",
         "updated_at",
         "fetched_at",
     )
@@ -539,6 +610,19 @@ def is_stale(fetched_at: str | None, force: bool) -> bool:
         return True
 
 
+def select_stale_ids(drama_ids: set[str], existing_dramas: dict, *, force: bool) -> tuple[set[str], int]:
+    to_update: set[str] = set()
+    skipped = 0
+    for did in drama_ids:
+        drama_id = str(did)
+        existing = existing_dramas.get(drama_id, {}) if isinstance(existing_dramas, dict) else {}
+        if is_stale(existing.get("fetched_at") if isinstance(existing, dict) else None, force):
+            to_update.add(drama_id)
+        else:
+            skipped += 1
+    return to_update, skipped
+
+
 def safe_int(value: object, default: int = 0) -> int:
     try:
         return int(value)
@@ -590,6 +674,45 @@ def collect_manbo_danmaku_target_ids(store: dict) -> set[str]:
             if drama_id:
                 targets.add(drama_id)
     return targets
+
+
+def extract_ongoing_ids(payload: object) -> set[str]:
+    """Extract drama IDs from an ongoing payload."""
+    if not isinstance(payload, dict):
+        return set()
+    records = payload.get("records")
+    if not isinstance(records, dict):
+        return set()
+    ids: set[str] = set()
+    for key, record in records.items():
+        if not isinstance(record, dict):
+            continue
+        value = record.get("dramaId")
+        if value in (None, ""):
+            value = key
+        if value not in (None, ""):
+            ids.add(str(value))
+    return ids
+
+
+def load_ongoing_drama_ids(platform: str) -> set[str]:
+    """Load ongoing drama IDs for one platform from Upstash."""
+    key = ONGOING_KEYS[platform]
+    return extract_ongoing_ids(_load_upstash_json(key))
+
+
+def merge_rank_and_ongoing_ids(rank_ids, ongoing_ids) -> set[str]:
+    """Merge rank-selected and ongoing drama IDs, coercing values to strings."""
+    merged: set[str] = set()
+    for value in list(rank_ids or []) + list(ongoing_ids or []):
+        if value not in (None, ""):
+            merged.add(str(value))
+    return merged
+
+
+def select_manbo_danmaku_backfill_ids(danmaku_ids: set[str], detail_update_ids: set[str]) -> set[str]:
+    """Select Manbo danmaku IDs that were not already refreshed with detail updates."""
+    return {str(value) for value in (danmaku_ids or set())} - {str(value) for value in (detail_update_ids or set())}
 
 
 # ---------------------------------------------------------------------------
@@ -855,6 +978,9 @@ def _parse_missevan_dm_xml(xml_text: str, uid_set: set[str]) -> None:
 def fetch_manbo_drama_details(
     drama_ids: set[str],
     store: dict,
+    *,
+    skip_danmaku: bool,
+    danmaku_ids: set[str] | None = None,
 ) -> None:
     """Fetch detailed info for each Manbo drama ID."""
     dramas = store["manbo"].setdefault("dramas", {})
@@ -865,6 +991,14 @@ def fetch_manbo_drama_details(
         entry: dict = dramas.get(drama_id, {})
         try:
             _fetch_one_manbo(drama_id, entry)
+            should_fetch_danmaku = (
+                not skip_danmaku
+                and (danmaku_ids is None or drama_id in danmaku_ids)
+            )
+            if should_fetch_danmaku:
+                _, uid_count, paid_episode_count = fetch_one_manbo_danmaku_count(drama_id)
+                entry["danmaku_uid_count"] = uid_count
+                entry["danmaku_paid_episode_count"] = paid_episode_count
         except Exception as exc:
             print(f"  [manbo] ERROR on {drama_id}: {exc}")
         dramas[drama_id] = entry
@@ -1256,6 +1390,27 @@ def pay_status_from_needpay(value: object) -> str | None:
     return None
 
 
+def truthy_member_value(value: object) -> bool:
+    if value is True:
+        return True
+    if isinstance(value, (int, float)) and value == 1:
+        return True
+    if isinstance(value, str):
+        return value.strip().lower() in {"1", "true", "yes"}
+    return False
+
+
+def pay_status_from_metadata(source: dict) -> str | None:
+    needpay = source.get("needpay")
+    if needpay is False:
+        return "免费"
+    if needpay is True:
+        if truthy_member_value(source.get("is_member")) or truthy_member_value(source.get("vipFree")):
+            return "会员"
+        return "付费"
+    return None
+
+
 def metadata_create_time(source: dict) -> str | None:
     value = str(source.get("createTime") or "").strip()
     return value or None
@@ -1306,7 +1461,7 @@ def lookup_cvs(store: dict) -> None:
             update_metadata_fields(
                 entry,
                 catalog_name=catalog_name_from_missevan(node),
-                pay_status=pay_status_from_needpay(node.get("needpay")),
+                pay_status=pay_status_from_metadata(node),
                 create_time=metadata_create_time(node),
             )
         else:
@@ -1322,7 +1477,7 @@ def lookup_cvs(store: dict) -> None:
             update_metadata_fields(
                 entry,
                 catalog_name=catalog_name_from_manbo(record),
-                pay_status=pay_status_from_needpay(record.get("needpay")),
+                pay_status=pay_status_from_metadata(record),
                 create_time=metadata_create_time(record),
             )
         else:
@@ -1364,12 +1519,17 @@ def only_danmaku_mode(store: dict, *, force: bool, do_missevan: bool, do_manbo: 
 
     if do_missevan:
         missevan_dramas = store["missevan"].get("dramas") or {}
-        danmaku_eligible = collect_missevan_danmaku_target_ids(store)
+        ongoing_missevan_ids = load_ongoing_drama_ids("missevan")
+        rank_danmaku_ids = collect_missevan_danmaku_target_ids(store)
+        danmaku_eligible = merge_rank_and_ongoing_ids(rank_danmaku_ids, ongoing_missevan_ids)
         targets = []
         for drama_id, entry in missevan_dramas.items():
             if drama_id in danmaku_eligible and (force or entry.get("danmaku_uid_count") is None):
                 targets.append(drama_id)
-        print(f"[only-danmaku] missevan: {len(targets)} dramas to update (all ranks except 巅峰榜)")
+        print(
+            f"[only-danmaku] missevan: {len(targets)} dramas to update "
+            f"(rank={len(rank_danmaku_ids)}, ongoing={len(ongoing_missevan_ids)})"
+        )
         for idx, drama_id in enumerate(sorted(targets), 1):
             print(f"  [missevan] ({idx}/{len(targets)}) danmaku for drama {drama_id} ...")
             # Need episodes list from getdrama
@@ -1391,9 +1551,16 @@ def only_danmaku_mode(store: dict, *, force: bool, do_missevan: bool, do_manbo: 
             save_json(RANKS_PATH, store)
 
     if do_manbo:
-        danmaku_eligible = collect_manbo_danmaku_target_ids(store)
-        print(f"[only-danmaku] manbo: {len(danmaku_eligible)} dramas selected (all ranks except 巅峰榜)")
-        fetch_manbo_danmaku_details(danmaku_eligible, store, force=force)
+        manbo_dramas = store["manbo"].get("dramas") or {}
+        ongoing_manbo_ids = load_ongoing_drama_ids("manbo")
+        rank_danmaku_ids = collect_manbo_danmaku_target_ids(store)
+        danmaku_eligible = merge_rank_and_ongoing_ids(rank_danmaku_ids, ongoing_manbo_ids)
+        existing_targets = {drama_id for drama_id in danmaku_eligible if drama_id in manbo_dramas}
+        print(
+            f"[only-danmaku] manbo: {len(existing_targets)} dramas selected "
+            f"(rank={len(rank_danmaku_ids)}, ongoing={len(ongoing_manbo_ids)})"
+        )
+        fetch_manbo_danmaku_details(existing_targets, store, force=force)
 
 
 
@@ -1443,9 +1610,7 @@ def main() -> None:
     )
 
     # Load or init store
-    store = load_json(RANKS_PATH, None)
-    if store is None:
-        store = init_ranks_store()
+    store = load_initial_rank_store()
     store.setdefault("_meta", {})
     store.setdefault("missevan", {"ranks": {}, "dramas": {}})
     store.setdefault("manbo", {"ranks": {}, "dramas": {}})
@@ -1481,6 +1646,28 @@ def main() -> None:
     if do_manbo:
         manbo_ids = fetch_manbo_ranks(store)
 
+    ongoing_missevan_ids: set[str] = set()
+    ongoing_manbo_ids: set[str] = set()
+    manbo_danmaku_ids: set[str] = set()
+    if do_missevan:
+        ongoing_missevan_ids = load_ongoing_drama_ids("missevan")
+        rank_count = len(missevan_ids)
+        missevan_ids = merge_rank_and_ongoing_ids(missevan_ids, ongoing_missevan_ids)
+        missevan_danmaku_ids = merge_rank_and_ongoing_ids(missevan_danmaku_ids, ongoing_missevan_ids)
+        print(
+            f"  [missevan] drama IDs: rank={rank_count}, "
+            f"ongoing={len(ongoing_missevan_ids)}, combined={len(missevan_ids)}"
+        )
+    if do_manbo:
+        ongoing_manbo_ids = load_ongoing_drama_ids("manbo")
+        rank_count = len(manbo_ids)
+        manbo_ids = merge_rank_and_ongoing_ids(manbo_ids, ongoing_manbo_ids)
+        manbo_danmaku_ids = merge_rank_and_ongoing_ids(collect_manbo_danmaku_target_ids(store), ongoing_manbo_ids)
+        print(
+            f"  [manbo] drama IDs: rank={rank_count}, "
+            f"ongoing={len(ongoing_manbo_ids)}, combined={len(manbo_ids)}"
+        )
+
     save_json(RANKS_PATH, store)
 
     # Phase 3: Dedup & cache filter
@@ -1488,23 +1675,17 @@ def main() -> None:
     missevan_dramas_existing = store["missevan"].get("dramas") or {}
     manbo_dramas_existing = store["manbo"].get("dramas") or {}
 
-    missevan_to_update = set()
-    missevan_skipped = 0
-    for did in missevan_ids:
-        existing = missevan_dramas_existing.get(str(did), {})
-        if is_stale(existing.get("fetched_at"), args.force):
-            missevan_to_update.add(str(did))
-        else:
-            missevan_skipped += 1
+    missevan_to_update, missevan_skipped = select_stale_ids(
+        missevan_ids,
+        missevan_dramas_existing,
+        force=args.force,
+    )
 
-    manbo_to_update = set()
-    manbo_skipped = 0
-    for did in manbo_ids:
-        existing = manbo_dramas_existing.get(did, {})
-        if is_stale(existing.get("fetched_at"), args.force):
-            manbo_to_update.add(did)
-        else:
-            manbo_skipped += 1
+    manbo_to_update, manbo_skipped = select_stale_ids(
+        manbo_ids,
+        manbo_dramas_existing,
+        force=args.force,
+    )
 
     print(f"  missevan: total={len(missevan_ids)}, skip={missevan_skipped}, update={len(missevan_to_update)}")
     print(f"  manbo:    total={len(manbo_ids)}, skip={manbo_skipped}, update={len(manbo_to_update)}")
@@ -1523,15 +1704,15 @@ def main() -> None:
         print(f"=== Phase 5: Manbo drama details ({len(manbo_to_update)}) ===")
         fetch_manbo_drama_details(
             manbo_to_update, store,
+            skip_danmaku=args.skip_danmaku,
+            danmaku_ids=manbo_danmaku_ids,
         )
 
     if do_manbo and not args.skip_danmaku:
-        print("=== Phase 5b: Manbo paid danmaku IDs (all ranks except 巅峰榜) ===")
-        fetch_manbo_danmaku_details(
-            collect_manbo_danmaku_target_ids(store),
-            store,
-            force=args.force,
-        )
+        manbo_backfill_ids = select_manbo_danmaku_backfill_ids(manbo_danmaku_ids, manbo_to_update)
+        if manbo_backfill_ids:
+            print(f"=== Phase 5b: Manbo paid danmaku backfill ({len(manbo_backfill_ids)}) ===")
+            fetch_manbo_danmaku_details(manbo_backfill_ids, store, force=args.force)
 
     # Phase 6: Upstash CV lookup
     print("=== Phase 6: Upstash CV lookup ===")

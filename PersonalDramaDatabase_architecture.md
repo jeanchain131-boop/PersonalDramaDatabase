@@ -147,6 +147,9 @@ def upstash_request(command: list[object]) -> object:
 - `new:dramaIDs` - JSON queue: `{"manbo": [ids], "missevan": [ids]}`
 - `manbo:info:v1` - Uploaded manbo-drama-info.json
 - `missevan:info:v1` - Uploaded missevan-drama-info.json
+- `ongoing:missevan` / `ongoing:manbo` - JSON payloads from fetch_ongoing.py with ongoing drama IDs and updateType.
+- `ranks:partial:{platform}` - Latest per-platform rank/drama shard used to merge partial updates.
+- `ranks:metrics:{date}:{platform}` - Daily drama metric shard used to restore cached rank drama fields.
 
 ## Rank SQL Structure (DramaByCV.rank.sql)
 
@@ -172,6 +175,12 @@ def upstash_request(command: list[object]) -> object:
 2. Calls append scripts for pending IDs
 3. `upload_json_file()` → stores updated files in Upstash
 4. Prunes completed IDs from queue
+
+### Ongoing Rank Fetch Flow:
+1. `fetch_ongoing.py` collects paid ongoing drama IDs from Missevan timeline/sound pages and Manbo update-time pages.
+2. Uploads compact records to `ongoing:missevan` and `ongoing:manbo`; local `ongoing-*.json` files are dry-run snapshots only.
+3. `fetch_rank_data.py` merges rank IDs with ongoing IDs before stale filtering, so ongoing dramas stay refreshed even when absent from rank lists.
+4. Rank history uploads include `cover`, `maincvs`, `catalogName`, `payStatus`, and `createTime` in metrics shards so remote cache restores keep display metadata.
 
 ## Key Processing Functions
 
