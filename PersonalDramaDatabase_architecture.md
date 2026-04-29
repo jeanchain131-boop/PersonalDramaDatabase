@@ -188,6 +188,7 @@ def upstash_request(command: list[object]) -> object:
 - **All-age dramas (type=3)**: Take first 4 CVs
 - **Romance/Pure Love (type=4,6)**: Take first 2 non-narrator CVs
 - Overridable via `MISSEVAN_MAINCV_OVERRIDES` / `MANBO_MAINCV_OVERRIDES`
+- New observed CV names can be appended to `missevan&manbo-cvid-map.json` during metadata/rank refreshes.
 
 ### Author Extraction:
 - Manbo: Regex patterns match "原著/原作" attribution
